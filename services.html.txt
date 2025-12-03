@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Technology | TriLumen Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for aesthetic vectors -->
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'trilumen-primary': '#1F2937', 'trilumen-secondary': '#FFC107', 'trilumen-accent': '#374151', 'bg-light': '#F3F4F6', }, fontFamily: { sans: ['Inter', 'sans-serif'], }, } }
+        }
+    </script>
+</head>
+<body class="bg-trilumen-primary text-white">
+
+    <!-- Navigation -->
+    <nav class="bg-trilumen-primary text-white sticky top-0 z-50 shadow-2xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="services.html" class="text-trilumen-secondary font-bold transition duration-300">Services & Tech</a>
+                <a href="faq.html" class="hover:text-trilumen-secondary transition duration-300">FAQ</a>
+                <a href="contact.html" class="hover:text-trilumen-secondary transition duration-300">Quote / Contact</a>
+                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg">Get FREE Estimate</a>
+            </div>
+
+            <!-- Mobile CTA and Hamburger Icon -->
+            <div class="md:hidden flex items-center">
+                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-3 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-md mr-3 text-sm">Get Quote</a>
+                <button id="mobile-menu-button-services" class="p-2 rounded-md hover:bg-trilumen-accent focus:outline-none focus:ring-2 focus:ring-trilumen-secondary">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu-services" class="hidden md:hidden bg-trilumen-accent">
+            <a href="index.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Services & Tech</a>
+            <a href="faq.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">FAQ</a>
+            <a href="contact.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Quote / Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('mobile-menu-button-services').addEventListener('click', function() {
+            document.getElementById('mobile-menu-services').classList.toggle('hidden');
+        });
+    </script>
+
+
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl font-extrabold text-trilumen-secondary mb-3">Our Services & Technology</h1>
+                <p class="text-xl text-gray-300">The high-end components and proprietary solutions that make TriLumen the best investment in NEPA.</p>
+            </header>
+
+            <div id="warranty-coverage" class="mb-16">
+                <h2 class="text-3xl font-bold text-trilumen-secondary mb-8 border-b-2 border-trilumen-secondary pb-2">Warranty Coverage</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 text-white">Complimentary 3-Year Parts Warranty</h3>
+                        <p class="text-gray-400 mb-4">All TriLumen Systems installations come standard with the following minimum coverage:</p>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>Parts Coverage:</strong> Full replacement coverage for all LED nodes, aluminum channel, and power supplies for 3 years, provided by the manufacturer.</li>
+                            <li><strong>Labor Coverage:</strong> 90 days coverage against defects in installation workmanship.</li>
+                            <li><strong>Note:</strong> Service calls for parts failure after 90 days are billable unless the TriLumen Assurance Plan is purchased.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 text-trilumen-secondary">The TriLumen Assurance Plan (5-Year Total)</h3>
+                        <p class="text-gray-400 mb-4">Extend your peace of mind and minimize service costs with our comprehensive premium plan.</p>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>In-House Guarantee:</strong> Direct coverage from TriLumen Systems—no third parties, no technicalities.</li>
+                            <li><strong>Zero Out-of-Pocket:</strong> All labor and part replacement costs are covered for the full 5 years. You will never pay a service fee for a covered component. Ever.</li>
+                            <li><strong>Extended Duration:</strong> Extends full coverage for all hardware and labor for a total of 5 years from installation date.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="core-systems" class="mb-16">
+                <h2 class="text-3xl font-bold text-trilumen-secondary mb-8 border-b-2 border-trilumen-secondary pb-2">Installation & System Value</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 text-trilumen-secondary">Year-Round Architectural Lighting</h3>
+                        <p class="text-gray-300 mb-4">Seamless, permanent installation along your roofline, peaks, and gables.</p>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>30mm RGBW Pixels:</strong> Dedicated warm white (3000K) plus full color spectrum.</li>
+                            <li><strong>Discreet Channel:</strong> Powder-coated aluminum channel matched to your trim (White, Black, Brown options).</li>
+                            <li><strong>24V System:</strong> Reliable voltage ensures minimal dimming over long runs.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 text-trilumen-secondary">Holiday, Events & Security Modes</h3>
+                        <p class="text-gray-300 mb-4">One system handles all your lighting needs throughout the year.</p>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>Instant Holidays:</strong> Switch between Christmas, Halloween, and Game Day colors instantly from the app.</li>
+                            <li><strong>Scheduled Security:</strong> Program powerful, full-brightness white lights to deter intruders after dark.</li>
+                            <li><strong>Dynamic Events:</strong> Set timers and custom effects for birthdays, parties, and special occasions.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 text-trilumen-secondary">ColorCast Landscape Integration</h3>
+                        <p class="text-gray-300 mb-4">Fully addressable yard and pathway lighting that integrates perfectly with your roofline.</p>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>24V Addressable Fixtures:</strong> High-lumen, IP67-rated floodlights and path lights.</li>
+                            <li><strong>Unified Control:</strong> Managed by the same TriLumen Power Hub and app as your roofline.</li>
+                            <li><strong>Professional Burial:</strong> 3-core direct-burial cable installed minimum 6 inches deep.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="control-tech" class="bg-gray-800 p-8 rounded-xl shadow-2xl mb-16 border border-trilumen-secondary">
+                <h2 class="text-3xl font-bold text-trilumen-secondary mb-4 text-center">The TriLumen Power Hub (The System Brain)</h2>
+                <p class="text-center text-lg text-gray-300 mb-8">We install our superior control solution for flawless, unified operation from a single app.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4 bg-trilumen-accent rounded-lg shadow">
+                        <h4 class="font-bold text-xl mb-2 text-trilumen-secondary">Single Controller Advantage</h4>
+                        <p class="text-sm text-gray-200">One powerful WLED (ESP32) controller manages four output segments, giving independent control.</p>
+                    </div>
+                    <div class="p-4 bg-trilumen-accent rounded-lg shadow">
+                        <h4 class="font-bold text-xl mb-2 text-trilumen-secondary">Commercial Power</h4>
+                        <p class="text-sm text-gray-200">Dedicated, high-quality 24V Mean Well power supply for stability and safety, rated for outdoor enclosure use.</p>
+                    </div>
+                    <div class="p-4 bg-trilumen-accent rounded-lg shadow">
+                        <h4 class="font-bold text-xl mb-2 text-trilumen-secondary">Segment Control</h4>
+                        <p class="text-sm text-gray-200">Easily name and control different sections of the house/yard separately via the primary control app.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="add-ons">
+                <h2 class="text-3xl font-bold text-trilumen-secondary mb-8 text-center">Premium Add-ons (Seamless Integration)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 flex items-center text-trilumen-secondary"><i data-lucide="monitor-dot" class="text-2xl mr-3"></i>TriLumen Dedicated Wall Hub</h3>
+                        <p class="text-gray-300">Upgrade your control experience with a permanently mounted touchscreen. We install a <strong>flush-mounted</strong> tablet running your custom app. This provides a dedicated, elegant control center, eliminating the need to search for your phone.</p>
+                        <p class="mt-3 text-sm font-semibold text-trilumen-secondary">Dedicated, seamless control from a clean aesthetic panel.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-trilumen-secondary">
+                        <h3 class="text-2xl font-semibold mb-3 flex items-center text-trilumen-secondary"><i data-lucide="music" class="text-2xl mr-3"></i>Music Synchronization Upgrade</h3>
+                        <p class="text-gray-300">We integrate the necessary hardware into the Power Hub to allow your lighting to analyze nearby music and drive dynamic effects in real-time. Select any sound-reactive mode in the app for instantaneous light shows.</p>
+                        <p class="mt-3 text-sm font-semibold text-trilumen-secondary">Required for advanced party and holiday effects.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="contact.html" class="inline-block bg-trilumen-secondary text-trilumen-primary text-xl font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-yellow-400 transition duration-300">Ready to Upgrade? Get a Quote Now →</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="bg-trilumen-primary py-8 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-extrabold text-trilumen-secondary">Ready to Start? <span class="text-white">Text (570) 392-9116</span> for the Fastest Service!</h3>
+        <p class="text-gray-400 mt-2 text-base">We can often start your virtual quote process immediately via text message.</p>
+    </div>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 border-t-8 border-trilumen-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
+                <span class="text-xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems | NEPA's Smart Lighting Experts</span>
+            </a>
+            <p class="mb-4">Serving Scranton, Wilkes-Barre, Hazleton, Back Mountain, The Poconos, and surrounding NEPA communities.</p>
+            <div class="space-x-4 mb-4">
+                <span class="inline-flex items-center"><span class="mr-2 text-trilumen-secondary">📞</span>(570) 392-9116</span>
+                <span class="inline-flex items-center"><span class="mr-2 text-trilumen-secondary">✉️</span>info@trilumensystems.com</span>
+            </div>
+            <p class="text-xs text-gray-500">© 2025 TriLumen Systems. All Rights Reserved. Fully Insured and HICPA Registered (Pending threshold).</p>
+        </div>
+    </footer>
+</body>
+</html>
+

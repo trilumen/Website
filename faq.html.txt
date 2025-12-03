@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | TriLumen Systems</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for aesthetic vectors -->
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'trilumen-primary': '#1F2937', 'trilumen-secondary': '#FFC107', 'trilumen-accent': '#374151', 'bg-light': '#F3F4F6', }, fontFamily: { sans: ['Inter', 'sans-serif'], }, } }
+        }
+    </script>
+</head>
+<body class="bg-trilumen-primary text-white">
+
+    <!-- Navigation -->
+    <nav class="bg-trilumen-primary text-white sticky top-0 z-50 shadow-2xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="services.html" class="hover:text-trilumen-secondary transition duration-300">Services & Tech</a>
+                <a href="faq.html" class="text-trilumen-secondary font-bold transition duration-300">FAQ</a>
+                <a href="contact.html" class="hover:text-trilumen-secondary transition duration-300">Quote / Contact</a>
+                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
+                    Get FREE Estimate
+                </a>
+            </div>
+
+            <!-- Mobile CTA and Hamburger Icon -->
+            <div class="md:hidden flex items-center">
+                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-3 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-md mr-3 text-sm">
+                    Get Quote
+                </a>
+                <button id="mobile-menu-button-faq" class="p-2 rounded-md hover:bg-trilumen-accent focus:outline-none focus:ring-2 focus:ring-trilumen-secondary">
+                    <!-- Hamburger Icon -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Collapsible) -->
+        <div id="mobile-menu-faq" class="hidden md:hidden bg-trilumen-accent">
+            <a href="index.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Services & Tech</a>
+            <a href="faq.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">FAQ</a>
+            <a href="contact.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Quote / Contact</a>
+        </div>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button-faq').addEventListener('click', function() {
+            document.getElementById('mobile-menu-faq').classList.toggle('hidden');
+        });
+
+        // JavaScript for Collapsible FAQ Sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-button');
+                const content = item.querySelector('.faq-content');
+                button.addEventListener('click', () => {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other open items
+                    faqItems.forEach(otherItem => {
+                        const otherButton = otherItem.querySelector('.faq-button');
+                        const otherContent = otherItem.querySelector('.faq-content');
+                        if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+                            otherButton.setAttribute('aria-expanded', 'false');
+                            otherContent.classList.add('hidden');
+                            otherContent.classList.remove('h-auto');
+                        }
+                    });
+
+                    // Toggle current item
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    content.classList.toggle('hidden');
+                    content.classList.toggle('h-auto');
+                });
+            });
+        });
+    </script>
+
+
+    <main class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl font-extrabold text-trilumen-secondary mb-3">Frequently Asked Questions</h1>
+                <p class="text-xl text-gray-300">Answers regarding our technology, installation process, and costs.</p>
+            </header>
+
+            <div class="space-y-4">
+                
+                <!-- Q1: Cost (Updated with $4k anchor) -->
+                <div class="faq-item bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent overflow-hidden">
+                    <button class="faq-button flex justify-between items-center w-full p-5 text-xl font-bold text-white hover:bg-trilumen-accent transition duration-150" aria-expanded="false" aria-controls="faq-content-1">
+                        <span class="flex items-center text-trilumen-secondary"><i data-lucide="circle-help" class="mr-3"></i>What does a typical permanent installation cost?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="faq-content hidden p-5 pt-0 text-gray-300 border-t border-gray-700">
+                        <p class="pt-4">
+                            The investment for a complete, professionally installed TriLumen permanent roofline system on a typical NEPA home often begins around <strong>$4,000</strong>. We offer specialized systems for all budgets. The final price can be less or more than $4,000 depending entirely on the complexity of your roofline, the density of the lighting, and any premium add-ons (like the Assurance Plan or Landscape Integration).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q2: Licensing/Expertise (Header fixed) -->
+                <div class="faq-item bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent overflow-hidden">
+                    <button class="faq-button flex justify-between items-center w-full p-5 text-xl font-bold text-white hover:bg-trilumen-accent transition duration-150" aria-expanded="false" aria-controls="faq-content-2">
+                        <span class="flex items-center text-trilumen-secondary"><i data-lucide="circle-help" class="mr-3"></i>Is TriLumen a general electrician? What is your specialty?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="faq-content hidden p-5 pt-0 text-gray-300 border-t border-gray-700">
+                        <p class="pt-4">
+                            No, we are not general electricians; we are specialized low-voltage LED lighting systems experts. Our singular focus is on the design and installation of permanent, unified architectural systems. This specialization allows us to be experts in the complex WLED technology, offering reliability and features that general contractors cannot match.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q3: Warranty -->
+                <div class="faq-item bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent overflow-hidden">
+                    <button class="faq-button flex justify-between items-center w-full p-5 text-xl font-bold text-white hover:bg-trilumen-accent transition duration-150" aria-expanded="false" aria-controls="faq-content-3">
+                        <span class="flex items-center text-trilumen-secondary"><i data-lucide="circle-help" class="mr-3"></i>Tell me more about the 5-Year TriLumen Assurance Plan.</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="faq-content hidden p-5 pt-0 text-gray-300 border-t border-gray-700">
+                        <p class="pt-4">
+                            The Assurance Plan is our premium extended coverage. It covers all labor and parts for a total of <strong>5 years</strong>. This means if a component fails or if the system needs adjustment within that time, you pay <strong>nothing out of pocket</strong> for the service call or replacement. It’s peace of mind, guaranteed by TriLumen.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Q4: Safety/Legality (Updated to simple "Insured" message) -->
+                <div class="faq-item bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent overflow-hidden">
+                    <button class="faq-button flex justify-between items-center w-full p-5 text-xl font-bold text-white hover:bg-trilumen-accent transition duration-150" aria-expanded="false" aria-controls="faq-content-4">
+                        <span class="flex items-center text-trilumen-secondary"><i data-lucide="circle-help" class="mr-3"></i>Is this safe, and is TriLumen properly insured?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div id="faq-content-4" class="faq-content hidden p-5 pt-0 text-gray-300 border-t border-gray-700">
+                        <p class="pt-4">
+                            Yes. Our lights are <strong>low-voltage (24V DC)</strong>, making them inherently safe for residential exterior use and maintenance. TriLumen Systems is fully insured with General Liability coverage and maintains all necessary local licensing requirements to operate professionally in NEPA.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q5: Longevity/Look -->
+                <div class="faq-item bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent overflow-hidden">
+                    <button class="faq-button flex justify-between items-center w-full p-5 text-xl font-bold text-white hover:bg-trilumen-accent transition duration-150" aria-expanded="false" aria-controls="faq-content-5">
+                        <span class="flex items-center text-trilumen-secondary"><i data-lucide="circle-help" class="mr-3"></i>How long do the lights last, and what do they look like during the day?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div id="faq-content-5" class="faq-content hidden p-5 pt-0 text-gray-300 border-t border-gray-700">
+                        <p class="pt-4">
+                            The LEDs are rated for 50,000+ hours of continuous use. During the day, the low-profile aluminum channel is custom-matched to your soffit or trim color, making the system virtually <strong>invisible</strong> and preserving your home's aesthetic.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- CTA to Contact -->
+            <div class="mt-16 text-center">
+                <a href="contact.html" class="inline-block bg-trilumen-secondary text-trilumen-primary text-xl font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-yellow-400 transition duration-300">
+                    Have a Question? Contact Us Directly →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Text Callout Section -->
+    <div class="bg-trilumen-primary py-8 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-extrabold text-trilumen-secondary">
+            Ready to Start? <span class="text-white">Text (570) 392-9116</span> for the Fastest Service!
+        </h3>
+        <p class="text-gray-400 mt-2 text-base">We can often start your virtual quote process immediately via text message.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 border-t-8 border-trilumen-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
+                <span class="text-xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems | NEPA's Smart Lighting Experts</span>
+            </a>
+            <p class="mb-4">
+                Serving Scranton, Wilkes-Barre, Hazleton, Back Mountain, The Poconos, and surrounding NEPA communities.
+            </p>
+            <div class="space-x-4 mb-4">
+                <span class="inline-flex items-center">
+                    <span class="mr-2 text-trilumen-secondary">📞</span>
+                    (570) 392-9116
+                </span>
+                <span class="inline-flex items-center">
+                    <span class="mr-2 text-trilumen-secondary">✉️</span>
+                    info@trilumensystems.com
+                </span>
+            </div>
+            <p class="text-xs text-gray-500">
+                © 2025 TriLumen Systems. All Rights Reserved. Fully Insured and HICPA Registered (Pending threshold).
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+

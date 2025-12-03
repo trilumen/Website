@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriLumen Systems | Permanent Architectural & Landscape LED Lighting</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for aesthetic vectors -->
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'trilumen-primary': '#1F2937', 
+                        'trilumen-secondary': '#FFC107', 
+                        'trilumen-accent': '#374151', 
+                        'bg-light': '#F3F4F6', 
+                    }, 
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-glow { text-shadow: 0 0 10px rgba(255, 193, 7, 0.9), 0 0 20px rgba(255, 193, 7, 0.4); }
+    </style>
+</head>
+<body class="bg-trilumen-primary text-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-trilumen-primary text-white sticky top-0 z-50 shadow-2xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
+                <a href="services.html" class="hover:text-trilumen-secondary transition duration-300">Services & Tech</a>
+                <a href="faq.html" class="hover:text-trilumen-secondary transition duration-300">FAQ</a>
+                <a href="contact.html" class="hover:text-trilumen-secondary transition duration-300">Quote / Contact</a>
+                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
+                    Get FREE Estimate
+                </a>
+            </div>
+
+            <!-- Mobile CTA and Hamburger Icon -->
+            <div class="md:hidden flex items-center">
+                 <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-3 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-md mr-3 text-sm">
+                    Get Quote
+                </a>
+                <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-trilumen-accent focus:outline-none focus:ring-2 focus:ring-trilumen-secondary">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-trilumen-accent">
+            <a href="index.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Services & Tech</a>
+            <a href="faq.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">FAQ</a>
+            <a href="contact.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Quote / Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gray-900 text-white pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-40" 
+             style="background-image: url('https://placehold.co/1920x1080/0A0A0A/FFC107?text=Gold+Lit+House+Mockup');">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 hero-glow">
+                Permanent Architectural LED Lighting in NEPA.
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Install premium, app-controlled Warm White & Color accent lights once, enjoy them for a decade. The last lights you'll ever buy.
+            </p>
+            <a href="contact.html" class="inline-block bg-trilumen-secondary text-trilumen-primary text-xl font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-yellow-400 transform hover:scale-105 transition duration-300">
+                Request Your FREE Virtual Quote Today
+            </a>
+            <p class="mt-4 text-sm text-gray-400">Serving Northeastern PA Homeowners & Businesses.</p>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="value" class="py-16 bg-bg-light text-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-trilumen-primary mb-12">
+                Why TriLumen Systems is the Premium Choice
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-trilumen-secondary">
+                    <div class="text-4xl text-trilumen-secondary mb-4"><i data-lucide="zap" class="mx-auto"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Unified Smart Control</h3>
+                    <p class="text-gray-600">
+                        Manage your entire home's lighting—from the <strong>Roofline Architecture</strong> to the <strong>Yard Landscape</strong>—all from one seamless phone or tablet app.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-trilumen-secondary">
+                    <div class="text-4xl text-trilumen-secondary mb-4"><i data-lucide="sun" class="mx-auto"></i></div>
+                    <h3 class="text-xl font-bold mb-3">True Warm White & Security</h3>
+                    <p class="text-gray-600">
+                        Dedicated 3000K warm white accent lighting provides sophisticated curb appeal by night and functions as powerful, automated security lighting.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center border-t-4 border-trilumen-secondary">
+                    <div class="text-4xl text-trilumen-secondary mb-4"><i data-lucide="shield" class="mx-auto"></i></div>
+                    <h3 class="text-xl font-bold mb-3">5-Year Assurance Plan</h3>
+                    <p class="text-gray-600">
+                        Ask about our optional warranty extension covering all parts AND labor for 5 full years. Zero hassle, guaranteed protection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Three Pillars / About Us -->
+    <section id="about" class="py-16 bg-trilumen-primary text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-trilumen-secondary mb-12">
+                Built on Three Pillars: The Legacy Behind TriLumen Systems
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent">
+                    <i data-lucide="heart" class="text-3xl text-trilumen-secondary mx-auto mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Lasting Legacy</h3>
+                    <p class="text-gray-400 text-sm">
+                        Our commitment is inspired by our family. This dedication drives us to view every client's project as an investment for the future. We promise to design and install permanent solutions designed to last a lifetime, ensuring your property's beauty and security endure for the next generation.
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent">
+                    <i data-lucide="award" class="text-3xl text-trilumen-secondary mx-auto mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Enduring Quality</h3>
+                    <p class="text-gray-400 text-sm">
+                        We only use the highest quality components backed by an industry-leading warranty. Our commitment ensures a low-maintenance system that withstands our region's harsh weather and performs as expected for decades.
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg border border-trilumen-accent">
+                    <i data-lucide="ruler" class="text-3xl text-trilumen-secondary mx-auto mb-3"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Precision in Design</h3>
+                    <p class="text-gray-400 text-sm">
+                        Our installations adhere to the highest architectural standards. Every light is custom placed to highlight your home's unique features, resulting in a low-profile system that is nearly invisible by day and stunning by night.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Teaser -->
+    <section class="py-16 bg-trilumen-accent text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-trilumen-secondary mb-4">See The TriLumen Transformation</h2>
+            <p class="text-lg text-gray-400 mb-8">Professional photos of your house will go here once installed!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="https://placehold.co/400x300/374151/FFC107?text=Photo+1%0A(Warm+White+Accent)" alt="Placeholder" class="rounded-lg shadow-xl hover:opacity-90 transition duration-300">
+                <img src="https://placehold.co/400x300/374151/FFC107?text=Photo+2%0A(Holiday+Color+Effect)" alt="Placeholder" class="rounded-lg shadow-xl hover:opacity-90 transition duration-300">
+                <img src="https://placehold.co/400x300/374151/FFC107?text=Photo+3%0A(Landscape+Integration)" alt="Placeholder" class="rounded-lg shadow-xl hover:opacity-90 transition duration-300">
+            </div>
+
+            <a href="services.html" class="inline-block mt-10 bg-trilumen-secondary text-trilumen-primary text-lg font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-yellow-400 transition duration-300">
+                Explore All Services & Technology Details →
+            </a>
+        </div>
+    </section>
+    
+    <!-- Text Callout -->
+    <div class="bg-trilumen-primary py-8 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-extrabold text-trilumen-secondary">
+            Ready to Start? <span class="text-white">Text (570) 392-9116</span> for the Fastest Service!
+        </h3>
+        <p class="text-gray-400 mt-2 text-base">We can often start your virtual quote process immediately via text message.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 border-t-8 border-trilumen-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
+                <span class="text-xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems | NEPA's Smart Lighting Experts</span>
+            </a>
+            <p class="mb-4">
+                Serving Scranton, Wilkes-Barre, Hazleton, Back Mountain, The Poconos, and surrounding NEPA communities.
+            </p>
+            <div class="space-x-4 mb-4">
+                <span class="inline-flex items-center">
+                    <span class="mr-2 text-trilumen-secondary">📞</span>
+                    (570) 392-9116
+                </span>
+                <span class="inline-flex items-center">
+                    <span class="mr-2 text-trilumen-secondary">✉️</span>
+                    info@trilumensystems.com
+                </span>
+            </div>
+            <p class="text-xs text-gray-500">
+                © 2025 TriLumen Systems. All Rights Reserved. Fully Insured and HICPA Registered (Pending threshold).
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
