@@ -68,15 +68,30 @@
             <div class="bg-bg-light p-8 rounded-2xl shadow-2xl border border-gray-300 text-gray-800">
                 <h1 class="text-4xl font-extrabold text-trilumen-primary mb-3 text-center">Request Your FREE Virtual Estimate</h1>
                 <p class="text-center text-lg text-gray-600 mb-8">
-                    Get a price range fast. We use high-resolution satellite mapping (Google Earth/GIS) to measure your exact roofline and property perimeter, **saving you time**.
+                    Get a price range fast. We use high-resolution satellite mapping (Google Earth/GIS) to measure your exact roofline and property perimeter, saving us both time.
                 </p>
+
+                <!-- FINALIZED FORM STRUCTURE WITH NO EMAIL CONFIRMATION -->
+                <div class="bg-trilumen-secondary p-4 rounded-lg text-trilumen-primary font-semibold text-center mb-6">
+                    <p class="mb-2"><strong>STEP 1: Submit the form below for a fast estimate.</strong></p>
+                    <p class="text-sm">
+                        Your data will flow directly to our estimate team without the need for email verification.
+                    </p>
+                </div>
                 
-                <form action="https://sheetdb.io/api/v1/txco3esdkyw5m" method="GET" class="space-y-4">
+                <!-- START OF FREE FORM BACKEND (FORMSPREE URL IS NOW EMBEDDED) -->
+                <form action="https://formspree.io/f/myzrjrep" method="POST" class="space-y-4">
                     
+                    <!-- HIDDEN FIELDS FOR SPAM PROTECTION AND REDIRECT -->
+                    <input type="hidden" name="_gotcha" style="display:none"> <!-- Spam protection -->
+                    <input type="hidden" name="_next" value="https://trilumensystems.com/index.html">
+                    <input type="hidden" name="_homepage" value="https://trilumensystems.com/index.html">
+
+                    <!-- IMPORTANT: The names here match your Google Sheet headers: name, phone, address, interest -->
                     <div><label for="name" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" name="name" id="name" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div><label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
+                        <div><label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent" value="570-392-9116"></div>
                         <div><label for="address" class="block text-sm font-medium text-gray-700">Project Address</label><input type="text" name="address" id="address" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
                     </div>
                     
@@ -87,6 +102,7 @@
                     </button>
                     <p class="text-xs text-center text-gray-500 mt-4">*All estimates are preliminary and subject to final on-site verification.</p>
                 </form>
+                <!-- END OF LEAD CAPTURE FORM -->
             </div>
             
             <!-- Contact Information -->
