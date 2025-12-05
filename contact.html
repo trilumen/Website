@@ -68,7 +68,7 @@
             <div class="bg-bg-light p-8 rounded-2xl shadow-2xl border border-gray-300 text-gray-800">
                 <h1 class="text-4xl font-extrabold text-trilumen-primary mb-3 text-center">Request Your FREE Virtual Estimate</h1>
                 <p class="text-center text-lg text-gray-600 mb-8">
-                    Get a price range fast. We use high-resolution satellite mapping (Google Earth/GIS) to measure your exact roofline and property perimeter, saving us both time.
+                    Get a price range fast. We use high-resolution satellite mapping (Google Earth/GIS) to measure your exact roofline and property perimeter.
                 </p>
 
                 <!-- FINALIZED FORM STRUCTURE WITH NO EMAIL CONFIRMATION -->
@@ -79,7 +79,7 @@
                     </p>
                 </div>
                 
-                <!-- START OF FREE FORM BACKEND (FORMSPREE URL IS NOW EMBEDDED) -->
+                <!-- START OF FREE FORM BACKEND (FORMSPREE URL EMBEDDED) -->
                 <form action="https://formspree.io/f/myzrjrep" method="POST" class="space-y-4">
                     
                     <!-- HIDDEN FIELDS FOR SPAM PROTECTION AND REDIRECT -->
@@ -87,15 +87,23 @@
                     <input type="hidden" name="_next" value="https://trilumensystems.com/index.html">
                     <input type="hidden" name="_homepage" value="https://trilumensystems.com/index.html">
 
-                    <!-- IMPORTANT: The names here match your Google Sheet headers: name, phone, address, interest -->
+                    <!-- ALL FIELDS ARE REQUIRED BY THE 'required' ATTRIBUTE -->
                     <div><label for="name" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" name="name" id="name" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div><label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent" </div>
-                        <div><label for="address" class="block text-sm font-medium text-gray-700">Project Address</label><input type="text" name="address" id="address" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
+                        <div><label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
+                        <!-- EMAIL FIELD - LABEL TEXT CLEANED -->
+                        <div><label for="email" class="block text-sm font-medium text-gray-700">Email Address</label><input type="email" name="email" id="email" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
                     </div>
                     
+                    <div><label for="address" class="block text-sm font-medium text-gray-700">Project Address</label><input type="text" name="address" id="address" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
+                    
                     <div><label for="interest" class="block text-sm font-medium text-gray-700">Describe Your Interest (Roofline, Landscape, Warranty, etc.)</label><textarea id="interest" name="interest" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent" placeholder="I'm interested in the roofline lights and the 5-Year Extended Warranty!"></textarea></div>
+
+                    <!-- IMPLICIT CONSENT MARKETING DISCLOSURE -->
+                    <p class="text-xs text-gray-500 pt-2">
+                        By submitting this form, you agree to receive follow-up correspondence regarding your quote and agree to receive occasional promotional emails from TriLumen Systems.
+                    </p>
 
                     <button type="submit" class="w-full bg-trilumen-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-trilumen-accent transition duration-300 shadow-md transform hover:scale-100">
                         Send My Virtual Quote Request
