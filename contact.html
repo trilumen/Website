@@ -1,167 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Quote | TriLumen Systems</title>
-    <!-- Load Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: { extend: { colors: { 'trilumen-primary': '#1F2937', 'trilumen-secondary': '#FFC107', 'trilumen-accent': '#374151', 'bg-light': '#F3F4F6', }, fontFamily: { sans: ['Inter', 'sans-serif'], }, } }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TriLumen Systems</title>
+<meta name="description" content="Book a free strategy call with TriLumen Systems, or ask about the Systems & Automation Assessment.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 32px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-links a.current { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.page-header { background: #F4F2FA; padding: 60px 0 44px; text-align: center; }
+.page-header h1 { font-size: 38px; margin-bottom: 14px; }
+.page-header p { font-size: 16px; color: #52525B; max-width: 540px; margin: 0 auto; line-height: 1.6; }
+
+.offer-note { background: #F4F2FA; border-left: 3px solid #4C4272; border-radius: 6px; padding: 16px 20px; margin: 36px 0; font-size: 14px; color: #3F3F46; line-height: 1.6; }
+.offer-note strong { color: #4C4272; }
+
+main { padding: 20px 0 70px; }
+form { display: flex; flex-direction: column; gap: 18px; }
+label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+input, textarea, select { width: 100%; padding: 12px 14px; border: 1px solid #E4E4E7; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 15px; }
+input:focus, textarea:focus, select:focus { outline: none; border-color: #4C4272; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+textarea { resize: vertical; min-height: 100px; }
+.consent { font-size: 12px; color: #A1A1AA; line-height: 1.5; }
+.submit-btn { background: #4C4272; color: #fff; border: none; padding: 15px; border-radius: 10px; font-weight: 600; font-size: 16px; cursor: pointer; }
+.submit-btn:hover { background: #3A3358; }
+
+.direct-contact { margin-top: 50px; padding-top: 34px; border-top: 1px solid #EDEDF2; text-align: center; }
+.direct-contact h3 { font-size: 16px; margin-bottom: 14px; color: #52525B; font-weight: 600; }
+.direct-contact p { font-size: 15px; margin-bottom: 6px; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.footer-links { display: flex; gap: 24px; font-size: 14px; color: #52525B; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .row2 { grid-template-columns: 1fr; }
+}
+</style>
 </head>
-<body class="bg-trilumen-primary text-white">
+<body>
 
-    <!-- Navigation -->
-    <nav class="bg-trilumen-primary text-white sticky top-0 z-50 shadow-2xl border-b border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems</span>
-            </a>
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="logo">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html" class="current">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="services.html">Services</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
 
-            <!-- Desktop Links -->
-            <div class="hidden md:flex space-x-6 text-sm font-medium items-center">
-                <a href="services.html" class="hover:text-trilumen-secondary transition duration-300">Services & Tech</a>
-                <a href="faq.html" class="hover:text-trilumen-secondary transition duration-300">FAQ</a>
-                <a href="contact.html" class="text-trilumen-secondary font-bold transition duration-300">Quote / Contact</a>
-                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-lg">
-                    Get FREE Estimate
-                </a>
-            </div>
+<section class="page-header">
+<div class="wrap">
+<h1>Let's Build.</h1>
+<p>Tell us what's going on with your systems. We'll set up a free strategy call — no commitment, just a real conversation about where you stand.</p>
+</div>
+</section>
 
-            <!-- Mobile CTA and Hamburger Icon -->
-            <div class="md:hidden flex items-center">
-                <a href="contact.html" class="bg-trilumen-secondary text-trilumen-primary font-bold py-2 px-3 rounded-lg hover:bg-yellow-400 transition duration-300 shadow-md mr-3 text-sm">
-                    Get Quote
-                </a>
-                <button id="mobile-menu-button-contact" class="p-2 rounded-md hover:bg-trilumen-accent focus:outline-none focus:ring-2 focus:ring-trilumen-secondary">
-                    <!-- Hamburger Icon -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu (Collapsible) -->
-        <div id="mobile-menu-contact" class="hidden md:hidden bg-trilumen-accent">
-            <a href="index.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Home</a>
-            <a href="services.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Services & Tech</a>
-            <a href="faq.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">FAQ</a>
-            <a href="contact.html" class="block px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Quote / Contact</a>
-        </div>
-    </nav>
+<main>
+<div class="wrap">
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        document.getElementById('mobile-menu-button-contact').addEventListener('click', function() {
-            document.getElementById('mobile-menu-contact').classList.toggle('hidden');
-        });
-    </script>
+<form action="https://formspree.io/f/xeaoqjgn" method="POST">
+<input type="hidden" name="_gotcha" style="display:none">
+<input type="hidden" name="_next" value="https://trilumensystems.com/success.html">
+<input type="hidden" name="_subject" value="New inquiry from TriLumen Systems website">
 
+<div class="row2">
+<div>
+<label for="name">Full Name</label>
+<input type="text" name="name" id="name" required>
+</div>
+<div>
+<label for="company">Company</label>
+<input type="text" name="company" id="company" required>
+</div>
+</div>
 
-    <main class="py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-bg-light p-8 rounded-2xl shadow-2xl border border-gray-300 text-gray-800">
-                <h1 class="text-4xl font-extrabold text-trilumen-primary mb-3 text-center">Request Your FREE Virtual Estimate</h1>
-                <p class="text-center text-lg text-gray-600 mb-8">
-                    Get a price range fast. We use high-resolution satellite mapping (Google Earth/GIS) to measure your exact roofline and property perimeter.
-                </p>
+<div class="row2">
+<div>
+<label for="email">Email Address</label>
+<input type="email" name="email" id="email" required>
+</div>
+<div>
+<label for="phone">Phone Number</label>
+<input type="tel" name="phone" id="phone" required>
+</div>
+</div>
 
-                <!-- FINALIZED FORM STRUCTURE WITH NO EMAIL CONFIRMATION -->
-                <div class="bg-trilumen-secondary p-4 rounded-lg text-trilumen-primary font-semibold text-center mb-6">
-                    <p class="mb-2"><strong>STEP 1: Submit the form below for a fast estimate.</strong></p>
-                    <p class="text-sm">
-                        Your request will be sent directly to our estimate team.
-                    </p>
-                </div>
-                
-                <!-- START OF FREE FORM BACKEND (FORMSPREE URL EMBEDDED) -->
-                <form action="https://formspree.io/f/myzrjrep" method="POST" class="space-y-4">
-                    
-                    <!-- HIDDEN FIELDS FOR SPAM PROTECTION AND REDIRECT -->
-                    <input type="hidden" name="_gotcha" style="display:none"> <!-- Spam protection -->
-                    <input type="hidden" name="_next" value="https://trilumensystems.com/index.html">
-                    <input type="hidden" name="_homepage" value="https://trilumensystems.com/index.html">
+<div>
+<label for="interest">What's going on?</label>
+<textarea name="interest" id="interest" placeholder="Tell us about your systems, what's not working, or what you're hoping to fix."></textarea>
+</div>
 
-                    <!-- ALL FIELDS ARE REQUIRED BY THE 'required' ATTRIBUTE -->
-                    <div><label for="name" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" name="name" id="name" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div><label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label><input type="tel" name="phone" id="phone" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
-                        <!-- EMAIL FIELD - LABEL TEXT CLEANED -->
-                        <div><label for="email" class="block text-sm font-medium text-gray-700">Email Address</label><input type="email" name="email" id="email" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
-                    </div>
-                    
-                    <div><label for="address" class="block text-sm font-medium text-gray-700">Project Address</label><input type="text" name="address" id="address" required class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent"></div>
-                    
-                    <div><label for="interest" class="block text-sm font-medium text-gray-700">Describe Your Interest (Roofline, Landscape, Warranty, etc.)</label><textarea id="interest" name="interest" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:border-trilumen-accent focus:ring-trilumen-accent" placeholder="I'm interested in the roofline lights and the 5-Year Extended Warranty!"></textarea></div>
+<p class="consent">By submitting this form, you agree to be contacted by TriLumen Systems regarding your inquiry.</p>
 
-                    <!-- IMPLICIT CONSENT MARKETING DISCLOSURE -->
-                    <p class="text-xs text-gray-500 pt-2">
-                        By submitting this form, you agree to receive follow-up correspondence regarding your quote and agree to receive occasional promotional emails from TriLumen Systems.
-                    </p>
+<button type="submit" class="submit-btn">Send & Book a Call</button>
+</form>
 
-                    <button type="submit" class="w-full bg-trilumen-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-trilumen-accent transition duration-300 shadow-md transform hover:scale-100">
-                        Send My Virtual Quote Request
-                    </button>
-                    <p class="text-xs text-center text-gray-500 mt-4">*All estimates are preliminary and subject to final on-site verification.</p>
-                </form>
-                <!-- END OF LEAD CAPTURE FORM -->
-            </div>
-            
-            <!-- Contact Information -->
-            <div class="mt-12 p-6 bg-gray-800 rounded-xl shadow-lg text-white text-center">
-                <h2 class="text-2xl font-bold text-trilumen-secondary mb-4">Direct Contact Information</h2>
-                <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-8 text-lg">
-                    <span class="inline-flex items-center font-semibold">
-                        <span class="mr-2 text-trilumen-secondary">📞</span>
-                        (570) 392-9116
-                    </span>
-                    <span class="inline-flex items-center font-semibold">
-                        <span class="mr-2 text-trilumen-secondary">✉️</span>
-                        info@trilumensystems.com
-                    </span>
-                </div>
-            </div>
-        </div>
-    </main>
+<div class="direct-contact">
+<h3>Or reach us directly</h3>
+<p>📞 (570) 392-9116</p>
+<p>✉️ hello@trilumensystems.com</p>
+</div>
 
-    <!-- Text Callout Section -->
-    <div class="bg-trilumen-primary py-8 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="text-2xl font-extrabold text-trilumen-secondary">
-            Ready to Start? <span class="text-white">Text (570) 392-9116</span> for the Fastest Service!
-        </h3>
-        <p class="text-gray-400 mt-2 text-base">We can often start your virtual quote process immediately via text message.</p>
-    </div>
+</div>
+</main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-8 border-t-8 border-trilumen-accent">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <a href="index.html" class="flex items-center justify-center space-x-2 mb-4">
-                <span class="text-xl font-bold tracking-tight text-trilumen-secondary">TriLumen Systems | NEPA's Smart Lighting Experts</span>
-            </a>
-            <p class="mb-4">
-                Serving Scranton, Wilkes-Barre, Hazleton, Back Mountain, The Poconos, and surrounding NEPA communities.
-            </p>
-            <div class="space-x-4 mb-4">
-                <span class="inline-flex items-center">
-                    <span class="mr-2 text-trilumen-secondary">📞</span>
-                    (570) 392-9116
-                </span>
-                <span class="inline-flex items-center">
-                    <span class="mr-2 text-trilumen-secondary">✉️</span>
-                    info@trilumensystems.com
-                </span>
-            </div>
-            <p class="text-xs text-gray-500">
-                © 2025 TriLumen Systems. All Rights Reserved. Fully Insured and HICPA Registered (Pending threshold).
-            </p>
-        </div>
-    </footer>
+<footer>
+<div class="footer-inner">
+<div>
+<div class="logo">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
 </body>
 </html>
-
