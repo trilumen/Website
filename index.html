@@ -139,21 +139,38 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 
 <section class="hero">
 <svg class="hero-beams" viewBox="0 0 1140 500" preserveAspectRatio="xMidYMid slice">
+<defs>
+<filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+<feGaussianBlur stdDeviation="4" result="blur"/>
+<feMerge>
+<feMergeNode in="blur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+<radialGradient id="dotGrad">
+<stop offset="0%" stop-color="#8B5CF6" stop-opacity="1"/>
+<stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="dotGradFinal">
+<stop offset="0%" stop-color="#4C4272" stop-opacity="1"/>
+<stop offset="100%" stop-color="#4C4272" stop-opacity="0"/>
+</radialGradient>
+</defs>
 <path d="M -50 60 C 250 60, 400 260, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
 <path d="M -50 260 C 250 260, 400 260, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
 <path d="M -50 440 C 250 440, 400 290, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
 <path d="M 620 268 C 800 268, 1000 262, 1190 258" fill="none" stroke="#E5E1F0" stroke-width="5"/>
-<circle r="5" fill="#6B5FA0">
+<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
 <animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 60 C 250 60, 400 260, 620 268"/>
 </circle>
-<circle r="5" fill="#6B5FA0">
+<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
 <animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 260 C 250 260, 400 260, 620 268"/>
 </circle>
-<circle r="5" fill="#6B5FA0">
+<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
 <animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 440 C 250 440, 400 290, 620 268"/>
 </circle>
-<circle r="6" fill="#4C4272">
-<animateMotion dur="1.8s" begin="3.6s;beam.end" repeatCount="indefinite" id="beam" path="M 620 268 C 800 268, 1000 262, 1190 258"/>
+<circle r="12" fill="url(#dotGradFinal)" filter="url(#glow)">
+<animateMotion dur="1.8s" begin="3.6s;7.2s;10.8s;14.4s;18s;21.6s;25.2s;28.8s;32.4s;36s;39.6s;43.2s;46.8s;50.4s;54s;57.6s;61.2s;64.8s;68.4s;72s" path="M 620 268 C 800 268, 1000 262, 1190 258"/>
 </circle>
 </svg>
 <div class="wrap">
