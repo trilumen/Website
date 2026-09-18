@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems Help for Small Teams | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="trilumen-icon-32.png">
+<meta name="description" content="Fixed-price dashboard builds, automation audits, and flexible support retainers for small businesses running on QuickBooks, HubSpot, Zapier, Make, and Airtable.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 32px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.hero { background: #F4F2FA; padding: 70px 0 60px; text-align: center; }
+.tag { display: inline-block; font-size: 13px; color: #4C4272; letter-spacing: 1px; margin-bottom: 18px; text-transform: uppercase; font-weight: 600; }
+.hero h1 { font-size: 44px; line-height: 1.15; margin-bottom: 18px; max-width: 700px; margin-left: auto; margin-right: auto; }
+.hero .sub { font-size: 17px; color: #52525B; max-width: 620px; margin: 0 auto 30px; line-height: 1.6; }
+.btn-primary { display: inline-block; background: #4C4272; color: #fff; padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(76,66,114,0.22); }
+.btn-primary:hover { background: #3A3358; }
+
+.tools { padding: 36px 0; background: #fff; text-align: center; }
+.tools-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A1A1AA; margin-bottom: 18px; font-weight: 600; }
+.badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.badge { background: #F4F2FA; color: #4C4272; font-size: 14px; font-weight: 600; padding: 8px 18px; border-radius: 20px; border: 1px solid #E5E1F0; }
+
+.pain { background: #FAFAFA; padding: 60px 0; }
+.section-head { text-align: center; font-size: 30px; font-weight: 700; margin-bottom: 12px; }
+.section-sub { text-align: center; font-size: 15px; color: #71717A; max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
+.pain-item { background: #fff; border-left: 3px solid #4C4272; padding: 16px 20px; font-weight: 600; font-size: 15px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+
+.starter { padding: 70px 0; background: #fff; }
+.offer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+.offer-card { border: 1px solid #EDEDF2; border-radius: 14px; padding: 32px 28px; }
+.offer-card h3 { font-size: 20px; margin-bottom: 6px; }
+.offer-price { font-size: 28px; font-weight: 800; color: #4C4272; margin-bottom: 14px; }
+.offer-price span { font-size: 14px; font-weight: 500; color: #71717A; }
+.offer-card p { font-size: 14px; color: #52525B; line-height: 1.6; margin-bottom: 18px; }
+.offer-card ul { list-style: none; margin-bottom: 20px; }
+.offer-card li { font-size: 14px; color: #3F3F46; padding: 5px 0 5px 20px; position: relative; }
+.offer-card li::before { content: "—"; position: absolute; left: 0; color: #A399C9; }
+.btn-secondary { display: inline-block; border: 2px solid #4C4272; color: #4C4272; padding: 11px 26px; border-radius: 10px; font-weight: 600; font-size: 15px; width: 100%; text-align: center; }
+.btn-secondary:hover { background: #F4F2FA; }
+
+.retainer { padding: 70px 0; background: #18181B; color: #fff; }
+.retainer .section-head { color: #fff; }
+.retainer .section-sub { color: #A1A1AA; }
+.retainer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+.retainer-card { background: #232326; border-radius: 14px; padding: 32px 28px; }
+.retainer-card h3 { font-size: 20px; margin-bottom: 6px; }
+.retainer-price { font-size: 28px; font-weight: 800; color: #A399C9; margin-bottom: 4px; }
+.retainer-price span { font-size: 14px; font-weight: 500; color: #A1A1AA; }
+.retainer-hours { font-size: 13px; color: #A1A1AA; margin-bottom: 16px; }
+.retainer-card p { font-size: 14px; color: #D4D4D8; line-height: 1.6; margin-bottom: 18px; }
+.retainer-card .btn-primary { width: 100%; text-align: center; box-shadow: none; }
+
+.faq-mini { padding: 60px 0; background: #FAFAFA; max-width: 700px; margin: 0 auto; }
+.faq-mini h2 { font-size: 26px; text-align: center; margin-bottom: 30px; }
+.faq-mini-item { margin-bottom: 22px; }
+.faq-mini-item h4 { font-size: 15px; margin-bottom: 6px; }
+.faq-mini-item p { font-size: 14px; color: #52525B; line-height: 1.6; }
+
+.cta-band { background: #4C4272; color: #fff; padding: 56px 0; text-align: center; }
+.cta-band h2 { font-size: 28px; margin-bottom: 20px; }
+.cta-band .btn-primary { background: #fff; color: #4C4272; box-shadow: none; }
+.cta-band .btn-primary:hover { background: #F4F2FA; }
+.cta-band .btn-outline { display: inline-block; border: 2px solid #fff; color: #fff; padding: 13px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; margin-left: 14px; }
+.cta-band .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+.footer-links { display: flex; gap: 24px; font-size: 14px; color: #52525B; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .offer-grid, .retainer-grid, .pain-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<section class="hero">
+<div class="wrap">
+<div class="tag">Proudly Human Systems</div>
+<h1>Systems Help, Sized for a <em>Small Team</em></h1>
+<p class="sub">You don't need a five-step enterprise rollout to fix a broken automation or get your first real dashboard. We work in the tools you already run on — QuickBooks, HubSpot, Zapier, Make, and Airtable — with pricing that makes sense for a team wearing five hats.</p>
+<a href="contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+</section>
+
+<section class="tools">
+<p class="tools-label">Built for the Tools You Already Use</p>
+<div class="badge-row">
+<span class="badge">QuickBooks Online</span>
+<span class="badge">HubSpot</span>
+<span class="badge">Zapier</span>
+<span class="badge">Make.com</span>
+<span class="badge">Airtable</span>
+</div>
+</section>
+
+<section class="pain">
+<div class="wrap">
+<h2 class="section-head">Sound About Right?</h2>
+<p class="section-sub">Small teams don't need a full-blown systems overhaul. Usually it's one specific thing, standing in the way.</p>
+<div class="pain-grid">
+<div class="pain-item">Nobody on the team has time to "own" your systems</div>
+<div class="pain-item">A Zapier or Make automation that quietly broke months ago</div>
+<div class="pain-item">A spreadsheet doing the job a real dashboard should</div>
+<div class="pain-item">QuickBooks and your other tools that don't talk to each other</div>
+<div class="pain-item">Too small to hire IT, too busy to fix it yourself</div>
+<div class="pain-item">Not sure what's actually worth automating yet</div>
+</div>
+</div>
+</section>
+
+<section class="starter">
+<div class="wrap">
+<h2 class="section-head">Start Small</h2>
+<p class="section-sub">Fixed price, fixed scope — a real deliverable, not a sales pitch for something bigger.</p>
+<div class="offer-grid">
+<div class="offer-card">
+<h3>3-Hour Automation Audit</h3>
+<div class="offer-price">$375</div>
+<p>We look at one broken or clunky automation, figure out what's actually going wrong, and hand you a clear write-up of what to fix and how.</p>
+<ul>
+<li>One automation or workflow reviewed</li>
+<li>Root-cause write-up</li>
+<li>Fix recommendations you can act on yourself</li>
+</ul>
+<a href="contact.html" class="btn-secondary">Book This</a>
+</div>
+<div class="offer-card">
+<h3>Single Dashboard Build</h3>
+<div class="offer-price">$950</div>
+<p>One real dashboard, built in the tool you already use, pulling from your actual data — not a template you have to figure out yourself.</p>
+<ul>
+<li>One dashboard, one data source</li>
+<li>Built in QuickBooks, HubSpot, Airtable, or similar</li>
+<li>A short walkthrough so you know how to read it</li>
+</ul>
+<a href="contact.html" class="btn-secondary">Book This</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="retainer">
+<div class="wrap">
+<h2 class="section-head">Need Someone on Call?</h2>
+<p class="section-sub">For the ongoing stuff — a tweak here, a broken automation there — without hiring anyone or signing an enterprise contract.</p>
+<div class="retainer-grid">
+<div class="retainer-card">
+<h3>Starter Retainer</h3>
+<div class="retainer-price">$600<span>/mo</span></div>
+<div class="retainer-hours">5 hours a month</div>
+<p>Enough to keep the small stuff from piling up — a broken automation, a dashboard tweak, a quick question answered.</p>
+<a href="contact.html" class="btn-primary">Get Started</a>
+</div>
+<div class="retainer-card">
+<h3>Growth Retainer</h3>
+<div class="retainer-price">$1,100<span>/mo</span></div>
+<div class="retainer-hours">10 hours a month</div>
+<p>For teams actively building out their systems — more room for new automations, dashboard builds, and bigger fixes.</p>
+<a href="contact.html" class="btn-primary">Get Started</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="faq-mini">
+<h2>Quick Questions</h2>
+<div class="faq-mini-item">
+<h4>Do I need to know exactly what I need before booking a call?</h4>
+<p>No — most people don't. That's what the free call is for. We'll figure out together whether it's a quick audit, a single build, or ongoing support.</p>
+</div>
+<div class="faq-mini-item">
+<h4>What if I outgrow this and need something bigger later?</h4>
+<p>That happens, and it's a good problem to have. We also handle full ERP migrations, BI systems, and enterprise-scale automation — see our <a href="services.html" style="color:#4C4272; text-decoration:underline;">full services</a> if that's ever where you land.</p>
+</div>
+<div class="faq-mini-item">
+<h4>Are the retainer hours "use it or lose it"?</h4>
+<p>Hours don't carry over month to month, but we'll always tell you honestly if a given month looks light — no padding the clock.</p>
+</div>
+</section>
+
+<section class="cta-band">
+<div class="wrap">
+<h2>Let's Figure Out What You Actually Need</h2>
+<a href="contact.html" class="btn-primary">Book a Free Strategy Call</a>
+<a href="trilumen-small-business-overview.pdf" class="btn-outline">Download Your Quick-Look Sheet</a>
+</div>
+</section>
+
+<footer>
+<div class="wrap footer-inner">
+<div>
+<div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="trilumen-small-business-overview.pdf">Overview (PDF)</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+</body>
+</html>
