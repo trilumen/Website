@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Most AI Rollouts Fail Before They Even Launch | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="../trilumen-icon-32.png">
+<meta name="description" content="AI rollouts don't usually fail because of the technology. They fail because of what happens, or doesn't happen, after go-live.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 26px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.article-header { background: #F4F2FA; padding: 56px 0 44px; }
+.article-tag { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #4C4272; font-weight: 700; margin-bottom: 14px; }
+.article-header h1 { font-size: 36px; line-height: 1.2; margin-bottom: 16px; }
+.article-meta { font-size: 14px; color: #71717A; }
+
+/* PUBLISH DATE: edit the text inside #post-date below to change the displayed date */
+article { padding: 50px 0 70px; }
+article p { font-size: 16.5px; color: #3F3F46; line-height: 1.75; margin-bottom: 22px; }
+article h2 { font-size: 22px; margin: 40px 0 16px; }
+article .lede { font-size: 19px; color: #18181B; font-weight: 500; line-height: 1.6; }
+
+.close-cta { background: #4C4272; color: #fff; border-radius: 14px; padding: 34px 36px; margin-top: 40px; text-align: center; }
+.close-cta p { color: #fff; font-size: 15.5px; margin-bottom: 18px; }
+.btn-primary { display: inline-block; background: #fff; color: #4C4272; padding: 13px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; }
+.btn-primary:hover { background: #F4F2FA; }
+
+.back-link { font-size: 14px; color: #4C4272; font-weight: 600; display: inline-block; margin-top: 30px; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.footer-links { display: flex; gap: 20px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .article-header h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="../index.html" class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<header class="article-header">
+<div class="wrap-narrow">
+<div class="article-tag">Clarity</div>
+<h1>Why Most AI Rollouts Fail Before They Even Launch</h1>
+<p class="article-meta" id="post-date"><!-- EDIT DATE HERE --> September 22, 2026</p>
+</div>
+</header>
+
+<article>
+<div class="wrap-narrow">
+
+<p class="lede">Ask most companies why their AI rollout stalled, and they'll point to the model, the vendor, or the tool itself. That's almost never the real answer.</p>
+
+<p>We've watched this pattern repeat enough times to say it plainly: the technology usually works. What fails is everything around it, the part nobody budgets time or attention for, because it doesn't show up on a vendor's feature list.</p>
+
+<h2>The rollout isn't the finish line</h2>
+
+<p>Somewhere along the way, "go-live" became the milestone everyone celebrates. The system is deployed, the announcement email goes out, the project gets marked complete. But for the people actually expected to use it, day one of a new tool is day one of learning something new, not day one of adoption.</p>
+
+<p>If nobody's watching what happens in the weeks after launch, one of two things quietly occurs. Either people find workarounds back to the old process because the new one feels unfamiliar and risky, or they use the new tool just enough to look compliant, without ever trusting it with anything that actually matters.</p>
+
+<h2>Trust is the real bottleneck, not capability</h2>
+
+<p>This is especially true for AI tools specifically. A dashboard that's wrong once might get a shrug. An AI assistant that gives one bad answer, especially in front of a customer or a manager, can lose someone's trust permanently, even if it's right the other 99 times.</p>
+
+<p>That means the standard for AI adoption isn't just "does it work." It's "does the person using it believe it works," and those are two very different bars to clear. Closing that gap takes deliberate training, honest communication about where the tool is strong and where it isn't, and enough hands-on time that using it stops feeling like a risk.</p>
+
+<h2>What actually closes the gap</h2>
+
+<p>The rollouts that stick share a few things in common. Someone owns adoption specifically, not just deployment. There's a real feedback loop in the first few weeks, not a one-time training session and then silence. And leadership visibly uses the tool themselves, because nothing kills adoption faster than a system leadership quietly ignores.</p>
+
+<p>None of that is complicated. It's just rarely planned for, because it isn't the exciting part of the project. The demo is exciting. The go-live date is exciting. The unglamorous work of making sure people actually trust and use the thing three months later is where most rollouts quietly die.</p>
+
+<div class="close-cta">
+<p>Change management isn't something we add on at the end. It's built into every system we build from day one.</p>
+<a href="../contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+
+<a href="../clarity.html" class="back-link">← Back to Clarity</a>
+
+</div>
+</article>
+
+<footer>
+<div class="footer-inner">
+<div>
+<div class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
+    };
+    
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+</body>
+</html>
