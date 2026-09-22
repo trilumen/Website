@@ -89,6 +89,19 @@ h1 { font-size: 48px; line-height: 1.12; margin-bottom: 22px; }
 .credibility { background: #F4F2FA; padding: 50px 0; text-align: center; }
 .credibility p { font-size: 19px; font-weight: 600; max-width: 700px; margin: 0 auto; line-height: 1.5; }
 
+/* Clarity preview */
+.clarity-preview { padding: 80px 0; background: #fff; }
+.clarity-preview-head { text-align: center; margin-bottom: 44px; }
+.clarity-preview-head h2 { font-size: 32px; margin-bottom: 10px; }
+.clarity-preview-head p { font-size: 15.5px; color: #71717A; }
+.clarity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto 34px; }
+.clarity-card { border: 1px solid #EDEDF2; border-radius: 14px; padding: 28px 26px; transition: box-shadow 0.15s ease, transform 0.15s ease; }
+.clarity-card:hover { box-shadow: 0 8px 24px rgba(76,66,114,0.1); transform: translateY(-2px); }
+.clarity-card-date { font-size: 12px; color: #A1A1AA; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.clarity-card h3 { font-size: 19px; margin-bottom: 10px; line-height: 1.3; }
+.clarity-card p { font-size: 14.5px; color: #52525B; line-height: 1.6; }
+.clarity-view-all { text-align: center; }
+
 /* Closing CTA band */
 .cta-band { background: #4C4272; color: #fff; padding: 60px 0; text-align: center; }
 .cta-band h2 { font-size: 32px; margin-bottom: 24px; font-weight: 700; }
@@ -121,6 +134,9 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 <div class="nav-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
 <a href="contact.html" class="nav-cta">Book a Free Call</a>
@@ -132,6 +148,9 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 <div class="mobile-menu" id="mobileMenu">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
 <a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
@@ -193,10 +212,36 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <p class="tools-label">Systems We Work In</p>
 <div class="badge-row">
 <span class="badge">Microsoft 365 & Power Platform</span>
+<span class="badge">Google Workspace</span>
 <span class="badge">Tableau</span>
+</div>
+<p class="tools-label" style="margin-top: 22px;">ERP</p>
+<div class="badge-row">
 <span class="badge">NetSuite</span>
+<span class="badge">Odoo</span>
+<span class="badge">Acumatica</span>
+<span class="badge">Sage Intacct</span>
+</div>
+<p class="tools-label" style="margin-top: 22px;">Warehouse Management</p>
+<div class="badge-row">
 <span class="badge">Körber WMS</span>
+<span class="badge">Oracle WMS Cloud</span>
+<span class="badge">Softeon</span>
+<span class="badge">Made4Net</span>
+</div>
+<p class="tools-label" style="margin-top: 22px;">Delivery & Logistics</p>
+<div class="badge-row">
 <span class="badge">Bringg</span>
+<span class="badge">Onfleet</span>
+<span class="badge">Routific</span>
+<span class="badge">eLogii</span>
+</div>
+<p class="tools-label" style="margin-top: 22px;">Data & Warehousing</p>
+<div class="badge-row">
+<span class="badge">Google BigQuery</span>
+<span class="badge">Managed PostgreSQL</span>
+<span class="badge">DuckDB</span>
+<span class="badge">dbt</span>
 </div>
 <p class="tools-label" style="margin-top: 22px;">And the Tools Small Businesses Already Run On</p>
 <div class="badge-row">
@@ -280,6 +325,35 @@ document.querySelectorAll('.tile').forEach(tile => {
 </div>
 </section>
 
+<section class="clarity-preview">
+<div class="wrap">
+<div class="clarity-preview-head">
+<h2>Latest from <em>Clarity</em></h2>
+<p>Real answers on systems, AI, and the problems that come with them.</p>
+</div>
+<div class="clarity-grid">
+
+<!-- Most recent post -->
+<a href="clarity/fractional-vs-full-project.html" class="clarity-card">
+<div class="clarity-card-date"><!-- EDIT DATE HERE --> September 22, 2026</div>
+<h3>Fractional vs. Full Project: How to Know Which One Your Business Actually Needs</h3>
+<p>Not every systems problem needs a full project. Here's how to tell which kind of help actually fits.</p>
+</a>
+
+<!-- Second most recent post -->
+<a href="clarity/why-kpi-dashboard-isnt-used.html" class="clarity-card">
+<div class="clarity-card-date"><!-- EDIT DATE HERE --> September 15, 2026</div>
+<h3>Why Your KPI Dashboard Isn't Being Used (And It's Not a Training Problem)</h3>
+<p>A dashboard nobody opens usually isn't a training failure. It's a design failure.</p>
+</a>
+
+</div>
+<div class="clarity-view-all">
+<a href="clarity.html" class="btn-secondary">View All Clarity Insights →</a>
+</div>
+</div>
+</section>
+
 <section class="cta-band">
 <div class="wrap">
 <h2>Ready to Start?</h2>
@@ -297,6 +371,9 @@ document.querySelectorAll('.tile').forEach(tile => {
 <div class="footer-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
 <a href="trilumen-overview.pdf">Overview (PDF)</a>
@@ -308,8 +385,9 @@ NEPA & remote nationwide<br>
 © 2026 TriLumen Systems
 </div>
 </div>
-  </footer>
-  <!--Start of Conferbot Script-->
+</footer>
+
+<!--Start of Conferbot Script-->
 <script type="text/javascript">
   (function (d, s, id) {
     var js, el = d.getElementsByTagName(s)[0];
