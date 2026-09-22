@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="trilumen-icon-32.png">
+<meta name="description" content="A principal consultant on every engagement, backed by a network of vetted specialists brought in based on what your project actually needs.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 22px; align-items: center; font-size: 14.5px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-links a.current { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 18px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.page-header { background: #F4F2FA; padding: 60px 0 50px; text-align: center; }
+.page-header h1 { font-size: 40px; margin-bottom: 14px; }
+.page-header p { font-size: 17px; color: #52525B; max-width: 620px; margin: 0 auto; line-height: 1.6; }
+
+.framing { padding: 56px 0; border-bottom: 1px solid #F0F0F3; }
+.framing p { font-size: 15.5px; color: #3F3F46; line-height: 1.75; margin-bottom: 16px; }
+.framing-box { background: #F4F2FA; border-radius: 12px; padding: 26px 30px; margin-top: 20px; }
+.framing-box p { font-size: 15px; font-weight: 600; color: #3F3F46; margin: 0; line-height: 1.6; }
+
+.team-section { padding: 60px 0 80px; }
+.group { margin-bottom: 50px; }
+.group:last-child { margin-bottom: 0; }
+.group-title { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #4C4272; font-weight: 700; margin-bottom: 22px; }
+.role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.role-grid.single { grid-template-columns: 1fr; max-width: 560px; }
+.role-card { border: 1px solid #EDEDF2; border-radius: 12px; padding: 24px 26px; }
+.role-card h3 { font-size: 16.5px; margin-bottom: 8px; }
+.role-card p { font-size: 14px; color: #52525B; line-height: 1.6; }
+.role-card.lead { background: #4C4272; border-color: #4C4272; }
+.role-card.lead h3 { color: #fff; }
+.role-card.lead p { color: #E5E1F0; }
+
+.cta-band { background: #18181B; color: #fff; padding: 60px 0; text-align: center; }
+.cta-band h2 { font-size: 28px; margin-bottom: 20px; }
+.btn-primary { display: inline-block; background: #4C4272; color: #fff; padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 16px; }
+.btn-primary:hover { background: #5B5088; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+.footer-links { display: flex; gap: 18px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+}
+@media (max-width: 700px) {
+  .role-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html" class="current">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<section class="page-header">
+<div class="wrap">
+<h1>Built Around <em>Specialists</em>, Not Generalists</h1>
+<p>The right expert for the actual problem in front of us, not one person stretched across every discipline.</p>
+</div>
+</section>
+
+<section class="framing">
+<div class="wrap-narrow">
+<p>We don't put headshots and bios on this page. Not because there's nothing behind the work, but because the right team for your project depends entirely on what your project actually needs.</p>
+<p>Every engagement is led by a principal consultant from first call through delivery, backed by a network of vetted specialists brought in based on the specific problem at hand. You're not getting a generalist stretched thin across a dozen disciplines. You're getting the right specialist for the right part of the job, the same reason we don't name clients on this site either. The work speaks for itself, and so does the structure behind it.</p>
+<div class="framing-box">
+<p>One consistent point of contact leads every project. The specialists change depending on what you actually need, the relationship and accountability don't.</p>
+</div>
+</div>
+</section>
+
+<section class="team-section">
+<div class="wrap">
+
+<div class="group">
+<div class="group-title">Leadership</div>
+<div class="role-grid single">
+<div class="role-card lead">
+<h3>Solutions Architect (Principal Consultant)</h3>
+<p>Leads every engagement from the first call through delivery. Designs the overall system architecture, decides which specialists a project actually needs, and stays the throughline from strategy to execution, so nothing gets lost in a handoff.</p>
+</div>
+</div>
+</div>
+
+<div class="group">
+<div class="group-title">Data & Analytics</div>
+<div class="role-grid">
+<div class="role-card">
+<h3>Analytics Engineers (dbt / SQL Experts)</h3>
+<p>Build the transformation logic that turns raw data into something trustworthy, the SQL and dbt models underneath every dashboard and report we deliver.</p>
+</div>
+<div class="role-card">
+<h3>Database Administrators / Cloud Engineers</h3>
+<p>Handle the infrastructure a system actually runs on: database performance, cloud architecture, and making sure the foundation can handle real production load, not just a demo.</p>
+</div>
+<div class="role-card">
+<h3>Business Intelligence (BI) Developers</h3>
+<p>Build the dashboards and reporting interfaces themselves, translating a data model into something a team actually opens and trusts every day.</p>
+</div>
+</div>
+</div>
+
+<div class="group">
+<div class="group-title">Systems & Integration</div>
+<div class="role-grid">
+<div class="role-card">
+<h3>Microsoft Power Platform Architects</h3>
+<p>Design and build on Power Apps, Power Automate, and Power BI specifically, the backbone of most of our workflow automation and internal tool work.</p>
+</div>
+<div class="role-card">
+<h3>Integration Developers (iPaaS Experts)</h3>
+<p>Connect the systems that weren't built to talk to each other, a CRM to an ERP, one platform to another, handling the sync logic, error handling, and edge cases that make an integration actually reliable.</p>
+</div>
+<div class="role-card">
+<h3>ERP / WMS Functional Consultants</h3>
+<p>Bring deep, hands-on experience with specific ERP and warehouse management platforms, understanding not just the software but how a real warehouse or finance team actually uses it day to day.</p>
+</div>
+</div>
+</div>
+
+<div class="group">
+<div class="group-title">Strategy & Adoption</div>
+<div class="role-grid">
+<div class="role-card">
+<h3>Business Systems Analysts (BSAs)</h3>
+<p>Translate between what a business actually needs and what gets built, mapping current-state processes and making sure a technical solution solves the real problem, not just the one that got written down first.</p>
+</div>
+<div class="role-card">
+<h3>Change Management & Training Specialists</h3>
+<p>Handle the adoption side of every engagement: training, rollout planning, and the ongoing support that makes sure a new system actually gets used, not just installed.</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="cta-band">
+<div class="wrap">
+<h2>Talk to the Person Who'll Actually Run Your Project</h2>
+<a href="contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+</section>
+
+<footer>
+<div class="wrap footer-inner">
+<div>
+<div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="trilumen-overview.pdf">Overview (PDF)</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
+    };
+    
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+</body>
+</html>
