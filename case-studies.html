@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="trilumen-icon-32.png">
+<meta name="description" content="Real projects, real problems, real results — presented without client names, out of respect for the confidentiality every engagement deserves.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-links a.current { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.page-header { background: #F4F2FA; padding: 60px 0 50px; text-align: center; }
+.page-header h1 { font-size: 40px; margin-bottom: 14px; }
+.page-header p { font-size: 17px; color: #52525B; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+
+.trust-section { padding: 56px 0; border-bottom: 1px solid #F0F0F3; }
+.trust-section h2 { font-size: 24px; margin-bottom: 16px; text-align: center; }
+.trust-section p { font-size: 15.5px; color: #3F3F46; line-height: 1.7; margin-bottom: 16px; }
+.trust-box { background: #F4F2FA; border-radius: 12px; padding: 26px 30px; margin-top: 24px; }
+.trust-box h3 { font-size: 15px; color: #4C4272; margin-bottom: 8px; }
+.trust-box p { font-size: 14px; color: #3F3F46; margin-bottom: 0; }
+
+.case-card { padding: 64px 0; border-bottom: 1px solid #F0F0F3; }
+.case-card:nth-child(even) { background: #FAFAFA; }
+.case-label { display: inline-block; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #4C4272; font-weight: 700; background: #F4F2FA; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; }
+.case-card h2 { font-size: 28px; margin-bottom: 30px; max-width: 760px; }
+.case-section { margin-bottom: 26px; }
+.case-section h3 { font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; color: #71717A; font-weight: 700; margin-bottom: 8px; }
+.case-section p { font-size: 15.5px; color: #3F3F46; line-height: 1.7; max-width: 780px; }
+.case-section p + p { margin-top: 12px; }
+.result-box { background: #4C4272; color: #fff; border-radius: 10px; padding: 20px 24px; max-width: 780px; }
+.result-box p { color: #fff; font-weight: 600; font-size: 16px; margin: 0; }
+.diagram-wrap { max-width: 780px; margin: 20px 0; background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; padding: 20px; }
+.methodology-list { list-style: none; max-width: 780px; }
+.methodology-list li { margin-bottom: 16px; font-size: 15.5px; color: #3F3F46; line-height: 1.7; }
+.methodology-list li strong { color: #18181B; }
+.btn-download { display: inline-flex; align-items: center; gap: 8px; border: 2px solid #4C4272; color: #4C4272; padding: 11px 22px; border-radius: 10px; font-weight: 600; font-size: 14px; margin-top: 8px; }
+.btn-download:hover { background: #F4F2FA; }
+
+.cta-band { background: #4C4272; color: #fff; padding: 60px 0; text-align: center; }
+.cta-band h2 { font-size: 30px; margin-bottom: 20px; }
+.btn-primary { display: inline-block; background: #fff; color: #4C4272; padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 16px; }
+.btn-primary:hover { background: #F4F2FA; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+.footer-links { display: flex; gap: 20px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+svg .th { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; fill: #ffffff; }
+svg .ts { font-family: 'Inter', sans-serif; font-size: 11px; fill: #ffffff; opacity: 0.85; }
+svg .th-dark { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; fill: #18181B; }
+svg .arr { stroke: #B5AFCB; stroke-width: 1.5; }
+svg rect.n-purple { fill: #4C4272; stroke: #3A3358; }
+svg rect.n-violet { fill: #6B5FA0; stroke: #5B5088; }
+svg rect.n-dark { fill: #3E3760; stroke: #2E2948; }
+svg rect.n-light { fill: #F4F2FA; stroke: #E5E1F0; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .case-card h2 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html" class="current">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<section class="page-header">
+<div class="wrap">
+<h1>Problems Over <em>Portfolios</em></h1>
+<p>Real projects, real complications, real results. Presented without a single client name attached.</p>
+</div>
+</section>
+
+<section class="trust-section">
+<div class="wrap-narrow">
+<h2>Why We Don't Name Our Clients</h2>
+<p>We don't name our clients. Not because we're hiding anything, but because their systems, their data structure, and their internal workflows aren't ours to show off. The same NDA we'd sign to protect your business is one we've already signed for theirs.</p>
+<p>What follows are real projects, real problems, and real numbers. Just without the names attached.</p>
+<div class="trust-box">
+<h3>How We Handle Data Isolation & Security</h3>
+<p>Every client's systems live in their own isolated environment. We don't reuse a client's specific automation logic, prompts, or data structure for anyone else, not in aggregate, not anonymized, not as a "template" for the next project. What we build for one business stays with that business.</p>
+</div>
+</div>
+</section>
+
+<!-- CASE STUDY 1: BI -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Large National Retailer · BI & Targeted Marketing</span>
+<h2>Turning a Cold Call List Into a Targeted Outreach Engine</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>During a NetSuite implementation for a large retailer, prospecting for returning customers was still happening cold, the same outreach for someone who'd bought three times last year as someone who'd never purchased at all.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>We built a dashboard surfacing customer purchasing patterns directly from the new system: when a customer historically buys, how much they typically spend, and how they pay. Instead of a generic call list, sales could prioritize outreach around a customer's actual buying rhythm, reaching people close to when they were likely to purchase again, not months off from it.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>Customers reached through the targeted outreach returned at a 50% higher rate than those contacted the old way.</p></div>
+</div>
+
+<a href="case-study-bi-targeting.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 1B: DATA STACK -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Small Textile Manufacturer (200 Employees) · Modern Data Stack</span>
+<h2>Enterprise-Grade Analytics Without the Enterprise Bill</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>A 200-employee textile manufacturer had outgrown spreadsheets and was trying to get live reporting directly off their operational PostgreSQL database. It wasn't working, running analytical queries against a live transactional system slowed down the actual business software people depended on every day. Looking for a real fix, they'd started pricing out enterprise data platforms, Fivetran, Snowflake, dbt Enterprise, and found the cost and complexity genuinely alarming for a business their size, thousands of dollars a month, and infrastructure that would strain their existing legacy systems rather than work with them. The owner was frustrated and not sure there was a version of this that actually fit their business.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>We didn't put them on the same stack a much larger company would use. We kept managed PostgreSQL as their transactional database, exactly what it's built for, but separated the analytics layer out entirely so heavy reporting queries never touch the live system again. For transformation, we used DuckDB, which runs in-memory on serverless infrastructure with no standing server cost, paired with dbt to write clean, modular, version-controlled SQL.</p>
+<p>Google BigQuery still has a role, but not as the everyday engine. We use it strictly as long-term cold storage, a monthly archive push, so historical data stays searchable and ready for future analysis without paying to keep a massive warehouse running 24/7 for day-to-day reporting.</p>
+<p>Because the transformation logic lives in dbt, it's self-documenting. If a new manager joins a year from now, they're not stuck guessing how a metric is calculated, they can open the documentation and see exactly how data moves from PostgreSQL through DuckDB to the dashboard.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>A full modern data stack running for roughly $60 to $230 a month, against enterprise-equivalent pricing that would have landed between $1,200 and over $3,000 a month for the same job. Enterprise-grade speed and reliability, at a cost that actually made sense for a 200-person business, with none of the "one developer holds all the knowledge" risk that comes with undocumented custom pipelines.</p></div>
+</div>
+
+<a href="case-study-data-stack.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 2: AI / COPILOT -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Enterprise Workforce · Microsoft Copilot Deployment</span>
+<h2>Rolling Out Copilot Without Exposing What It Shouldn't</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>Turning on Copilot for a large, multi-department workforce without first locking down file permissions is how employees end up accidentally seeing executive salaries and confidential data on day one. At enterprise scale, "just-in-time" permissions are almost always messy, and Copilot will surface anything it can technically reach.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>Before a single license got assigned, we ran a full data governance and permission audit, deploying automated scanners to identify over-shared sites, sensitive executive folders, and outdated financial data, then re-scoping those permissions so the system only ever surfaced what a given user was authorized to see.</p>
+<p>Sales and service needed fundamentally different builds. For sales, we deployed Copilot as a bridge between email, chat, and the CRM, so reps stopped manually updating pipeline stages, action items and follow-ups now generate themselves from a single prompt. For customer care, we anchored the assistant strictly to verified internal procedures and ticket history, not the open web, so a complex dispute surfaces the exact, correct resolution script in seconds.</p>
+<p>Rolling this out to thousands of users only works if people actually use it. We staged the deployment in cohorts and built a champion network, training power users in every department to build workflow-specific prompts, while standing up a usage dashboard for leadership to track real adoption.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>Sales reps stopped manually maintaining CRM records mid-conversation, resolution time on complex customer disputes dropped to seconds, and leadership had a real, measurable view of adoption, not just a license count.</p></div>
+</div>
+
+<a href="case-study-copilot.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 3: CLOUD / SHAREPOINT -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Enterprise Workforce · SharePoint Intranet Overhaul</span>
+<h2>From a 20-Minute Search to Three Seconds</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>At enterprise scale, deep folder structures had become where information went to die. Finding an active HR policy could take twenty minutes, if the version someone found was even still current.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>We moved the organization away from rigid folder hierarchies entirely, onto a flat architecture powered by structured metadata and a unified corporate taxonomy. We didn't just organize documents, we built a self-cleaning system: when a policy document hits a year old, it's automatically flagged for review and routed to its owner, then archived if it's not reapproved. Nobody sees outdated documentation by accident.</p>
+<p>Relevance mattered as much as accuracy. We built audience targeting mapped to role, so a frontline employee logging in sees shift schedules and safety updates, while an executive sees performance metrics and compliance trackers, all from the same root URL. To stop uncontrolled site sprawl, we also built a custom provisioning portal, a manager requesting a new collaboration space fills out a short form, and the system verifies ownership and naming requirements automatically before provisioning it, with zero manual IT intervention.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>Search time for critical documents dropped from roughly twenty minutes to seconds, with every employee seeing only current, compliant information, automatically enforced.</p></div>
+</div>
+
+<a href="case-study-intranet.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 4: ERP -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Large National Retailer · ERP, WMS & Delivery Migration</span>
+<h2>When Two Systems Stopped Agreeing With Each Other</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>A large national retailer migrating off legacy systems onto NetSuite, alongside a new warehouse management system and a last-mile delivery platform, all at once. The biggest issue wasn't any single system, it was the lag between them. An action in the warehouse system needed to reflect in NetSuite, and vice versa, and the volume of real-time data flowing between the two proved heavier than either system could sustain at launch.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>We stepped back to hourly reconciliation while we solved it properly, a combination of scaling system capacity and reducing the volume of data moving through each sync. That workaround ran for two weeks. We didn't move back to real-time until we were completely certain the fix would hold.</p>
+<p>That lag touched inventory accuracy, delivery scheduling, and the selling cycle while it was live. We'd recommended shifting go-live to a slower period to protect the customer experience during the transition. Leadership held the original date. We managed the impact as carefully as we could, but there were real failed deliveries and real customers affected during that window. We don't pretend otherwise.</p>
+<p>What we controlled was the response. We stood up twice-daily calls, sales, customer care, and operations, open to any leadership who wanted in, and built daily microlearning modules for every leader involved, started before go-live and continued through the full resolution.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>A fully resolved real-time sync within two weeks, an organization that stayed informed and trained throughout, and a hard lesson in what happens when a go-live date gets prioritized over a system's real capacity.</p></div>
+</div>
+
+<a href="case-study-erp-migration.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 5: WORKFLOW AUTOMATION -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Mid-Size Manufacturer · Equipment Maintenance Automation</span>
+<h2>Turning a Broken Machine Into a Self-Routing Ticket</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>On a manufacturing floor, every minute a critical machine sits broken destroys margin. A manual process, clipboards, phone calls, emails to a maintenance team, is too slow to catch that bleeding before it adds up.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<p>We replaced the paper trail with a three-button mobile form. An operator taps the machine ID, selects the issue type, photographs the fault, and submits. From there, a single automated flow branches three ways at once: an instant, photo-attached alert to the maintenance team, an automatic flag in the production schedule so a broken machine can't be accidentally assigned new work, and a live inventory check for the failed part.</p>
+
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 680 280" role="img">
+<title>Equipment downtime automation flow</title>
+<desc>An operator submits a form, triggering an automated flow that branches into three parallel actions: a maintenance alert, an asset lookup, and an inventory check.</desc>
+<defs><marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#B5AFCB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="230" y="20" width="220" height="44" rx="8" class="n-light"/>
+<text class="th-dark" x="340" y="42" text-anchor="middle" dominant-baseline="central">Operator submits form</text>
+<line x1="340" y1="64" x2="340" y2="84" class="arr" marker-end="url(#arrow1)"/>
+<rect x="240" y="84" width="200" height="44" rx="8" class="n-purple"/>
+<text class="th" x="340" y="106" text-anchor="middle" dominant-baseline="central">Automated flow triggers</text>
+<path d="M340 128 L340 148 L140 148 L140 168" fill="none" class="arr" marker-end="url(#arrow1)"/>
+<path d="M340 128 L340 168" fill="none" class="arr" marker-end="url(#arrow1)"/>
+<path d="M340 128 L340 148 L540 148 L540 168" fill="none" class="arr" marker-end="url(#arrow1)"/>
+<rect x="50" y="168" width="180" height="56" rx="8" class="n-violet"/>
+<text class="th" x="140" y="188" text-anchor="middle" dominant-baseline="central">Maintenance alert</text>
+<text class="ts" x="140" y="206" text-anchor="middle" dominant-baseline="central">Sent to Teams channel</text>
+<rect x="250" y="168" width="180" height="56" rx="8" class="n-violet"/>
+<text class="th" x="340" y="188" text-anchor="middle" dominant-baseline="central">Asset lookup</text>
+<text class="ts" x="340" y="206" text-anchor="middle" dominant-baseline="central">Flags machine as down</text>
+<rect x="450" y="168" width="180" height="56" rx="8" class="n-violet"/>
+<text class="th" x="540" y="188" text-anchor="middle" dominant-baseline="central">Inventory check</text>
+<text class="ts" x="540" y="206" text-anchor="middle" dominant-baseline="central">Orders part if needed</text>
+</svg>
+</div>
+
+<p>If the part isn't in stock, the system doesn't wait on a human to notice. It drafts a purchase request automatically. Below a set cost threshold, it approves and submits the order itself. Above that threshold, it escalates to the plant manager with the machine's downtime cost per hour shown right next to the part cost, approvable from a phone notification.</p>
+
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 680 400" role="img">
+<title>Inventory and escalation flow</title>
+<desc>Continuing from the inventory check: if the part is in stock, a pick ticket is generated. If not, a purchase request is drafted and automatically approved under 1500 dollars, or escalated to the plant manager above that threshold, before the purchase order is released.</desc>
+<defs><marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#B5AFCB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="250" y="20" width="180" height="44" rx="8" class="n-purple"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Inventory check</text>
+<path d="M340 64 L340 84 L160 84 L160 104" fill="none" class="arr" marker-end="url(#arrow2)"/>
+<path d="M340 64 L340 84 L460 84 L460 104" fill="none" class="arr" marker-end="url(#arrow2)"/>
+<rect x="70" y="104" width="180" height="56" rx="8" class="n-violet"/>
+<text class="th" x="160" y="124" text-anchor="middle" dominant-baseline="central">Part in stock</text>
+<text class="ts" x="160" y="142" text-anchor="middle" dominant-baseline="central">Pick ticket generated</text>
+<rect x="370" y="104" width="180" height="56" rx="8" class="n-purple"/>
+<text class="th" x="460" y="124" text-anchor="middle" dominant-baseline="central">Part not in stock</text>
+<text class="ts" x="460" y="142" text-anchor="middle" dominant-baseline="central">Draft PO created</text>
+<path d="M460 160 L460 180 L375 180 L375 220" fill="none" class="arr" marker-end="url(#arrow2)"/>
+<path d="M460 160 L460 180 L545 180 L545 220" fill="none" class="arr" marker-end="url(#arrow2)"/>
+<rect x="300" y="220" width="150" height="56" rx="8" class="n-violet"/>
+<text class="th" x="375" y="240" text-anchor="middle" dominant-baseline="central">Under $1,500</text>
+<text class="ts" x="375" y="258" text-anchor="middle" dominant-baseline="central">Auto-approved</text>
+<rect x="470" y="220" width="150" height="56" rx="8" class="n-dark"/>
+<text class="th" x="545" y="240" text-anchor="middle" dominant-baseline="central">Over $1,500</text>
+<text class="ts" x="545" y="258" text-anchor="middle" dominant-baseline="central">Needs approval</text>
+<path d="M375 276 L375 296 L460 296 L460 316" fill="none" class="arr" marker-end="url(#arrow2)"/>
+<path d="M545 276 L545 296 L460 296 L460 316" fill="none" class="arr"/>
+<rect x="370" y="316" width="180" height="44" rx="8" class="n-light"/>
+<text class="th-dark" x="460" y="338" text-anchor="middle" dominant-baseline="central">PO released</text>
+</svg>
+</div>
+
+<p>When the technician closes the ticket, the system calculates the full downtime duration automatically and logs it, feeding a live dashboard tracking mean time to repair, monthly cost of downtime, and which equipment fails most often.</p>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>What used to depend on someone finding the right person to call became a self-routing system, alerting the right team, protecting the schedule, and even purchasing its own replacement parts within a set budget, all without a single manual handoff.</p></div>
+</div>
+
+<a href="case-study-workflow-automation.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<!-- CASE STUDY 6: QUICKBOOKS/HUBSPOT -->
+<div class="case-card">
+<div class="wrap">
+<span class="case-label">Independent Engagement · Small Business Systems Integration</span>
+<h2>Making QuickBooks and HubSpot Actually Agree</h2>
+
+<div class="case-section">
+<h3>The Challenge</h3>
+<p>Sales and accounting systems that don't agree with each other create duplicate customers, mismatched revenue, and invoices nobody fully trusts.</p>
+</div>
+
+<div class="case-section">
+<h3>Our Approach</h3>
+<ul class="methodology-list">
+<li><strong>We started with the human problem, not the API.</strong> Before any technical work happened, we defined a clear boundary: HubSpot owns the pipeline, QuickBooks owns the money. Sales reps can trigger an invoice request from HubSpot, but they can never touch a financial record or tax setting directly.</li>
+<li><strong>Deduplication had to be strict, not cosmetic.</strong> We never relied on company name matching alone. A verified email domain or tax ID became the real unique identifier, so "Acme LLC" and "Acme Incorporated" didn't quietly become two different customers with a fractured history.</li>
+<li><strong>We synced line items, not just "Closed-Won."</strong> When a deal closed, we mapped the actual SKU-level line items to the right accounting category, applied the correct tax code by shipping address, and generated a draft invoice, not just a status flag someone had to interpret.</li>
+<li><strong>Automation breaks. We planned for that, not around it.</strong> If an API limit was hit or a required field was left blank, the system didn't fail silently. It sent a direct alert to whoever needed to fix it, with a link straight to the record.</li>
+</ul>
+</div>
+
+<div class="case-section">
+<h3>The Result</h3>
+<div class="result-box"><p>An integration that runs without silent failures, duplicate customers, or a bookkeeper reconciling invoices by hand every month.</p></div>
+</div>
+
+<a href="case-study-quickbooks-hubspot.pdf" class="btn-download">Download This Case Study (PDF)</a>
+</div>
+</div>
+
+<section class="cta-band">
+<div class="wrap">
+<h2>Have a Problem That Looks Like One of These?</h2>
+<a href="contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+</section>
+
+<footer>
+<div class="wrap footer-inner">
+<div>
+<div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="trilumen-overview.pdf">Overview (PDF)</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
+    };
+    
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+</body>
+</html>
