@@ -85,6 +85,20 @@ h1 { font-size: 48px; line-height: 1.12; margin-bottom: 22px; }
 .about h2 { font-size: 34px; margin-bottom: 16px; }
 .about p { font-size: 18px; color: #52525B; max-width: 640px; margin: 0 auto; line-height: 1.6; }
 
+/* Segmentation Fork */
+.fork { padding: 20px 0 60px; background: #fff; }
+.fork-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.fork-card { padding: 26px 28px; border-radius: 14px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.fork-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,66,114,0.1); }
+.fork-card.small-biz { background: #F4F2FA; border: 1px solid #E5E1F0; }
+.fork-card.enterprise { background: #18181B; }
+.fork-card p { font-size: 16px; font-weight: 600; line-height: 1.5; margin-bottom: 4px; }
+.fork-card.small-biz p { color: #18181B; }
+.fork-card.enterprise p { color: #fff; }
+.fork-card .arrow { font-size: 14px; font-weight: 600; }
+.fork-card.small-biz .arrow { color: #4C4272; }
+.fork-card.enterprise .arrow { color: #A399C9; }
+
 /* Credibility */
 .credibility { background: #F4F2FA; padding: 50px 0; text-align: center; }
 .credibility p { font-size: 19px; font-weight: 600; max-width: 700px; margin: 0 auto; line-height: 1.5; }
@@ -250,6 +264,21 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <span class="badge">Zapier</span>
 <span class="badge">Make.com</span>
 <span class="badge">Airtable</span>
+</div>
+</section>
+
+<section class="fork">
+<div class="wrap">
+<div class="fork-grid">
+<a href="small-business.html" class="fork-card small-biz">
+<p>Running a smaller team?</p>
+<span class="arrow">See our fixed-price small business sprint options →</span>
+</a>
+<a href="services.html" class="fork-card enterprise">
+<p>Scaling an enterprise infrastructure?</p>
+<span class="arrow">Explore our full lifecycle consulting capabilities →</span>
+</a>
+</div>
 </div>
 </section>
 

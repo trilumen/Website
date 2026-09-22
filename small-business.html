@@ -72,6 +72,13 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .retainer-card p { font-size: 14px; color: #D4D4D8; line-height: 1.6; margin-bottom: 18px; }
 .retainer-card .btn-primary { width: 100%; text-align: center; box-shadow: none; }
 
+.retainer-rules { margin-top: 50px; padding-top: 40px; border-top: 1px solid #333336; }
+.rules-head { font-size: 22px; text-align: center; margin-bottom: 26px; color: #fff; }
+.rules-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.rule-item { background: #232326; border-radius: 10px; padding: 20px 22px; }
+.rule-item h4 { font-size: 15px; color: #A399C9; margin-bottom: 8px; }
+.rule-item p { font-size: 13.5px; color: #D4D4D8; line-height: 1.6; }
+
 .faq-mini { padding: 60px 0; background: #FAFAFA; max-width: 700px; margin: 0 auto; }
 .faq-mini h2 { font-size: 26px; text-align: center; margin-bottom: 30px; }
 .faq-mini-item { margin-bottom: 22px; }
@@ -203,7 +210,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="retainer">
 <div class="wrap">
 <h2 class="section-head">Need Someone on Call?</h2>
-<p class="section-sub">For the ongoing stuff — a tweak here, a broken automation there — without hiring anyone or signing an enterprise contract.</p>
+<p class="section-sub">For the ongoing stuff — a tweak here, a broken automation there — without hiring anyone or signing an enterprise contract. Continuous stability, no hidden fees.</p>
 <div class="retainer-grid">
 <div class="retainer-card">
 <h3>Starter Retainer</h3>
@@ -220,6 +227,29 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <a href="contact.html" class="btn-primary">Get Started</a>
 </div>
 </div>
+
+<div class="retainer-rules">
+<h3 class="rules-head">The Rules of the Road</h3>
+<div class="rules-grid">
+<div class="rule-item">
+<h4>48-Hour Response SLA</h4>
+<p>Routine maintenance and bug fixes are triaged, resolved, and safely deployed within 48 business hours. No fire drills, no random 2am texts, a schedule you can actually count on.</p>
+</div>
+<div class="rule-item">
+<h4>We Don't Let Hours Quietly Expire</h4>
+<p>If your systems are stable and you have hours left late in the billing cycle, we don't let them disappear. We proactively run a system tune-up, clearing logs and optimizing performance, and send you a full technical receipt of exactly what we did.</p>
+</div>
+<div class="rule-item">
+<h4>The Overage Guarantee</h4>
+<p>We never perform unbilled hours and never charge you retroactively. If a fix needs more time than your retainer holds, we pause, map out what's needed, and let you choose how to proceed.</p>
+</div>
+<div class="rule-item">
+<h4>Clear Scope, No Surprises</h4>
+<p>Retainers cover maintaining and troubleshooting the systems we already built with you. A brand-new integration or feature is a separate, fixed-price project, we'll always tell you which one you're looking at.</p>
+</div>
+</div>
+</div>
+
 </div>
 </section>
 
