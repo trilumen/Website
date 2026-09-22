@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Signs Your Small Business Automation Is Quietly Broken | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="../trilumen-icon-32.png">
+<meta name="description" content="Automations rarely announce when they break. Here's what to actually watch for.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 26px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.article-header { background: #F4F2FA; padding: 56px 0 44px; }
+.article-tag { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #4C4272; font-weight: 700; margin-bottom: 14px; }
+.article-header h1 { font-size: 36px; line-height: 1.2; margin-bottom: 16px; }
+.article-meta { font-size: 14px; color: #71717A; }
+
+article { padding: 50px 0 70px; }
+article p { font-size: 16.5px; color: #3F3F46; line-height: 1.75; margin-bottom: 22px; }
+article h2 { font-size: 22px; margin: 40px 0 16px; }
+article .lede { font-size: 19px; color: #18181B; font-weight: 500; line-height: 1.6; }
+
+.close-cta { background: #4C4272; color: #fff; border-radius: 14px; padding: 34px 36px; margin-top: 40px; text-align: center; }
+.close-cta p { color: #fff; font-size: 15.5px; margin-bottom: 18px; }
+.btn-primary { display: inline-block; background: #fff; color: #4C4272; padding: 13px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; }
+.btn-primary:hover { background: #F4F2FA; }
+
+.back-link { font-size: 14px; color: #4C4272; font-weight: 600; display: inline-block; margin-top: 30px; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.footer-links { display: flex; gap: 20px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .article-header h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="../index.html" class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<header class="article-header">
+<div class="wrap-narrow">
+<div class="article-tag">Clarity</div>
+<h1>5 Signs Your Small Business Automation Is Quietly Broken</h1>
+<p class="article-meta" id="post-date"><!-- EDIT DATE HERE --> September 22, 2026</p>
+</div>
+</header>
+
+<article>
+<div class="wrap-narrow">
+
+<p class="lede">Automations don't usually fail loudly. There's no alarm, no red banner, no email saying "this stopped working." They just quietly stop doing what they used to, and everyone adjusts around it without ever saying so out loud.</p>
+
+<h2>It stops erroring, but it also stops working</h2>
+<p>The scariest automation failures aren't the ones that throw an error message. Those get noticed and fixed. The dangerous ones fail silently, a sync that quietly stops updating, a trigger that used to fire and now just doesn't, with nothing telling anyone it happened.</p>
+
+<h2>Someone starts "just double-checking it manually"</h2>
+<p>This is one of the clearest tells. If a person on your team has quietly started re-checking or re-entering something the automation was supposed to handle, that's not a habit, it's a workaround. People don't do extra manual work for no reason. They do it because they stopped trusting the system.</p>
+
+<h2>The output looks right, until it doesn't</h2>
+<p>A lot of broken automations aren't fully broken, they're partially broken. Ninety percent of the records sync correctly, and the other ten percent quietly don't, often the ten percent that matters most: a specific customer type, a specific product line, a specific edge case nobody accounted for when it was built.</p>
+
+<h2>Nobody remembers exactly how it was set up</h2>
+<p>If the person who built the automation left, or just doesn't remember the specifics anymore, that's a real risk sitting quietly in your systems. Automations that nobody currently understands are automations nobody can actually trust when something changes upstream.</p>
+
+<h2>What to actually do about it</h2>
+<p>None of this requires tearing anything down and starting over. Usually it just takes someone actually looking at what's running, checking it against what it's supposed to do, and writing down what they find.</p>
+
+<div class="close-cta">
+<p>If any of these sound familiar, a short audit is usually enough to find out exactly what's actually happening.</p>
+<a href="../contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+
+<a href="../clarity.html" class="back-link">← Back to Clarity</a>
+
+</div>
+</article>
+
+<footer>
+<div class="footer-inner">
+<div>
+<div class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
+    };
+    
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboards Are Not Decisions: Why More Data Isn't the Answer | TriLumen Systems</title>
+<link rel="icon" type="image/png" href="../trilumen-icon-32.png">
+<meta name="description" content="A dashboard can tell you what happened. It still takes people to know what to do about it.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 26px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+.article-header { background: #F4F2FA; padding: 56px 0 44px; }
+.article-tag { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #4C4272; font-weight: 700; margin-bottom: 14px; }
+.article-header h1 { font-size: 36px; line-height: 1.2; margin-bottom: 16px; }
+.article-meta { font-size: 14px; color: #71717A; }
+
+article { padding: 50px 0 70px; }
+article p { font-size: 16.5px; color: #3F3F46; line-height: 1.75; margin-bottom: 22px; }
+article h2 { font-size: 22px; margin: 40px 0 16px; }
+article .lede { font-size: 19px; color: #18181B; font-weight: 500; line-height: 1.6; }
+
+.close-cta { background: #4C4272; color: #fff; border-radius: 14px; padding: 34px 36px; margin-top: 40px; text-align: center; }
+.close-cta p { color: #fff; font-size: 15.5px; margin-bottom: 18px; }
+.btn-primary { display: inline-block; background: #fff; color: #4C4272; padding: 13px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; }
+.btn-primary:hover { background: #F4F2FA; }
+
+.back-link { font-size: 14px; color: #4C4272; font-weight: 600; display: inline-block; margin-top: 30px; }
+
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.footer-links { display: flex; gap: 20px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .article-header h1 { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="../index.html" class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+<a href="../contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<header class="article-header">
+<div class="wrap-narrow">
+<div class="article-tag">Clarity</div>
+<h1>Dashboards Are Not Decisions: Why More Data Isn't the Answer</h1>
+<p class="article-meta" id="post-date"><!-- EDIT DATE HERE --> September 22, 2026</p>
+</div>
+</header>
+
+<article>
+<div class="wrap-narrow">
+
+<p class="lede">It's tempting to believe that more data automatically means better decisions. In practice, most businesses don't have a data shortage. They have a clarity shortage.</p>
+
+<h2>A dashboard tells you what happened, not what to do</h2>
+<p>Revenue was down eight percent last month. Okay, now what? A dashboard can show you the number. It can't tell you whether that's a pricing problem, a staffing problem, a seasonal blip, or something worth panicking about. That gap, between the number and the decision, is where most businesses actually get stuck.</p>
+
+<h2>More metrics often means less clarity</h2>
+<p>Every metric added to a dashboard competes for attention with every other metric on it. Past a certain point, adding more numbers doesn't add insight, it adds noise, and makes the one number that actually matters harder to spot in the moment it matters.</p>
+
+<h2>The question every good KPI should answer</h2>
+<p>Before a metric earns a spot on a primary dashboard, it should survive one question: if this number turns red, what specific action does someone take? If there's no clear answer, the metric might still be worth tracking somewhere, but it doesn't belong on the screen people are supposed to make decisions from.</p>
+
+<h2>Numbers need people</h2>
+<p>Dashboards, automation, and AI can tell you what happened. It still takes a person, with context and judgment, to know what to actually do about it. The best BI work isn't the one with the most charts. It's the one that makes the next decision obvious.</p>
+
+<div class="close-cta">
+<p>If your dashboards are full but your decisions still feel foggy, the fix usually isn't more data. It's a different dashboard.</p>
+<a href="../contact.html" class="btn-primary">Book a Free Strategy Call</a>
+</div>
+
+<a href="../clarity.html" class="back-link">← Back to Clarity</a>
+
+</div>
+</article>
+
+<footer>
+<div class="footer-inner">
+<div>
+<div class="logo"><img src="../trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="../services.html">Services</a>
+<a href="../small-business.html">Small Business</a>
+<a href="../case-studies.html">Case Studies</a>
+<a href="../team.html">Team</a>
+<a href="../clarity.html">Clarity Insights</a>
+<a href="../faq.html">FAQ</a>
+<a href="../contact.html">Contact</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA & remote nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<!--Start of Conferbot Script-->
+<script type="text/javascript">
+  (function (d, s, id) {
+    var js, el = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.async = true;
+    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
+    js.id = id;
+    js.charset = 'UTF-8';
+    el.parentNode.insertBefore(js, el);
+    js.onload = function () {
+      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
+    };
+    
+  })(document, 'script', 'conferbot-js');
+</script>
+<!--End of Conferbot Script-->
+
+</body>
+</html>
