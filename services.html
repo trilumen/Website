@@ -58,9 +58,15 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .combo-arrow { font-size: 20px; color: #A399C9; flex-shrink: 0; }
 .combo-outcome { font-size: 15px; color: #E4E4E7; line-height: 1.5; }
 
-.areas-served { padding: 40px 0; text-align: center; background: #FAFAFA; }
-.areas-label { font-size: 15px; font-weight: 700; color: #18181B; margin-bottom: 4px; }
-.areas-text { font-size: 14px; color: #71717A; }
+.coverage { padding: 70px 0; background: #FAFAFA; }
+.coverage-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; }
+.coverage-text h2 { font-size: 28px; margin-bottom: 14px; }
+.coverage-text p { font-size: 15px; color: #52525B; line-height: 1.7; }
+.coverage-map { display: flex; justify-content: center; }
+
+@media (max-width: 800px) {
+  .coverage-inner { grid-template-columns: 1fr; }
+}
 
 .assessment { background: #4C4272; color: #fff; padding: 60px 0; text-align: center; }
 .assessment h2 { font-size: 30px; margin-bottom: 14px; }
@@ -257,10 +263,35 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 </div>
 </section>
 
-<section class="areas-served">
+<section class="coverage">
 <div class="wrap">
-<p class="areas-label">Northeastern PA</p>
-<p class="areas-text">With clients in New York, Philadelphia, and Allentown — plus remote support worldwide.</p>
+<div class="coverage-inner">
+<div class="coverage-text">
+<h2>Close Enough to Show Up, Built to Work Anywhere</h2>
+<p>We're based in Northeastern PA, within easy reach of New York and Philadelphia for on-site work when a project calls for it. For everything else, our systems and workflows are built to run just as well from anywhere, remote clients nationwide, no drop in how the work gets done.</p>
+</div>
+<div class="coverage-map">
+<svg width="340" height="320" viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="wash">
+<stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.08"/>
+<stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<circle cx="150" cy="170" r="140" fill="url(#wash)"/>
+<circle cx="150" cy="170" r="135" fill="none" stroke="#E5E1F0" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="150" cy="170" r="75" fill="none" stroke="#E5E1F0" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="150" y1="170" x2="255" y2="85" stroke="#C4BEDC" stroke-width="1.5"/>
+<line x1="150" y1="170" x2="245" y2="255" stroke="#C4BEDC" stroke-width="1.5"/>
+<circle cx="150" cy="170" r="8" fill="#4C4272"/>
+<text x="150" y="195" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#18181B">NEPA</text>
+<circle cx="255" cy="85" r="6" fill="#4C4272"/>
+<text x="266" y="89" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3F3F46">New York</text>
+<circle cx="245" cy="255" r="6" fill="#4C4272"/>
+<text x="256" y="259" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#3F3F46">Philadelphia</text>
+</svg>
+</div>
+</div>
 </div>
 </section>
 
