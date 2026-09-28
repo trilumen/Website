@@ -82,10 +82,23 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 /* Result */
 .result-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 18px; padding: 38px; max-width: 680px; margin: 0 auto; }
 .result-eyebrow { text-align: center; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #A1A1AA; font-weight: 700; margin-bottom: 14px; }
-.result-tiles { display: flex; gap: 10px; justify-content: center; margin-bottom: 18px; flex-wrap: wrap; }
-.result-tile { width: 62px; height: 62px; border-radius: 10px; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.result-tile span.sym { font-size: 19px; font-weight: 700; }
-.result-tile span.lbl { font-size: 8.5px; opacity: .85; margin-top: 2px; letter-spacing: .3px; }
+
+/* Periodic-table tile grid, matches the homepage's "What We Do" tiles */
+.periodic { display: grid; grid-template-columns: repeat(6, 78px); gap: 8px; justify-content: center; margin-bottom: 18px; }
+.tile { aspect-ratio: 1; border-radius: 10px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease, opacity .15s ease; color: #fff; position: relative; padding: 8px; display: flex; flex-direction: column; border: none; opacity: .32; }
+.tile:hover, .tile:focus { transform: scale(1.06); box-shadow: 0 8px 20px rgba(0,0,0,0.15); opacity: .55; }
+.tile.active { opacity: 1; outline: 3px solid #18181B; outline-offset: 2px; }
+.tile.active:hover { opacity: 1; }
+.tile .num { font-size: 9px; opacity: 0.7; font-weight: 500; text-align: left; }
+.tile .symbol { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+.tile .short { font-size: 7.5px; text-align: center; opacity: 0.85; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; }
+.p1 { background: #4C4272; } .p2 { background: #5B5088; } .p3 { background: #6B5FA0; }
+.p4 { background: #7C70B8; } .p5 { background: #5D5296; } .p6 { background: #3E3760; }
+.detail { min-height: 70px; max-width: 540px; margin: 0 auto 22px; background: #F4F2FA; border-radius: 10px; padding: 16px 20px; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.detail .name { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: #18181B; }
+.detail .desc { font-size: 13.5px; color: #52525B; line-height: 1.5; }
+.tile-hint { text-align: center; font-size: 12.5px; color: #A1A1AA; margin-bottom: 22px; }
+
 .result-name { text-align: center; font-size: 25px; font-weight: 800; margin-bottom: 10px; }
 .result-desc { text-align: center; color: #52525B; font-size: 15.5px; line-height: 1.65; max-width: 540px; margin: 0 auto 22px; }
 .result-because { background: #F4F2FA; border-radius: 12px; padding: 16px 20px; font-size: 14px; color: #3A3358; margin-bottom: 18px; line-height: 1.6; }
@@ -156,6 +169,9 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margi
   .menu-btn { display: block; }
   .page-header h1 { font-size: 30px; }
   .q-card, .result-card { padding: 24px; }
+}
+@media (max-width: 560px) {
+  .periodic { grid-template-columns: repeat(3, 72px); }
 }
 
 @media print {
@@ -275,12 +291,12 @@ var EMAIL = 'hello@trilumensystems.com';
    TILE DATA (matches the homepage periodic table)
    ============================================================ */
 var TILES = {
-  BI:       { name: 'BI Reporting & Dashboards',   sym: 'BI', color: '#4C4272', desc: "Power BI & Tableau dashboards leadership actually trusts and uses, not reports generated once and ignored." },
-  AI:       { name: 'Copilot & AI Automation',     sym: 'AI', color: '#5B5088', desc: "Microsoft Copilot deployment and AI-assisted workflows built with the team, not around them." },
-  Cloud:    { name: 'SharePoint & Cloud Migrations', sym: 'Cl', color: '#6B5FA0', desc: "Company-wide intranets and cloud migrations designed for real adoption, not just a completed deployment checklist." },
-  Change:   { name: 'Change Management & Adoption', sym: 'Ch', color: '#7C70B8', desc: "Training, rollout planning, and adoption tracking included in every engagement, because the best system in the world fails if nobody uses it." },
-  ERP:      { name: 'ERP & WMS Support',           sym: 'Er', color: '#5D5296', desc: "Guidance and hands-on support for ERP, warehouse management, and delivery platforms, working with whatever system you already run." },
-  Workflow: { name: 'Workflow Automation',         sym: 'Au', color: '#3E3760', desc: "Power Automate-driven automation that eliminates manual, repetitive tasks." }
+  BI:       { name: 'BI Reporting & Dashboards',   sym: 'BI', short: 'Reporting',  color: '#4C4272', desc: "Power BI & Tableau dashboards leadership actually trusts and uses, not reports generated once and ignored." },
+  AI:       { name: 'Copilot & AI Automation',     sym: 'AI', short: 'Automation', color: '#5B5088', desc: "Microsoft Copilot deployment and AI-assisted workflows built with the team, not around them." },
+  Cloud:    { name: 'SharePoint & Cloud Migrations', sym: 'Cl', short: 'Cloud',    color: '#6B5FA0', desc: "Company-wide intranets and cloud migrations designed for real adoption, not just a completed deployment checklist." },
+  Change:   { name: 'Change Management & Adoption', sym: 'Ch', short: 'Change',   color: '#7C70B8', desc: "Training, rollout planning, and adoption tracking included in every engagement, because the best system in the world fails if nobody uses it." },
+  ERP:      { name: 'ERP & WMS Support',           sym: 'Er', short: 'ERP',       color: '#5D5296', desc: "Guidance and hands-on support for ERP, warehouse management, and delivery platforms, working with whatever system you already run." },
+  Workflow: { name: 'Workflow Automation',         sym: 'Au', short: 'Workflow',  color: '#3E3760', desc: "Power Automate-driven automation that eliminates manual, repetitive tasks." }
 };
 var TILE_ORDER = ['BI', 'AI', 'Cloud', 'Change', 'ERP', 'Workflow'];
 
@@ -721,6 +737,30 @@ function renderResult() {
   renderLargeResult(r);
 }
 
+function periodicGrid(activeTiles) {
+  return '<div class="periodic" id="resultPeriodic">' + TILE_ORDER.map(function (t, i) {
+    var on = activeTiles.indexOf(t) !== -1;
+    return '<div class="tile p' + (i + 1) + (on ? ' active' : '') + '" tabindex="0" data-tile="' + t + '" data-name="' + escapeHtml(TILES[t].name) + '" data-desc="' + escapeHtml(TILES[t].desc) + '">' +
+      '<span class="num">0' + (i + 1) + '</span><span class="symbol">' + TILES[t].sym + '</span><span class="short">' + escapeHtml(TILES[t].short) + '</span></div>';
+  }).join('') + '</div>';
+}
+
+function wireTileGrid(r, defaultName, defaultDesc, onToggle) {
+  var detailEl = document.getElementById('resultDetail');
+  document.querySelectorAll('#resultPeriodic .tile').forEach(function (tile) {
+    tile.addEventListener('mouseenter', function () {
+      detailEl.innerHTML = '<div class="name">' + tile.dataset.name + '</div><div class="desc">' + tile.dataset.desc + '</div>';
+    });
+    tile.addEventListener('focus', function () {
+      detailEl.innerHTML = '<div class="name">' + tile.dataset.name + '</div><div class="desc">' + tile.dataset.desc + '</div>';
+    });
+    tile.addEventListener('mouseleave', function () {
+      detailEl.innerHTML = '<div class="name">' + escapeHtml(defaultName) + '</div><div class="desc">' + escapeHtml(defaultDesc) + '</div>';
+    });
+    tile.addEventListener('click', function () { onToggle(tile.getAttribute('data-tile')); });
+  });
+}
+
 function tileChip(t) {
   var meta = TILES[t];
   return '<div class="result-tile" style="background:' + meta.color + '"><span class="sym">' + meta.sym + '</span><span class="lbl">' + escapeHtml(t) + '</span></div>';
@@ -796,37 +836,29 @@ function renderLargeResult(r) {
   quizArea.innerHTML =
     '<div class="result-card">' +
       '<div class="result-eyebrow">Your recommended combination</div>' +
-      '<div class="result-tiles" id="resultTiles">' + r.tiles.map(tileChip).join('') + '</div>' +
       '<div class="result-name">' + escapeHtml(name) + '</div>' +
-      '<div class="result-desc" id="resultDesc">' + escapeHtml(desc) + '</div>' +
+      periodicGrid(r.tiles) +
+      '<div class="detail" id="resultDetail"><div class="name">' + escapeHtml(name) + '</div><div class="desc">' + escapeHtml(desc) + '</div></div>' +
+      '<div class="tile-hint">Hover or tap a tile to see what it covers. Tap to add or remove it, 1 to 3 tiles, at least one stays selected.</div>' +
       becauseBlock(r.reasons) +
       (r.also ? '<div class="result-also">Also consider: <strong>' + escapeHtml(TILES[r.also].name) + '</strong></div>' : '') +
       actionsBlock(summaryText) +
-      '<div class="customize-box"><h4>Customize your combination</h4><div class="customize-tiles" id="czTiles">' +
-        TILE_ORDER.map(function (t) {
-          var on = r.tiles.indexOf(t) !== -1;
-          return '<button type="button" class="cz-tile' + (on ? ' on' : '') + '" data-tile="' + t + '" style="' + (on ? 'background:' + TILES[t].color : '') + '">' + escapeHtml(TILES[t].name) + '</button>';
-        }).join('') +
-      '</div><div class="cz-note">Pick 1 to 3. At least one stays selected.</div></div>' +
       '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The free call is where it gets confirmed.</div>' +
       '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
     '</div>';
 
   document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
   document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext(summaryText); });
-  document.querySelectorAll('#czTiles .cz-tile').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var t = btn.getAttribute('data-tile');
-      var idx = r.tiles.indexOf(t);
-      if (idx !== -1) {
-        if (r.tiles.length === 1) return; // can't remove the last tile
-        r.tiles.splice(idx, 1);
-      } else {
-        if (r.tiles.length >= 3) r.tiles.shift();
-        r.tiles.push(t);
-      }
-      renderLargeResult(r);
-    });
+  wireTileGrid(r, name, desc, function (t) {
+    var idx = r.tiles.indexOf(t);
+    if (idx !== -1) {
+      if (r.tiles.length === 1) return; // can't remove the last tile
+      r.tiles.splice(idx, 1);
+    } else {
+      if (r.tiles.length >= 3) r.tiles.shift();
+      r.tiles.push(t);
+    }
+    renderLargeResult(r);
   });
 }
 
