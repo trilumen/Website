@@ -120,6 +120,13 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
   .offer-grid, .retainer-grid, .pain-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 32px; }
 }
+
+.concierge-cta { background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 14px; padding: 32px; margin: 40px auto; max-width: 900px; text-align: center; }
+.concierge-cta h3 { font-size: 22px; margin-bottom: 8px; }
+.concierge-cta p { color: #52525B; font-size: 15px; margin-bottom: 18px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+.concierge-cta .btn-primary { display: inline-block; }
+.concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
+.concierge-cta.small h3 { font-size: 18px; }
 </style>
 <script type="application/ld+json">
 {
@@ -163,11 +170,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
     "https://www.facebook.com/trilumensystemspa/",
     "https://www.instagram.com/trilumensystems/",
     "https://share.google/hdX5ZFP5B2RnKa2Sh",
-    "https://nextdoor.com/page/trilumen-systems",
-    "https://www.goodfirms.co/company/trilumen-systems",
-    "https://themanifest.com/company/trilumen-systems",
-    "https://www.alignable.com/kingston-pa/trilumen-systems",
-    "https://clutch.co/profile/trilumen-systems"
+    "https://nextdoor.com/page/trilumen-systems"
   ]
 }
 </script>
@@ -243,6 +246,14 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 </div>
 </section>
 
+<section class="wrap">
+<div class="concierge-cta">
+<h3>Skip the guesswork, build your plan</h3>
+<p>Answer a few quick questions and our free concierge will recommend the audit, dashboard, or retainer that actually fits.</p>
+<a href="concierge.html" class="btn-primary">Build My Plan</a>
+</div>
+</section>
+
 <section class="starter">
 <div class="wrap">
 <h2 class="section-head">Start Small</h2>
@@ -312,7 +323,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 </div>
 <div class="rule-item">
 <h4>Clear Scope, No Surprises</h4>
-<p>Retainers cover maintaining and troubleshooting the systems we already built with you. A brand-new integration or feature is a separate, fixed-price project, we'll always tell you which one you're looking at.</p>
+<p>Retainers cover maintaining and troubleshooting the systems we build with you, and any others you're already running. A brand-new integration or feature is a separate, fixed-price project, we'll always tell you which one you're looking at.</p>
 </div>
 </div>
 </div>
@@ -359,6 +370,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
 <a href="trilumen-small-business-overview.pdf">Overview (PDF)</a>
+<a href="concierge.html">Concierge</a>
 </div>
 <div class="footer-meta">
 (570) 392-9116<br>
@@ -370,23 +382,5 @@ Remote Nationwide<br>
 </div>
 </footer>
 
-<!--Start of Conferbot Script-->
-<script type="text/javascript">
-  (function (d, s, id) {
-    var js, el = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.async = true;
-    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
-    js.id = id;
-    js.charset = 'UTF-8';
-    el.parentNode.insertBefore(js, el);
-    js.onload = function () {
-      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
-    };
-    
-  })(document, 'script', 'conferbot-js');
-</script>
-<!--End of Conferbot Script-->
 </body>
 </html>

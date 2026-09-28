@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP88CN9BNQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BP88CN9BNQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concierge | TriLumen Systems</title>
+<meta name="description" content="Answer a few quick questions and we'll build your custom systems plan, or just ask us a question directly.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Concierge | TriLumen Systems">
+<meta property="og:description" content="Answer a few quick questions and we'll build your custom systems plan, or just ask us a question directly.">
+<meta property="og:url" content="https://www.trilumensystems.com/concierge.html">
+<meta property="og:image" content="https://www.trilumensystems.com/trilumen-icon-512.png">
+<meta property="og:site_name" content="TriLumen Systems">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="trilumen-icon-32.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
+a { text-decoration: none; color: inherit; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
+button { font-family: inherit; }
+
+/* Nav (matches site) */
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo span { color: #4C4272; }
+.nav-links { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #4C4272; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta:hover { background: #3A3358; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn svg { width: 26px; height: 26px; }
+.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
+.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
+.mobile-menu.open { display: flex; }
+
+/* Page header */
+.page-header { background: #F4F2FA; padding: 60px 0 40px; text-align: center; }
+.page-header h1 { font-size: 38px; margin-bottom: 12px; }
+.page-header p { color: #52525B; font-size: 16px; max-width: 560px; margin: 0 auto; line-height: 1.6; }
+
+/* Tabs */
+.tabs-row { display: flex; justify-content: center; padding: 28px 24px 0; }
+.tabs { display: flex; gap: 6px; background: #F4F2FA; padding: 6px; border-radius: 12px; max-width: 460px; width: 100%; }
+.tab-btn { flex: 1; padding: 13px 14px; border: 0; background: transparent; border-radius: 8px; font-weight: 700; font-size: 14.5px; cursor: pointer; color: #52525B; transition: background .15s, color .15s; }
+.tab-btn.active { background: #fff; color: #4C4272; box-shadow: 0 2px 10px rgba(24,24,27,.08); }
+
+.panel-wrap { padding: 36px 24px 90px; min-height: 50vh; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* Quiz */
+.q-progress { max-width: 640px; margin: 0 auto 22px; height: 6px; background: #EDEDF2; border-radius: 3px; overflow: hidden; }
+.q-progress-bar { height: 100%; background: #4C4272; transition: width .3s ease; width: 0%; }
+.q-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 16px; padding: 34px; max-width: 640px; margin: 0 auto; box-shadow: 0 2px 14px rgba(24,24,27,.05); }
+.q-title { font-size: 21px; font-weight: 700; margin-bottom: 6px; line-height: 1.35; }
+.q-sub { font-size: 13.5px; color: #71717A; margin-bottom: 20px; }
+.q-options { display: flex; flex-direction: column; gap: 10px; }
+.q-opt { text-align: left; background: #FAFAFA; border: 1.5px solid #EDEDF2; border-radius: 10px; padding: 14px 16px; font-size: 15px; font-weight: 600; cursor: pointer; transition: border-color .15s, background .15s; }
+.q-opt:hover { border-color: #B8AEDC; }
+.q-opt.selected { border-color: #4C4272; background: #F4F2FA; }
+.q-opt small { display: block; color: #A1A1AA; font-weight: 400; font-size: 12.5px; margin-top: 4px; }
+.q-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; max-width: 640px; margin-left: auto; margin-right: auto; }
+.q-back { background: none; border: 0; color: #71717A; font-weight: 600; cursor: pointer; font-size: 14px; padding: 8px 4px; }
+.q-back:disabled { visibility: hidden; }
+.q-continue { background: #4C4272; color: #fff; border: 0; border-radius: 10px; padding: 12px 26px; font-weight: 700; font-size: 14.5px; cursor: pointer; opacity: .35; pointer-events: none; transition: opacity .15s; }
+.q-continue.enabled { opacity: 1; pointer-events: auto; }
+.q-continue:hover.enabled { background: #3A3358; }
+
+/* Result */
+.result-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 18px; padding: 38px; max-width: 680px; margin: 0 auto; }
+.result-eyebrow { text-align: center; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #A1A1AA; font-weight: 700; margin-bottom: 14px; }
+.result-tiles { display: flex; gap: 10px; justify-content: center; margin-bottom: 18px; flex-wrap: wrap; }
+.result-tile { width: 62px; height: 62px; border-radius: 10px; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.result-tile span.sym { font-size: 19px; font-weight: 700; }
+.result-tile span.lbl { font-size: 8.5px; opacity: .85; margin-top: 2px; letter-spacing: .3px; }
+.result-name { text-align: center; font-size: 25px; font-weight: 800; margin-bottom: 10px; }
+.result-desc { text-align: center; color: #52525B; font-size: 15.5px; line-height: 1.65; max-width: 540px; margin: 0 auto 22px; }
+.result-because { background: #F4F2FA; border-radius: 12px; padding: 16px 20px; font-size: 14px; color: #3A3358; margin-bottom: 18px; line-height: 1.6; }
+.result-because b { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #4C4272; margin-bottom: 6px; }
+.result-also { font-size: 13px; color: #71717A; text-align: center; margin-bottom: 26px; }
+.result-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 8px; }
+.result-actions .btn-primary, .result-actions .btn-outline, .result-actions .btn-ghost { display: inline-block; padding: 13px 24px; border-radius: 10px; font-weight: 700; font-size: 14.5px; cursor: pointer; border: 0; }
+.btn-primary { background: #4C4272; color: #fff; }
+.btn-primary:hover { background: #3A3358; }
+.btn-outline { background: #fff; color: #4C4272; border: 1.5px solid #D9D3EC !important; }
+.btn-outline:hover { border-color: #4C4272 !important; }
+.btn-ghost { background: none; color: #71717A; font-weight: 600; }
+.btn-ghost:hover { color: #4C4272; }
+.result-disclaimer { font-size: 12px; color: #A1A1AA; text-align: center; margin-top: 24px; border-top: 1px solid #EDEDF2; padding-top: 18px; line-height: 1.5; }
+.customize-box { margin-top: 26px; border-top: 1px solid #EDEDF2; padding-top: 22px; }
+.customize-box h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: #71717A; text-align: center; margin-bottom: 14px; font-weight: 700; }
+.customize-tiles { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 4px; }
+.cz-tile { border: 1.5px solid #EDEDF2; border-radius: 8px; padding: 9px 15px; font-size: 13px; font-weight: 700; cursor: pointer; background: #fff; color: #52525B; }
+.cz-tile.on { border-color: transparent; color: #fff; }
+.cz-note { text-align: center; font-size: 12.5px; color: #A1A1AA; margin-top: 10px; }
+.restart-link { display: block; text-align: center; margin-top: 18px; font-size: 13px; color: #71717A; }
+.restart-link:hover { color: #4C4272; }
+
+/* Small-business result ladder */
+.ladder { display: flex; flex-direction: column; gap: 12px; max-width: 460px; margin: 0 auto 22px; }
+.ladder-item { border: 1.5px solid #EDEDF2; border-radius: 12px; padding: 16px 18px; }
+.ladder-item.lead { border-color: #4C4272; background: #F4F2FA; }
+.ladder-item h5 { font-size: 15px; margin-bottom: 3px; }
+.ladder-item .price { font-size: 13px; color: #4C4272; font-weight: 700; margin-bottom: 6px; }
+.ladder-item p { font-size: 13.5px; color: #52525B; line-height: 1.5; }
+.offer-toggle { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 4px; }
+
+/* Decline / fallback */
+.simple-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 16px; padding: 34px; max-width: 560px; margin: 0 auto; text-align: center; }
+.simple-card h3 { font-size: 20px; margin-bottom: 10px; }
+.simple-card p { color: #52525B; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+
+/* Chat */
+.chat-shell { max-width: 640px; margin: 0 auto; border: 1px solid #EDEDF2; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; height: 66vh; min-height: 460px; background: #fff; box-shadow: 0 2px 14px rgba(24,24,27,.05); }
+.chat-log { flex: 1; overflow-y: auto; padding: 20px; background: #FAFAFC; display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth; }
+.msg { max-width: 84%; padding: 10px 14px; border-radius: 14px; font-size: 14.5px; line-height: 1.55; white-space: pre-wrap; word-wrap: break-word; }
+.msg.bot { align-self: flex-start; background: #fff; border: 1px solid #EDEDF2; border-bottom-left-radius: 4px; }
+.msg.me { align-self: flex-end; background: #4C4272; color: #fff; border-bottom-right-radius: 4px; }
+.chat-chips { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.chat-chip { background: #fff; border: 1px solid #D9D3EC; color: #4C4272; border-radius: 999px; padding: 9px 15px; font-size: 13.5px; font-weight: 700; cursor: pointer; text-align: left; }
+.chat-chip:hover { background: #F4F2FA; border-color: #4C4272; }
+.chat-input-row { display: flex; gap: 10px; padding: 14px; border-top: 1px solid #EDEDF2; background: #fff; }
+.chat-input-row textarea { flex: 1; resize: none; border: 1.5px solid #EDEDF2; border-radius: 10px; padding: 11px 13px; font: inherit; font-size: 14.5px; max-height: 100px; }
+.chat-input-row textarea:focus { outline: none; border-color: #4C4272; }
+.chat-send { background: #4C4272; color: #fff; border: 0; border-radius: 10px; padding: 0 20px; font-weight: 700; cursor: pointer; }
+.chat-send:disabled { opacity: .5; cursor: default; }
+.chat-book { display: inline-block; margin-top: 6px; background: #4C4272; color: #fff; padding: 10px 18px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+.typing-dots { display: flex; gap: 4px; padding: 10px 14px; align-self: flex-start; }
+.typing-dots i { width: 6px; height: 6px; border-radius: 50%; background: #A79FC8; display: block; animation: bl 1.1s infinite ease-in-out; }
+.typing-dots i:nth-child(2) { animation-delay: .15s; }
+.typing-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes bl { 0%,60%,100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-4px); opacity: 1; } }
+
+/* Footer (matches site) */
+footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margin-top: 20px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+.footer-links { display: flex; gap: 24px; font-size: 14px; color: #52525B; flex-wrap: wrap; }
+.footer-links a:hover { color: #4C4272; }
+.footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; line-height: 1.7; }
+
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .page-header h1 { font-size: 30px; }
+  .q-card, .result-card { padding: 24px; }
+}
+
+@media print {
+  nav, footer, .tabs-row, .page-header, .q-nav, .result-actions, .customize-box, .restart-link, .result-eyebrow { display: none !important; }
+  body { background: #fff; }
+  .panel-wrap { padding: 0; }
+  .result-card { border: none; box-shadow: none; max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta">Book a Free Call</a>
+</div>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="contact.html" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+</div>
+</nav>
+<script>
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+
+<section class="page-header">
+<div class="wrap">
+<h1>Meet the <em>Concierge</em></h1>
+<p>Answer a few quick questions and we'll build your custom systems plan, or skip straight to asking us anything.</p>
+</div>
+</section>
+
+<div class="tabs-row">
+<div class="tabs">
+<button class="tab-btn" id="tabPlanBtn">Build My Plan</button>
+<button class="tab-btn" id="tabChatBtn">Ask a Question</button>
+</div>
+</div>
+
+<div class="panel-wrap wrap">
+
+<!-- ===================== QUIZ PANEL ===================== -->
+<section class="panel" id="planPanel">
+  <div class="q-progress" id="qProgressWrap"><div class="q-progress-bar" id="qProgressBar"></div></div>
+  <div id="quizArea"></div>
+</section>
+
+<!-- ===================== CHAT PANEL ===================== -->
+<section class="panel" id="chatPanel">
+  <div class="chat-shell">
+    <div class="chat-log" id="chatLog"></div>
+    <div class="chat-input-row">
+      <textarea id="chatInput" rows="1" placeholder="Type your question..."></textarea>
+      <button class="chat-send" id="chatSend">Send</button>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+<div class="wrap footer-inner">
+<div>
+<div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div>
+<p class="footer-meta">Proudly Human Systems</p>
+</div>
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="small-business.html">Small Business</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="team.html">Team</a>
+<a href="clarity.html">Clarity Insights</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="trilumen-overview.pdf">Overview (PDF)</a>
+</div>
+<div class="footer-meta">
+(570) 392-9116<br>
+hello@trilumensystems.com<br>
+NEPA, New York City, Philadelphia<br>
+Remote Nationwide<br>
+© 2026 TriLumen Systems
+</div>
+</div>
+</footer>
+
+<script>
+(function () {
+'use strict';
+
+var ENDPOINT = 'https://concierge.trilumensystems.com/chat';
+var PHONE = '(570) 392-9116';
+var EMAIL = 'hello@trilumensystems.com';
+
+/* ============================================================
+   TILE DATA (matches the homepage periodic table)
+   ============================================================ */
+var TILES = {
+  BI:       { name: 'BI Reporting & Dashboards',   sym: 'BI', color: '#4C4272', desc: "Power BI & Tableau dashboards leadership actually trusts and uses, not reports generated once and ignored." },
+  AI:       { name: 'Copilot & AI Automation',     sym: 'AI', color: '#5B5088', desc: "Microsoft Copilot deployment and AI-assisted workflows built with the team, not around them." },
+  Cloud:    { name: 'SharePoint & Cloud Migrations', sym: 'Cl', color: '#6B5FA0', desc: "Company-wide intranets and cloud migrations designed for real adoption, not just a completed deployment checklist." },
+  Change:   { name: 'Change Management & Adoption', sym: 'Ch', color: '#7C70B8', desc: "Training, rollout planning, and adoption tracking included in every engagement, because the best system in the world fails if nobody uses it." },
+  ERP:      { name: 'ERP & WMS Support',           sym: 'Er', color: '#5D5296', desc: "Guidance and hands-on support for ERP, warehouse management, and delivery platforms, working with whatever system you already run." },
+  Workflow: { name: 'Workflow Automation',         sym: 'Au', color: '#3E3760', desc: "Power Automate-driven automation that eliminates manual, repetitive tasks." }
+};
+var TILE_ORDER = ['BI', 'AI', 'Cloud', 'Change', 'ERP', 'Workflow'];
+
+var PAIR_DESC = {
+  'BI+Change':      "A new dashboard rollout, paired with the training that gets leadership to actually trust and use it.",
+  'ERP+Change':     "A system-wide ERP migration, paired with the change management that keeps the business running through the transition.",
+  'AI+Workflow':    "A Copilot deployment, paired with the workflow automation that removes the manual work around it.",
+  'BI+AI':          "Dashboards leadership can trust, paired with the AI-assisted automation that keeps the data behind them current without a manual export every week.",
+  'BI+Cloud':       "A cloud or data migration, paired with the dashboards and reporting built on the new, cleaner setup underneath it.",
+  'BI+ERP':         "Dashboards and KPI reporting built straight on top of the ERP or warehouse system, so the numbers come from where the business actually runs.",
+  'BI+Workflow':    "A dashboard build, paired with the automation that keeps it fed with current data instead of someone updating it by hand.",
+  'AI+Cloud':       "A Copilot or AI rollout built on a cloud or Microsoft 365 environment that's actually ready for it, not bolted onto an old setup.",
+  'AI+Change':      "A Copilot or AI deployment, paired with the training and rollout plan that gets people actually using it past the first week.",
+  'AI+ERP':         "AI-assisted workflows built around the ERP or WMS system already in place, automating the busywork without replacing what already works.",
+  'Cloud+Change':   "A SharePoint or cloud migration, paired with the training and rollout plan that gets the team actually using the new environment, not just logging into it once.",
+  'Cloud+ERP':      "A cloud migration that happens alongside an ERP or WMS move, so the two don't end up half-finished and disconnected from each other.",
+  'Cloud+Workflow': "A cloud migration, paired with the automation that removes the manual, repetitive work the old setup required.",
+  'Change+Workflow':"A workflow automation build, paired with the training that makes sure people actually adopt the new process instead of quietly going back to the old one.",
+  'ERP+Workflow':   "An ERP or WMS system, paired with the automation that removes the manual busywork that's built up around it over time."
+};
+var PUBLISHED_TRIPLE_DESC = "A full modernization push: cloud migration, AI-powered automation, and the change management to bring the whole team along.";
+
+var ADDON = {
+  BI:       "with dashboards built in alongside it, so progress is visible from day one.",
+  AI:       "with AI-assisted automation layered in to cut down whatever manual work is left.",
+  Cloud:    "with the underlying cloud or Microsoft 365 environment brought up to the same standard.",
+  Change:   "with the training and rollout plan that makes sure it actually gets used, not just installed.",
+  ERP:      "with the ERP or WMS system it touches brought into the same plan.",
+  Workflow: "with the repetitive manual work around it automated away too."
+};
+
+function pairKey(a, b) {
+  if (PAIR_DESC[a + '+' + b]) return a + '+' + b;
+  if (PAIR_DESC[b + '+' + a]) return b + '+' + a;
+  return null;
+}
+
+function comboName(tiles) {
+  // Keep a stable, readable order regardless of scoring order.
+  var ordered = TILE_ORDER.filter(function (t) { return tiles.indexOf(t) !== -1; });
+  return ordered.join(' + ');
+}
+
+function describeCombo(tiles) {
+  if (tiles.length === 1) return TILES[tiles[0]].desc;
+  if (tiles.length === 2) {
+    var k = pairKey(tiles[0], tiles[1]);
+    return k ? PAIR_DESC[k] : TILES[tiles[0]].desc + ' ' + TILES[tiles[1]].desc;
+  }
+  // triple
+  var set = tiles.slice().sort().join(',');
+  if (set === ['AI', 'Change', 'Cloud'].sort().join(',')) return PUBLISHED_TRIPLE_DESC;
+  // primary+secondary as the pair, tertiary as the composed add-on
+  var pair = tiles.slice(0, 2), third = tiles[2];
+  var pk = pairKey(pair[0], pair[1]);
+  var base = pk ? PAIR_DESC[pk] : TILES[pair[0]].desc;
+  var addon = ADDON[third] || '';
+  return base + (addon ? ' Plus, ' + addon : '');
+}
+
+/* ============================================================
+   QUESTION DEFINITIONS
+   ============================================================ */
+var NOT_SURE = { id: 'not_sure', label: "Not sure, that's okay", scores: {} };
+
+var Q1 = {
+  id: 'q1', title: "Do you run one connected system for your whole business, or is it more a mix of separate tools?",
+  type: 'single', options: [
+    { id: 'one', label: "One system that runs the whole business — orders, inventory, accounting, all connected", sub: "Examples: NetSuite, Odoo, Acumatica, Sage Intacct", route: 'large_l1' },
+    { id: 'mix', label: "A mix of everyday tools, or mostly spreadsheets", sub: "Examples: QuickBooks, HubSpot, Zapier, Make, Airtable", route: 'small_s1' },
+    { id: 'both', label: "A bit of both, or not sure", route: 'q1b' },
+    { id: 'other', label: "Something else (a website, an app, IT help-desk work)", route: 'decline' }
+  ]
+};
+var Q1B = {
+  id: 'q1b', title: "Roughly how many people work at your company?", type: 'single', options: [
+    { id: 'u25', label: "Under 25", route: 'small_s1' },
+    { id: 'ge25', label: "25 or more", route: 'large_l1' }
+  ]
+};
+
+// ---- Small-business path ----
+var S1 = {
+  id: 's1', title: "What is slowing you down most?", sub: "Pick up to two.", type: 'multi', max: 2, options: [
+    { id: 'automation_broke', label: "An automation (Zapier, Make) broke or acts up", scores: { audit: 3 } },
+    { id: 'not_sure_worth', label: "I'm not sure what's worth automating", scores: { audit: 3 } },
+    { id: 'tools_dont_talk', label: "My tools don't talk to each other (QuickBooks and HubSpot, say)", scores: { audit: 2, dashboard: 1 } },
+    { id: 'reports_spreadsheets', label: "Reports live in spreadsheets and I want a real dashboard", scores: { dashboard: 3 } },
+    { id: 'nobody_owns', label: "Nobody on the team has time to own our systems", scores: { audit: 1, retainer: 3 } },
+    { id: 'too_small_it', label: "Too small for IT, but things keep breaking", scores: { audit: 1, retainer: 2 } },
+    NOT_SURE
+  ]
+};
+var S2 = {
+  id: 's2', title: "Which of these do you use?", sub: "Pick all that apply.", type: 'multi', max: 6, scored: false, options: [
+    { id: 'qbo', label: "QuickBooks Online" }, { id: 'hubspot', label: "HubSpot" }, { id: 'zapier', label: "Zapier" },
+    { id: 'make', label: "Make" }, { id: 'airtable', label: "Airtable" }, { id: 'other', label: "Other" }
+  ]
+};
+var S3 = {
+  id: 's3', title: "What kind of help do you want?", type: 'single', options: [
+    { id: 'one_thing', label: "One specific thing fixed or built", scores: { audit: 1, dashboard: 1 } },
+    { id: 'few_things', label: "A few things over the next several months", scores: { audit: 1, dashboard: 1, retainer: 1 } },
+    { id: 'on_call', label: "Someone on call as things come up", scores: { retainer: 3 } },
+    NOT_SURE
+  ]
+};
+var S4 = {
+  id: 's4', title: "About how many hours a month do you spend keeping systems working?", type: 'single', scored: false, options: [
+    { id: 'u2', label: "Under 2" }, { id: '2to5', label: "2 to 5" }, { id: '5to10', label: "5 to 10" }, { id: '10plus', label: "10+" }
+  ]
+};
+
+// ---- Larger path ----
+var L1 = {
+  id: 'l1', title: "What is the biggest headache right now?", sub: "Pick up to two.", type: 'multi', max: 2, options: [
+    { id: 'manual_reporting', label: "Manual reporting eats days every month", scores: { BI: 3, Workflow: 1 } },
+    { id: 'kpis_untrusted', label: "We track KPIs but nobody trusts the numbers", scores: { BI: 3, Change: 1 } },
+    { id: 'systems_dont_share', label: "Our systems don't share data", scores: { Cloud: 1, ERP: 1, Workflow: 2 } },
+    { id: 'migration_stalled', label: "A migration is stalled or coming up", scores: { Cloud: 2, Change: 1, ERP: 3 } },
+    { id: 'ai_no_owner', label: "An AI effort has no clear owner or direction", scores: { AI: 3, Change: 2 } },
+    { id: 'rollout_not_adopted', label: "We rolled out software and nobody adopted it", scores: { Change: 3 } },
+    { id: 'repetitive_manual', label: "Repetitive manual work eats hours (data entry, approvals, invoicing)", scores: { AI: 1, Workflow: 3 } },
+    { id: 'scattered_files', label: "Files and info are scattered, no central place", scores: { Cloud: 3 } },
+    NOT_SURE
+  ]
+};
+var L2 = {
+  id: 'l2', title: "Which of these describes systems you use?", sub: "Pick all that apply.", type: 'multi', max: 8, options: [
+    { id: 'erp_whole', label: "One system that runs the whole business, tying orders, inventory, and accounting together", sub: "ERP: NetSuite, Odoo, Acumatica, Sage Intacct", scores: { ERP: 2 } },
+    { id: 'wms', label: "A system that tracks physical inventory or deliveries", sub: "Warehouse or delivery platform", scores: { ERP: 2 } },
+    { id: 'ms365', label: "Microsoft's business tools", sub: "Microsoft 365, Power Platform, SharePoint", scores: { AI: 1, Cloud: 1, Workflow: 1 } },
+    { id: 'google', label: "Google's business tools", sub: "Google Workspace", scores: { Cloud: 1 } },
+    { id: 'warehouse_data', label: "A dedicated place where data is pulled together just for reporting", sub: "A data warehouse: BigQuery, PostgreSQL", scores: { BI: 2 } },
+    { id: 'bi_tool', label: "A reporting or dashboard tool", sub: "Power BI, Tableau", scores: { BI: 1 } },
+    { id: 'spreadsheets', label: "Mostly spreadsheets", scores: { BI: 1, Workflow: 1 } },
+    NOT_SURE
+  ]
+};
+var L3 = {
+  id: 'l3', title: "Where are you with AI?", type: 'single', options: [
+    { id: 'not_priority', label: "Not a priority right now", scores: {} },
+    { id: 'curious', label: "Curious, but no idea where to start", scores: { AI: 1 } },
+    { id: 'copilot_unused', label: "We bought an AI assistant for the team, but hardly anyone uses it", sub: "Like Microsoft Copilot", scores: { AI: 2, Change: 2 } },
+    { id: 'specific_task', label: "I have a specific task in mind I'd like AI to take off someone's plate", scores: { AI: 3, Workflow: 1 } }
+  ]
+};
+var L4 = {
+  id: 'l4', title: "When you've rolled out new software before, what happened?", type: 'single', options: [
+    { id: 'used_it', label: "People used it", scores: {} },
+    { id: 'worked_around', label: "People worked around it", scores: { Change: 3 } },
+    { id: 'never_finished', label: "It never really finished", scores: { Change: 2 } },
+    { id: 'first_big', label: "This is our first big one", scores: { Change: 1 } }
+  ]
+};
+var L5 = {
+  id: 'l5', title: "Roughly how many people work at your company?", type: 'single', scored: false, options: [
+    { id: 'u25', label: "Under 25" }, { id: '25to100', label: "25 to 100" }, { id: '100to500', label: "100 to 500" }, { id: '500plus', label: "500+" }
+  ]
+};
+var L6 = {
+  id: 'l6', title: "What is driving the timing?", type: 'single', options: [
+    { id: 'compliance', label: "A compliance or audit deadline", scores: {} },
+    { id: 'migration_date', label: "A go-live or migration date", scores: { ERP: 1 } },
+    { id: 'growth', label: "Growth or new leadership", scores: {} },
+    { id: 'just_better', label: "Just want it better", scores: {} }
+  ]
+};
+var L7 = {
+  id: 'l7', title: "Who else weighs in on a decision like this?", type: 'single', scored: false, options: [
+    { id: 'just_me', label: "Just me" }, { id: 'me_plus_one', label: "Me plus one" }, { id: 'committee', label: "A committee" }, { id: 'not_sure', label: "Not sure" }
+  ]
+};
+var SENSITIVE = {
+  id: 'sensitive', title: "Do you handle sensitive records — government, healthcare, or financial data?", type: 'single', options: [
+    { id: 'yes', label: "Yes", scores: { Cloud: 1 } },
+    { id: 'no', label: "No", scores: {} }
+  ]
+};
+
+var SMALL_FLOW = [S1, S2, S3, S4];
+var LARGE_FLOW = [L1, L2, L3, L4, L5, L6, L7, SENSITIVE];
+
+// "Because you said..." short reasons, keyed by "questionId.optionId"
+var REASONS = {
+  'l1.manual_reporting': "reports take days to put together",
+  'l1.kpis_untrusted': "the numbers get tracked but nobody trusts them",
+  'l1.systems_dont_share': "your systems don't share data with each other",
+  'l1.migration_stalled': "a migration is stalled or coming up",
+  'l1.ai_no_owner': "an AI effort has no clear owner",
+  'l1.rollout_not_adopted': "software got rolled out but never really got adopted",
+  'l1.repetitive_manual': "repetitive manual work is eating hours",
+  'l1.scattered_files': "files and information are scattered with no central place",
+  'l3.curious': "you're curious about AI but not sure where to start",
+  'l3.copilot_unused': "an AI assistant got bought but hardly anyone uses it",
+  'l3.specific_task': "you have a specific task you'd like AI to take off someone's plate",
+  'l4.worked_around': "the last rollout got worked around instead of used",
+  'l4.never_finished': "the last rollout never really finished",
+  'l4.first_big': "this would be your first big rollout",
+  's1.automation_broke': "an automation broke and started acting up",
+  's1.not_sure_worth': "you're not sure what's actually worth automating",
+  's1.tools_dont_talk': "your tools don't talk to each other",
+  's1.reports_spreadsheets': "your reports live in spreadsheets and you want a real dashboard",
+  's1.nobody_owns': "nobody on the team has time to own your systems",
+  's1.too_small_it': "you're too small for IT, but things keep breaking",
+  's3.one_thing': "you want one specific thing fixed or built",
+  's3.few_things': "you're looking at a few things over the next several months",
+  's3.on_call': "you want someone on call as things come up"
+};
+
+/* ============================================================
+   QUIZ STATE + ENGINE
+   ============================================================ */
+var state = { path: null, order: [], stepIndex: 0, answers: {}, result: null };
+var quizArea = document.getElementById('quizArea');
+var progressBar = document.getElementById('qProgressBar');
+var progressWrap = document.getElementById('qProgressWrap');
+
+function resetQuiz() {
+  state = { path: null, order: [], stepIndex: 0, answers: {}, result: null };
+  try { sessionStorage.removeItem('tl_blueprint_v1'); } catch (e) {}
+  renderStep(Q1);
+}
+
+function saveState() {
+  try { sessionStorage.setItem('tl_blueprint_v1', JSON.stringify(state)); } catch (e) {}
+}
+
+function currentFlow() { return state.path === 'small' ? SMALL_FLOW : LARGE_FLOW; }
+
+function renderStep(q) {
+  progressWrap.style.display = 'block';
+  var totalSteps = state.path ? currentFlow().length + 1 : 5; // rough estimate incl. Q1/Q1b
+  var doneSteps = state.order.length;
+  progressBar.style.width = Math.min(96, (doneSteps / totalSteps) * 100) + '%';
+
+  var selected = state.answers[q.id] || (q.type === 'multi' ? [] : null);
+  var optsHtml = q.options.map(function (o) {
+    var isOn = q.type === 'multi' ? selected.indexOf(o.id) !== -1 : selected === o.id;
+    return '<button type="button" class="q-opt' + (isOn ? ' selected' : '') + '" data-id="' + o.id + '">' +
+      escapeHtml(o.label) + (o.sub ? '<small>' + escapeHtml(o.sub) + '</small>' : '') + '</button>';
+  }).join('');
+
+  quizArea.innerHTML =
+    '<div class="q-card">' +
+      '<div class="q-title">' + escapeHtml(q.title) + '</div>' +
+      (q.sub ? '<div class="q-sub">' + escapeHtml(q.sub) + '</div>' : '') +
+      '<div class="q-options">' + optsHtml + '</div>' +
+    '</div>' +
+    '<div class="q-nav">' +
+      '<button class="q-back" id="qBack"' + (state.order.length === 0 ? ' disabled' : '') + '>&larr; Back</button>' +
+      '<button class="q-continue" id="qContinue">' + (q.type === 'multi' ? 'Continue' : 'Continue') + '</button>' +
+    '</div>';
+
+  var opts = quizArea.querySelectorAll('.q-opt');
+  var continueBtn = document.getElementById('qContinue');
+
+  function updateContinue() {
+    var val = state.answers[q.id];
+    var ok = q.type === 'multi' ? (val && val.length > 0) : !!val;
+    continueBtn.classList.toggle('enabled', !!ok);
+  }
+
+  opts.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-id');
+      if (q.type === 'multi') {
+        var arr = state.answers[q.id] ? state.answers[q.id].slice() : [];
+        var idx = arr.indexOf(id);
+        if (idx !== -1) { arr.splice(idx, 1); }
+        else {
+          if (q.max && arr.length >= q.max) arr.shift();
+          arr.push(id);
+        }
+        state.answers[q.id] = arr;
+      } else {
+        state.answers[q.id] = id;
+      }
+      renderStep(q); // re-render to reflect selection state
+    });
+  });
+
+  updateContinue();
+
+  document.getElementById('qBack').addEventListener('click', function () {
+    if (!state.order.length) return;
+    var prev = state.order.pop();
+    goToStep(prev, true);
+  });
+
+  continueBtn.addEventListener('click', function () {
+    if (!continueBtn.classList.contains('enabled')) return;
+    advance(q);
+  });
+
+  saveState();
+}
+
+function advance(q) {
+  state.order.push(q.id);
+  // Routing questions
+  if (q.id === 'q1') {
+    var choice = q.options.filter(function (o) { return o.id === state.answers.q1; })[0];
+    if (choice.route === 'q1b') { renderStep(Q1B); return; }
+    if (choice.route === 'decline') { renderDecline(); return; }
+    state.path = choice.route === 'small_s1' ? 'small' : 'large';
+    state.stepIndex = 0;
+    renderStep(currentFlow()[0]);
+    return;
+  }
+  if (q.id === 'q1b') {
+    var choice2 = q.options.filter(function (o) { return o.id === state.answers.q1b; })[0];
+    state.path = choice2.route === 'small_s1' ? 'small' : 'large';
+    state.stepIndex = 0;
+    renderStep(currentFlow()[0]);
+    return;
+  }
+  // Normal flow
+  var flow = currentFlow();
+  state.stepIndex++;
+  if (state.stepIndex < flow.length) {
+    renderStep(flow[state.stepIndex]);
+  } else {
+    finishQuiz();
+  }
+}
+
+function goToStep(id, isBack) {
+  if (id === 'q1') { renderStep(Q1); return; }
+  if (id === 'q1b') { renderStep(Q1B); return; }
+  var flow = currentFlow();
+  for (var i = 0; i < flow.length; i++) {
+    if (flow[i].id === id) { state.stepIndex = i; renderStep(flow[i]); return; }
+  }
+  renderStep(Q1);
+}
+
+function scoreOf(qid, oid, list) {
+  var q = list.filter(function (x) { return x.id === qid; })[0];
+  if (!q) return {};
+  var opt = q.options.filter(function (o) { return o.id === oid; })[0];
+  return (opt && opt.scores) || {};
+}
+
+function addScores(target, scores) {
+  for (var k in scores) target[k] = (target[k] || 0) + scores[k];
+}
+
+function reasonsFor(qid, ids) {
+  ids = Array.isArray(ids) ? ids : [ids];
+  return ids.map(function (id) { return REASONS[qid + '.' + id]; }).filter(Boolean);
+}
+
+function finishQuiz() {
+  if (state.path === 'small') finishSmall(); else finishLarge();
+}
+
+function finishSmall() {
+  var totals = { audit: 0, dashboard: 0, retainer: 0 };
+  (state.answers.s1 || []).forEach(function (id) { addScores(totals, scoreOf('s1', id, SMALL_FLOW)); });
+  if (state.answers.s3) addScores(totals, scoreOf('s3', state.answers.s3, SMALL_FLOW));
+
+  var allUnder3 = totals.audit < 3 && totals.dashboard < 3 && totals.retainer < 3;
+  var s1NotSure = (state.answers.s1 || []).indexOf('not_sure') !== -1;
+  if (allUnder3 || s1NotSure) { state.result = { type: 'fallback_small' }; renderResult(); return; }
+
+  var retainerSignal = (state.answers.s1 || []).some(function (id) { return id === 'nobody_owns' || id === 'too_small_it'; }) || state.answers.s3 === 'on_call';
+  var lead = 'audit';
+  if (retainerSignal) lead = 'retainer';
+  else lead = totals.dashboard > totals.audit ? 'dashboard' : 'audit';
+
+  var tier = (state.answers.s4 === '5to10' || state.answers.s4 === '10plus') ? 'growth' : 'starter';
+  var reasons = reasonsFor('s1', state.answers.s1 || []).concat(state.answers.s3 ? reasonsFor('s3', state.answers.s3) : []);
+
+  state.result = { type: 'small', lead: lead, totals: totals, tier: tier, reasons: reasons.slice(0, 3) };
+  renderResult();
+}
+
+function finishLarge() {
+  var tiles = { BI: 0, AI: 0, Cloud: 0, Change: 0, ERP: 0, Workflow: 0 };
+  (state.answers.l1 || []).forEach(function (id) { addScores(tiles, scoreOf('l1', id, LARGE_FLOW)); });
+  (state.answers.l2 || []).forEach(function (id) { addScores(tiles, scoreOf('l2', id, LARGE_FLOW)); });
+  if (state.answers.l3) addScores(tiles, scoreOf('l3', state.answers.l3, LARGE_FLOW));
+  if (state.answers.l4) addScores(tiles, scoreOf('l4', state.answers.l4, LARGE_FLOW));
+  if (state.answers.l6) addScores(tiles, scoreOf('l6', state.answers.l6, LARGE_FLOW));
+  if (state.answers.sensitive) addScores(tiles, scoreOf('sensitive', state.answers.sensitive, LARGE_FLOW));
+
+  var topScore = Math.max.apply(null, TILE_ORDER.map(function (t) { return tiles[t]; }));
+  var notSureCount = ((state.answers.l1 || []).indexOf('not_sure') !== -1 ? 1 : 0) +
+                      ((state.answers.l2 || []).indexOf('not_sure') !== -1 ? 1 : 0) +
+                      (state.answers.l7 === 'not_sure' ? 1 : 0);
+  if (topScore < 4 || notSureCount >= 3) { state.result = { type: 'fallback_large' }; renderResult(); return; }
+
+  var firstL1 = (state.answers.l1 || [])[0];
+  var firstL1Tile = firstL1 ? topTileOf(scoreOf('l1', firstL1, LARGE_FLOW)) : null;
+
+  var sorted = TILE_ORDER.slice().sort(function (a, b) {
+    if (tiles[b] !== tiles[a]) return tiles[b] - tiles[a];
+    if (a === firstL1Tile) return -1;
+    if (b === firstL1Tile) return 1;
+    return 0;
+  });
+  var primary = sorted[0];
+  var chosen = [primary];
+  var passes = function (t) { return tiles[t] >= tiles[primary] * 0.6 && tiles[t] >= 4; };
+  for (var i = 1; i < sorted.length && chosen.length < 3; i++) {
+    if (passes(sorted[i])) chosen.push(sorted[i]);
+  }
+  var changeAuto = tiles.Change >= 3 || state.answers.l5 === '100to500' || state.answers.l5 === '500plus';
+  if (changeAuto && chosen.indexOf('Change') === -1 && chosen.length < 3) chosen.push('Change');
+
+  var also = TILE_ORDER.filter(function (t) { return chosen.indexOf(t) === -1 && tiles[t] >= 2; })
+    .sort(function (a, b) { return tiles[b] - tiles[a]; })[0];
+
+  var reasons = reasonsFor('l1', state.answers.l1 || [])
+    .concat(state.answers.l3 ? reasonsFor('l3', state.answers.l3) : [])
+    .concat(state.answers.l4 ? reasonsFor('l4', state.answers.l4) : []);
+
+  state.result = { type: 'large', tiles: chosen, totals: tiles, also: also, reasons: reasons.slice(0, 3) };
+  renderResult();
+}
+
+function topTileOf(scores) {
+  var best = null, bestVal = -1;
+  for (var k in scores) if (scores[k] > bestVal) { best = k; bestVal = scores[k]; }
+  return best;
+}
+
+/* ============================================================
+   RESULT RENDERING
+   ============================================================ */
+function renderResult() {
+  progressWrap.style.display = 'none';
+  var r = state.result;
+  if (r.type === 'fallback_large') { renderFallbackLarge(); return; }
+  if (r.type === 'fallback_small') { renderFallbackSmall(); return; }
+  if (r.type === 'small') { renderSmallResult(r); return; }
+  renderLargeResult(r);
+}
+
+function tileChip(t) {
+  var meta = TILES[t];
+  return '<div class="result-tile" style="background:' + meta.color + '"><span class="sym">' + meta.sym + '</span><span class="lbl">' + escapeHtml(t) + '</span></div>';
+}
+
+function becauseBlock(reasons) {
+  if (!reasons || !reasons.length) return '';
+  var joined = reasons.length === 1 ? reasons[0] : reasons.slice(0, -1).join(', ') + ', and ' + reasons[reasons.length - 1];
+  return '<div class="result-because"><b>Because you said</b>' + escapeHtml(joined.charAt(0).toUpperCase() + joined.slice(1)) + '.</div>';
+}
+
+function actionsBlock(summaryText) {
+  var a1 = encodeURIComponent(summaryText.slice(0, 480));
+  var bookUrl = 'https://calendly.com/tom-trilumensystems/30min?hide_gdpr_banner=1&primary_color=4c4272&a1=' + a1;
+  var mailBody = encodeURIComponent(summaryText + '\n\n—\nBuilt with the TriLumen Concierge: https://www.trilumensystems.com/concierge.html');
+  return '<div class="result-actions">' +
+    '<a href="' + bookUrl + '" target="_blank" rel="noopener" class="btn-primary">Book a Free Call</a>' +
+    '<button class="btn-outline" onclick="window.print()">Print</button>' +
+    '<a href="mailto:?subject=' + encodeURIComponent('My TriLumen systems plan') + '&body=' + mailBody + '" class="btn-outline">Email Me This</a>' +
+    '<button class="btn-ghost" id="askBeforeBook">Have a question first? Ask the concierge</button>' +
+    '</div>';
+}
+
+function renderSmallResult(r) {
+  var OFFERS = {
+    audit: { name: '3-Hour Automation Audit', price: '$375', desc: "One automation or workflow reviewed, a root-cause write-up, and fix recommendations you can act on yourself." },
+    dashboard: { name: 'Single Dashboard Build', price: '$950', desc: "One dashboard, one data source, built in QuickBooks, HubSpot, Airtable, or similar, plus a short walkthrough." },
+    retainer: { name: r.tier === 'growth' ? 'Growth Retainer' : 'Starter Retainer', price: r.tier === 'growth' ? '$1,100/mo (10 hrs)' : '$600/mo (5 hrs)', desc: "Ongoing support for whatever you're running today, not just systems we built. Enough to keep small issues from piling up." }
+  };
+  var lead = OFFERS[r.lead];
+  var rest = ['audit', 'dashboard', 'retainer'].filter(function (k) { return k !== r.lead; });
+
+  var summaryText = "Recommended: " + lead.name + " (" + lead.price + "). " + lead.desc;
+
+  var ladder = '<div class="ladder"><div class="ladder-item lead"><h5>' + escapeHtml(lead.name) + '</h5><div class="price">' + escapeHtml(lead.price) + '</div><p>' + escapeHtml(lead.desc) + '</p></div>';
+  rest.forEach(function (k) {
+    var o = OFFERS[k];
+    ladder += '<div class="ladder-item"><h5>Then: ' + escapeHtml(o.name) + '</h5><div class="price">' + escapeHtml(o.price) + '</div><p>' + escapeHtml(o.desc) + '</p></div>';
+  });
+  ladder += '</div>';
+
+  quizArea.innerHTML =
+    '<div class="result-card">' +
+      '<div class="result-eyebrow">Your recommended starting point</div>' +
+      '<div class="result-name" style="text-align:center">' + escapeHtml(lead.name) + '</div>' +
+      ladder +
+      becauseBlock(r.reasons) +
+      actionsBlock(summaryText) +
+      '<div class="customize-box"><h4>Want something different?</h4><div class="offer-toggle" id="offerToggle">' +
+        ['audit', 'dashboard', 'retainer'].map(function (k) {
+          return '<button type="button" class="cz-tile' + (k === r.lead ? ' on' : '') + '" data-offer="' + k + '" style="' + (k === r.lead ? 'background:#4C4272' : '') + '">' + escapeHtml(OFFERS[k].name) + '</button>';
+        }).join('') +
+      '</div></div>' +
+      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The free call is where it gets confirmed.</div>' +
+      '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
+    '</div>';
+
+  document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
+  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext(summaryText); });
+  document.querySelectorAll('#offerToggle .cz-tile').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      r.lead = btn.getAttribute('data-offer');
+      renderResult();
+    });
+  });
+}
+
+function renderLargeResult(r) {
+  var name = comboName(r.tiles);
+  var desc = describeCombo(r.tiles);
+  var summaryText = "Recommended combination: " + name + ". " + desc;
+
+  quizArea.innerHTML =
+    '<div class="result-card">' +
+      '<div class="result-eyebrow">Your recommended combination</div>' +
+      '<div class="result-tiles" id="resultTiles">' + r.tiles.map(tileChip).join('') + '</div>' +
+      '<div class="result-name">' + escapeHtml(name) + '</div>' +
+      '<div class="result-desc" id="resultDesc">' + escapeHtml(desc) + '</div>' +
+      becauseBlock(r.reasons) +
+      (r.also ? '<div class="result-also">Also consider: <strong>' + escapeHtml(TILES[r.also].name) + '</strong></div>' : '') +
+      actionsBlock(summaryText) +
+      '<div class="customize-box"><h4>Customize your combination</h4><div class="customize-tiles" id="czTiles">' +
+        TILE_ORDER.map(function (t) {
+          var on = r.tiles.indexOf(t) !== -1;
+          return '<button type="button" class="cz-tile' + (on ? ' on' : '') + '" data-tile="' + t + '" style="' + (on ? 'background:' + TILES[t].color : '') + '">' + escapeHtml(TILES[t].name) + '</button>';
+        }).join('') +
+      '</div><div class="cz-note">Pick 1 to 3. At least one stays selected.</div></div>' +
+      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The free call is where it gets confirmed.</div>' +
+      '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
+    '</div>';
+
+  document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
+  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext(summaryText); });
+  document.querySelectorAll('#czTiles .cz-tile').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var t = btn.getAttribute('data-tile');
+      var idx = r.tiles.indexOf(t);
+      if (idx !== -1) {
+        if (r.tiles.length === 1) return; // can't remove the last tile
+        r.tiles.splice(idx, 1);
+      } else {
+        if (r.tiles.length >= 3) r.tiles.shift();
+        r.tiles.push(t);
+      }
+      renderLargeResult(r);
+    });
+  });
+}
+
+function renderFallbackLarge() {
+  quizArea.innerHTML =
+    '<div class="simple-card">' +
+      '<h3>Not sure yet: start with the assessment</h3>' +
+      '<p>Your answers point in a few directions at once, which is common, and totally fine. The best next step is a free 30-minute call, and if it makes sense, the Systems and Automation Assessment ($2,200, credited toward a project if you move forward).</p>' +
+      actionsBlock("Not sure yet: recommend starting with a free call, then the Systems and Automation Assessment.") +
+      '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
+    '</div>';
+  document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
+  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext("Not sure yet: recommend starting with a free call, then the Systems and Automation Assessment."); });
+}
+
+function renderFallbackSmall() {
+  quizArea.innerHTML =
+    '<div class="simple-card">' +
+      '<h3>Start with the 3-Hour Automation Audit</h3>' +
+      '<p>Your answers were a bit broad, which is common. The audit ($375) is the safest first step: one automation or workflow reviewed, with a root-cause write-up and fix recommendations you can act on yourself.</p>' +
+      actionsBlock("Recommended: 3-Hour Automation Audit ($375) as a safe first step.") +
+      '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
+    '</div>';
+  document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
+  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext("Recommended: 3-Hour Automation Audit ($375) as a safe first step."); });
+}
+
+function renderDecline() {
+  progressWrap.style.display = 'none';
+  quizArea.innerHTML =
+    '<div class="simple-card">' +
+      "<h3>This might be outside what we do</h3>" +
+      "<p>TriLumen focuses on business systems, data, and AI automation, so this may not be the best fit. If there's any doubt, reach out directly and we'll tell you honestly.</p>" +
+      '<p><strong>' + PHONE + '</strong><br>' + EMAIL + '</p>' +
+      '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
+    '</div>';
+  document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
+}
+
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+/* ============================================================
+   CHAT
+   ============================================================ */
+var chatLog = document.getElementById('chatLog');
+var chatInput = document.getElementById('chatInput');
+var chatSend = document.getElementById('chatSend');
+var chatMessages = []; // {role, content} sent to the API
+var chatStarted = false;
+var pendingQuizContext = null;
+
+var GREETING = "Hi, I'm the TriLumen concierge, an AI assistant. We help businesses fix their reporting, connect their systems, and roll out AI in a way their team actually uses. Tell me what's going on and I'll help figure out whether we're a fit. If we are, I'll set up a free call with a person on our team.";
+var CHIPS = [
+  'Our reports and dashboards are a mess',
+  'We want to use AI or Copilot',
+  "Our systems don't talk to each other",
+  "I'm not sure where to start"
+];
+
+function addMsg(role, text) {
+  var div = document.createElement('div');
+  div.className = 'msg ' + (role === 'user' ? 'me' : 'bot');
+  div.textContent = text;
+  chatLog.appendChild(div);
+  chatLog.scrollTop = chatLog.scrollHeight;
+  return div;
+}
+
+function addChips() {
+  var wrap = document.createElement('div');
+  wrap.className = 'chat-chips';
+  CHIPS.forEach(function (c) {
+    var b = document.createElement('button');
+    b.className = 'chat-chip';
+    b.type = 'button';
+    b.textContent = c;
+    b.addEventListener('click', function () { sendMessage(c); });
+    wrap.appendChild(b);
+  });
+  chatLog.appendChild(wrap);
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+function showTyping() {
+  var d = document.createElement('div');
+  d.className = 'typing-dots';
+  d.id = 'typingIndicator';
+  d.innerHTML = '<i></i><i></i><i></i>';
+  chatLog.appendChild(d);
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+function hideTyping() {
+  var t = document.getElementById('typingIndicator');
+  if (t) t.remove();
+}
+
+function initChatDefault() {
+  if (chatStarted) return;
+  chatStarted = true;
+  addMsg('assistant', GREETING);
+  addChips();
+}
+
+function openChatWithContext(summaryText) {
+  pendingQuizContext = summaryText;
+  activateTab('chat');
+  if (!chatStarted) startChatWithContext();
+}
+
+function startChatWithContext() {
+  chatStarted = true;
+  showTyping();
+  postChat([{ role: 'user', content: "I just finished the Build My Plan quiz on this page." }], pendingQuizContext)
+    .then(function (data) {
+      hideTyping();
+      addMsg('assistant', data.reply || "Hi! I can see what you picked in the quiz, what's on your mind?");
+      chatMessages.push({ role: 'user', content: "I just finished the Build My Plan quiz on this page." });
+      chatMessages.push({ role: 'assistant', content: data.reply || '' });
+    })
+    .catch(function () {
+      hideTyping();
+      addMsg('assistant', GREETING);
+      addChips();
+    });
+}
+
+function postChat(messagesToSend, context) {
+  var payload = { messages: messagesToSend, page: '/concierge.html' };
+  if (context) payload.context = context;
+  return fetch(ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(function (r) {
+    if (!r.ok) throw new Error('bad response');
+    return r.json();
+  });
+}
+
+function sendMessage(text) {
+  text = (text || chatInput.value).trim();
+  if (!text) return;
+  chatInput.value = '';
+  addMsg('user', text);
+  chatMessages.push({ role: 'user', content: text });
+  showTyping();
+  postChat(chatMessages, pendingQuizContext)
+    .then(function (data) {
+      hideTyping();
+      addMsg('assistant', data.reply || "Sorry, could you say that again?");
+      chatMessages.push({ role: 'assistant', content: data.reply || '' });
+      if (data.handoff && data.handoff.bookingUrl) {
+        var wrap = document.createElement('div');
+        wrap.innerHTML = '<a class="chat-book" href="' + data.handoff.bookingUrl + '" target="_blank" rel="noopener">Pick a time →</a>';
+        chatLog.appendChild(wrap);
+        chatLog.scrollTop = chatLog.scrollHeight;
+      }
+    })
+    .catch(function () {
+      hideTyping();
+      addMsg('assistant', "Sorry, something went wrong reaching the team. Please try again, or email " + EMAIL + ".");
+    });
+}
+
+chatSend.addEventListener('click', function () { sendMessage(); });
+chatInput.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
+chatInput.addEventListener('input', function () {
+  chatInput.style.height = 'auto';
+  chatInput.style.height = Math.min(100, chatInput.scrollHeight) + 'px';
+});
+
+/* ============================================================
+   TABS
+   ============================================================ */
+var tabPlanBtn = document.getElementById('tabPlanBtn');
+var tabChatBtn = document.getElementById('tabChatBtn');
+var planPanel = document.getElementById('planPanel');
+var chatPanel = document.getElementById('chatPanel');
+
+function activateTab(name) {
+  var isChat = name === 'chat';
+  tabPlanBtn.classList.toggle('active', !isChat);
+  tabChatBtn.classList.toggle('active', isChat);
+  planPanel.classList.toggle('active', !isChat);
+  chatPanel.classList.toggle('active', isChat);
+  if (isChat) initChatDefault();
+  try { history.replaceState(null, '', isChat ? '#chat' : '#plan'); } catch (e) {}
+}
+
+tabPlanBtn.addEventListener('click', function () { activateTab('plan'); });
+tabChatBtn.addEventListener('click', function () { activateTab('chat'); });
+
+/* ============================================================
+   INIT
+   ============================================================ */
+(function init() {
+  var startedOnChat = window.location.hash === '#chat';
+  activateTab(startedOnChat ? 'chat' : 'plan');
+
+  var restored = false;
+  try {
+    var saved = sessionStorage.getItem('tl_blueprint_v1');
+    if (saved) {
+      var parsed = JSON.parse(saved);
+      if (parsed && parsed.result) {
+        state = parsed;
+        renderResult();
+        restored = true;
+      }
+    }
+  } catch (e) {}
+  if (!restored) renderStep(Q1);
+})();
+
+})();
+</script>
+
+</body>
+</html>

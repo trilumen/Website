@@ -155,6 +155,13 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
   .nav-links { display: none; }
   .menu-btn { display: block; }
 }
+
+.concierge-cta { background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 14px; padding: 32px; margin: 40px auto; max-width: 900px; text-align: center; }
+.concierge-cta h3 { font-size: 22px; margin-bottom: 8px; }
+.concierge-cta p { color: #52525B; font-size: 15px; margin-bottom: 18px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+.concierge-cta .btn-primary { display: inline-block; }
+.concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
+.concierge-cta.small h3 { font-size: 18px; }
 </style>
 <script type="application/ld+json">
 {
@@ -198,11 +205,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
     "https://www.facebook.com/trilumensystemspa/",
     "https://www.instagram.com/trilumensystems/",
     "https://share.google/hdX5ZFP5B2RnKa2Sh",
-    "https://nextdoor.com/page/trilumen-systems",
-    "https://www.goodfirms.co/company/trilumen-systems",
-    "https://themanifest.com/company/trilumen-systems",
-    "https://www.alignable.com/kingston-pa/trilumen-systems",
-    "https://clutch.co/profile/trilumen-systems"
+    "https://nextdoor.com/page/trilumen-systems"
   ]
 }
 </script>
@@ -396,6 +399,14 @@ document.querySelectorAll('.tile').forEach(tile => {
 });
 </script>
 
+<section class="concierge-cta-wrap wrap">
+<div class="concierge-cta">
+<h3>Not sure where to start?</h3>
+<p>Answer a few quick questions and our free concierge will build your custom plan for you, no guessing which pieces you need.</p>
+<a href="concierge.html" class="btn-primary">Build My Plan</a>
+</div>
+</section>
+
 <section class="process">
 <div class="wrap">
 <h2 class="section-head">How It Works</h2>
@@ -473,6 +484,7 @@ document.querySelectorAll('.tile').forEach(tile => {
 <a href="clarity.html">Clarity Insights</a>
 <a href="faq.html">FAQ</a>
 <a href="contact.html">Contact</a>
+<a href="concierge.html">Concierge</a>
 <a href="trilumen-overview.pdf">Overview (PDF)</a>
 </div>
 <div class="footer-meta">
@@ -485,23 +497,5 @@ Remote Nationwide<br>
 </div>
 </footer>
 
-<!--Start of Conferbot Script-->
-<script type="text/javascript">
-  (function (d, s, id) {
-    var js, el = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.async = true;
-    js.src = 'https://cdn.conferbot.com/dist/v1/widget.min.js';
-    js.id = id;
-    js.charset = 'UTF-8';
-    el.parentNode.insertBefore(js, el);
-    js.onload = function () {
-      var w = window.ConferbotWidget("6aad9b7dce990d4c23275536", "live_chat");
-    };
-    
-  })(document, 'script', 'conferbot-js');
-</script>
-<!--End of Conferbot Script-->
 </body>
 </html>
