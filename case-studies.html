@@ -37,10 +37,11 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
+.nav-links a { white-space: nowrap; }
 .nav-links a.current { color: #4C4272; }
-.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
 .nav-cta:hover { background: #3A3358; }
 .menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
 .menu-btn svg { width: 26px; height: 26px; }
@@ -101,9 +102,12 @@ svg rect.n-dark { fill: #3E3760; stroke: #2E2948; }
 svg rect.n-light { fill: #F4F2FA; stroke: #E5E1F0; }
 
 @media (max-width: 700px) {
+  .case-card h2 { font-size: 22px; }
+}
+
+@media (max-width: 1150px) {
   .nav-links { display: none; }
   .menu-btn { display: block; }
-  .case-card h2 { font-size: 22px; }
 }
 </style>
 <script type="application/ld+json">

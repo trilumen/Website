@@ -36,9 +36,10 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
-.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-links a { white-space: nowrap; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
 .nav-cta:hover { background: #3A3358; }
 .menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
 .menu-btn svg { width: 26px; height: 26px; }
@@ -165,8 +166,6 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margi
 .footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; line-height: 1.7; }
 
 @media (max-width: 860px) {
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
   .page-header h1 { font-size: 30px; }
   .q-card, .result-card { padding: 24px; }
 }
@@ -180,6 +179,11 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margi
   .panel-wrap { padding: 0; }
   .result-card { border: none; box-shadow: none; max-width: 100%; }
 }
+
+@media (max-width: 1150px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+}
 </style>
 </head>
 <body>
@@ -190,6 +194,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margi
 <div class="nav-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>
@@ -204,6 +209,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; margi
 <div class="mobile-menu" id="mobileMenu">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>
@@ -262,6 +268,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <div class="footer-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>

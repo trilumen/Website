@@ -37,9 +37,10 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 28px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
-.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-links a { white-space: nowrap; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
 .nav-cta:hover { background: #3A3358; }
 .menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
 .menu-btn svg { width: 26px; height: 26px; }
@@ -153,8 +154,6 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
   .fork-grid { grid-template-columns: 1fr; }
   .periodic { grid-template-columns: repeat(3, 100px); }
   h1 { font-size: 34px; }
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
 }
 
 .concierge-cta { background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 14px; padding: 32px; margin: 40px auto; max-width: 900px; text-align: center; }
@@ -163,6 +162,11 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 .concierge-cta .btn-primary { display: inline-block; }
 .concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
 .concierge-cta.small h3 { font-size: 18px; }
+
+@media (max-width: 1150px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+}
 </style>
 <script type="application/ld+json">
 {

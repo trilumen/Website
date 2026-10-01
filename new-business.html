@@ -36,10 +36,11 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 24px; align-items: center; font-size: 15px; font-weight: 500; }
+.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
+.nav-links a { white-space: nowrap; }
 .nav-links a.current { color: #4C4272; }
-.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
 .nav-cta:hover { background: #3A3358; }
 .menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
 .menu-btn svg { width: 26px; height: 26px; }
@@ -114,11 +115,14 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 .footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
 
 @media (max-width: 760px) {
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
   .pain-grid, .pkg-grid, .trust-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 32px; }
   .pos-cta-box { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 1150px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
 }
 </style>
 <script type="application/ld+json">
