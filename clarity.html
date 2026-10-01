@@ -61,15 +61,14 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .post-card p { font-size: 15px; color: #52525B; line-height: 1.6; }
 
 footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
-.footer-inner { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "brand contact" "links links"; column-gap: 24px; row-gap: 14px; align-items: start; }
-.footer-inner > div:first-child { grid-area: brand; }
-.footer-inner > .footer-meta { grid-area: contact; margin-top: 0; text-align: right; line-height: 1.6; }
-.footer-links { grid-area: links; display: flex; flex-wrap: nowrap; gap: 10px 12px; font-size: 12px; color: #52525B; min-width: 0; justify-content: flex-start; }
+.footer-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: nowrap; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.footer-inner > .footer-meta { margin-top: 0; text-align: right; line-height: 1.6; }
+.footer-links { display: flex; flex-wrap: nowrap; gap: 8px 10px; font-size: 11px; color: #52525B; flex: 1; min-width: 0; justify-content: center; }
 .footer-links a { white-space: nowrap; flex-shrink: 0; }
 @media (max-width: 900px) {
-  .footer-inner { grid-template-columns: 1fr; grid-template-areas: "brand" "links" "contact"; row-gap: 16px; }
+  .footer-inner { flex-wrap: wrap; }
   .footer-inner > .footer-meta { text-align: left; }
-  .footer-links { flex-wrap: wrap; gap: 8px 12px; font-size: 13px; }
+  .footer-links { flex-wrap: wrap; gap: 8px 12px; font-size: 13px; justify-content: flex-start; }
 }
 .footer-meta { font-size: 13px; color: #A1A1AA; margin-top: 10px; }
 
