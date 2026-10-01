@@ -56,12 +56,12 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .offer-note strong { color: #4C4272; }
 
 main { padding: 20px 0 70px; }
-form { display: flex; flex-direction: column; gap: 18px; }
-label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-input, textarea, select { width: 100%; padding: 12px 14px; border: 1px solid #E4E4E7; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 15px; }
-input:focus, textarea:focus, select:focus { outline: none; border-color: #4C4272; }
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.contact-form label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 12px 14px; border: 1px solid #E4E4E7; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 15px; }
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: none; border-color: #4C4272; }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-textarea { resize: vertical; min-height: 100px; }
+.contact-form textarea { resize: vertical; min-height: 100px; }
 .consent { font-size: 12px; color: #A1A1AA; line-height: 1.5; }
 .submit-btn { background: #4C4272; color: #fff; border: none; padding: 15px; border-radius: 10px; font-weight: 600; font-size: 16px; cursor: pointer; }
 .submit-btn:hover { background: #3A3358; }
@@ -81,8 +81,9 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .footer-brand .logo { font-size: 18px; }
 .footer-tagline { font-size: 13px; color: #A1A1AA; margin: 0; }
 .footer-newsletter label { display: block; font-size: 14px; color: #3F3F46; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
-.embeddable-buttondown-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; margin-bottom: 18px; }
-.embeddable-buttondown-form input[type="email"] { flex: 1 1 160px; min-width: 0; padding: 11px 14px; border: 1px solid #E5E1F0; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; color: #18181B; background: #fff; }
+.embeddable-buttondown-form { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 18px; }
+.embeddable-buttondown-form > label { flex: 1 1 100%; margin-bottom: 0; }
+.embeddable-buttondown-form input[type="email"] { flex: 1 1 160px; width: auto; min-width: 0; min-height: 0; height: 42px; padding: 11px 14px; border: 1px solid #E5E1F0; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; color: #18181B; background: #fff; box-sizing: border-box; }
 .embeddable-buttondown-form input[type="email"]:focus { outline: none; border-color: #4C4272; box-shadow: 0 0 0 3px rgba(76,66,114,0.12); }
 .embeddable-buttondown-form input[type="submit"] { background: #4C4272; color: #fff; border: none; border-radius: 8px; padding: 11px 18px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .embeddable-buttondown-form input[type="submit"]:hover { background: #3d365c; }
@@ -240,7 +241,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <h3>Prefer to Send a Message Instead?</h3>
 </div>
 
-<form action="https://formspree.io/f/xeaoqjgn" method="POST">
+<form class="contact-form" action="https://formspree.io/f/xeaoqjgn" method="POST">
 <input type="hidden" name="_gotcha" style="display:none">
 <input type="hidden" name="_next" value="https://www.trilumensystems.com/success">
 <input type="hidden" name="_subject" value="New inquiry from TriLumen Systems website">
