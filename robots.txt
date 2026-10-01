@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /pdf-sources/
 
 Sitemap: https://www.trilumensystems.com/sitemap.xml
