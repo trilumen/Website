@@ -66,23 +66,20 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 
 footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .footer-shell { max-width: 1140px; margin: 0 auto; padding: 48px 24px 0; }
-.footer-columns { display: grid; grid-template-columns: 1fr 1fr 1.35fr; gap: 40px 32px; align-items: start; }
+.footer-columns { display: grid; grid-template-columns: 1.15fr 1fr 1fr 1.35fr; gap: 40px 28px; align-items: start; }
 .footer-col-title { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4C4272; margin: 0 0 14px; }
 .footer-col-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .footer-col-links a { color: #52525B; font-size: 14px; }
 .footer-col-links a:hover { color: #4C4272; }
 .footer-brand { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .footer-brand .logo { font-size: 18px; }
-.footer-tagline { font-size: 13px; color: #A1A1AA; margin: 0 0 18px; }
+.footer-tagline { font-size: 13px; color: #A1A1AA; margin: 0; }
 .footer-newsletter label { display: block; font-size: 14px; color: #3F3F46; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
-.embeddable-buttondown-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; margin-bottom: 8px; }
+.embeddable-buttondown-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; margin-bottom: 18px; }
 .embeddable-buttondown-form input[type="email"] { flex: 1 1 160px; min-width: 0; padding: 11px 14px; border: 1px solid #E5E1F0; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; color: #18181B; background: #fff; }
 .embeddable-buttondown-form input[type="email"]:focus { outline: none; border-color: #4C4272; box-shadow: 0 0 0 3px rgba(76,66,114,0.12); }
 .embeddable-buttondown-form input[type="submit"] { background: #4C4272; color: #fff; border: none; border-radius: 8px; padding: 11px 18px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .embeddable-buttondown-form input[type="submit"]:hover { background: #3d365c; }
-.footer-bd-powered { font-size: 11px; color: #A1A1AA; margin: 0 0 18px; }
-.footer-bd-powered a { color: #A1A1AA; text-decoration: underline; text-underline-offset: 2px; }
-.footer-bd-powered a:hover { color: #4C4272; }
 .footer-social { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
 .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: #F4F2FA; border: 1px solid #E5E1F0; color: #4C4272; transition: background 0.15s, color 0.15s; }
 .footer-social a:hover { background: #4C4272; color: #fff; border-color: #4C4272; }
@@ -91,15 +88,15 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .footer-recognized-label { font-size: 12px; color: #A1A1AA; margin: 0 0 8px; font-weight: 500; }
 .footer-badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .footer-badges a { display: inline-flex; align-items: center; }
-.footer-badges img { height: 28px; width: auto; display: block; }
+.footer-badges img { height: 48px; width: auto; display: block; }
 .footer-bottom { margin-top: 40px; border-top: 1px solid #EDEDF2; padding: 16px 0 20px; }
 .footer-bottom-inner { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: space-between; font-size: 13px; color: #A1A1AA; }
 .footer-bottom-links { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
 .footer-bottom-links a { color: #71717A; }
 .footer-bottom-links a:hover { color: #4C4272; }
 .footer-bottom-sep { color: #D4D4D8; }
-@media (max-width: 900px) {
-  .footer-columns { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1000px) {
+  .footer-columns { grid-template-columns: 1fr 1fr 1fr; }
   .footer-col-newsletter { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
@@ -261,9 +258,11 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <footer>
 <div class="footer-shell">
 <div class="footer-columns">
-<div class="footer-col">
+<div class="footer-col footer-col-brand">
 <div class="footer-brand"><div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div></div>
 <p class="footer-tagline">Proudly Human Systems</p>
+</div>
+<div class="footer-col">
 <p class="footer-col-title">Explore</p>
 <ul class="footer-col-links">
 <li><a href="services.html">Services</a></li>
@@ -289,7 +288,6 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <input type="email" name="email" id="bd-email" placeholder="Your email" required />
 <input type="submit" value="Subscribe" />
 </form>
-<p class="footer-bd-powered"><a href="https://buttondown.com" target="_blank" rel="noopener">Powered by Buttondown</a></p>
 <div class="footer-social" aria-label="Social links">
 <a href="https://www.linkedin.com/company/trilumen-systems" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg></a>
 <a href="https://www.facebook.com/trilumensystemspa" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.68 0H1.32A1.32 1.32 0 0 0 0 1.32v21.36A1.32 1.32 0 0 0 1.32 24h11.5v-9.29H9.69v-3.62h3.13V8.41c0-3.1 1.89-4.79 4.66-4.79 1.33 0 2.47.1 2.8.14v3.24h-1.92c-1.5 0-1.8.72-1.8 1.76v2.31h3.6l-.47 3.62h-3.13V24h6.12A1.32 1.32 0 0 0 24 22.68V1.32A1.32 1.32 0 0 0 22.68 0z"/></svg></a>
@@ -299,9 +297,9 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <div class="footer-recognized">
 <p class="footer-recognized-label">Recognized on</p>
 <div class="footer-badges">
-<a href="https://clutch.co/profile/trilumen-systems" target="_blank" rel="noopener" title="Clutch"><img src="assets/badges/clutch.svg" alt="Clutch" width="88" height="28"></a>
-<a href="https://www.goodfirms.co/company/trilumen-systems" target="_blank" rel="noopener" title="GoodFirms"><img src="assets/badges/goodfirms.svg" alt="GoodFirms" width="100" height="28"></a>
-<a href="https://www.alignable.com/kingston-pa/trilumen-systems" target="_blank" rel="noopener" title="Alignable"><img src="assets/badges/alignable.svg" alt="Alignable" width="96" height="28"></a>
+<a href="https://clutch.co/profile/trilumen-systems" target="_blank" rel="noopener" title="Clutch"><img src="assets/badges/clutch.png" alt="Clutch" height="48"></a>
+<a href="https://www.goodfirms.co/company/trilumen-systems" target="_blank" rel="noopener" title="GoodFirms"><img src="assets/badges/goodfirms.png" alt="GoodFirms" height="48"></a>
+<a href="https://www.alignable.com/kingston-pa/trilumen-systems" target="_blank" rel="noopener" title="Alignable"><img src="assets/badges/alignable.png" alt="Alignable" height="48"></a>
 </div>
 </div>
 </div>
