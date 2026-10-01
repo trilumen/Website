@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TriLumen Systems — New Business Overview</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    font-family: "DejaVu Sans", sans-serif;
+    color: #18181B;
+    background: #fff;
+    font-size: 10.5px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  em {
+    font-family: "DejaVu Serif", serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #4C4272;
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* —— Header —— */
+  .header {
+    background: #F4F2FA;
+    padding: 28px 42px 22px;
+  }
+
+  .brand {
+    font-size: 15px;
+    font-weight: 700;
+    color: #18181B;
+    letter-spacing: -0.01em;
+  }
+  .brand span { color: #4C4272; }
+
+  .tagline {
+    margin-top: 3px;
+    font-size: 8.5px;
+    font-weight: 600;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    color: #6B5FA0;
+  }
+
+  .headline {
+    margin-top: 16px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: #18181B;
+  }
+
+  .intro {
+    margin-top: 10px;
+    font-size: 11.5px;
+    color: #52525B;
+    max-width: 620px;
+    line-height: 1.55;
+  }
+
+  /* —— Body —— */
+  .body {
+    flex: 1;
+    padding: 18px 42px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #4C4272;
+    margin-bottom: 8px;
+  }
+
+  /* Pills */
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 7px;
+  }
+  .pill {
+    background: #F4F2FA;
+    color: #4C4272;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid #E5E1F0;
+  }
+
+  /* Pain points */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 28px;
+  }
+  .pain-item {
+    background: #FAFAFA;
+    border-radius: 6px;
+    border-left: 3px solid #4C4272;
+    padding: 9px 12px 9px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #3F3F46;
+    line-height: 1.35;
+  }
+
+  /* Packages */
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .pkg-card {
+    border: 1px solid #EDEDF2;
+    border-radius: 10px;
+    padding: 16px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+  }
+  .pkg-card.featured {
+    border-color: #4C4272;
+    border-width: 1.5px;
+    box-shadow: 0 4px 14px rgba(76,66,114,0.10);
+  }
+  .pkg-badge {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4C4272;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pkg-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #18181B;
+    margin-bottom: 2px;
+  }
+  .pkg-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #4C4272;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .pkg-for {
+    font-size: 9.5px;
+    color: #71717A;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    min-height: 28px;
+  }
+  .pkg-card ul {
+    list-style: none;
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  .pkg-card li {
+    font-size: 10px;
+    color: #3F3F46;
+    padding: 3px 0 3px 14px;
+    position: relative;
+    line-height: 1.35;
+  }
+  .pkg-card li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #A399C9;
+  }
+  .pkg-free {
+    background: #F4F2FA;
+    border-radius: 6px;
+    padding: 7px 8px;
+    font-size: 9.5px;
+    color: #4C4272;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* Trust / What you get */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .trust-card {
+    background: #EDEDF2;
+    border-radius: 8px;
+    padding: 12px 12px 11px;
+  }
+  .trust-card h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #4C4272;
+    margin-bottom: 4px;
+  }
+  .trust-card p {
+    font-size: 9.5px;
+    color: #52525B;
+    line-height: 1.45;
+  }
+
+  .note {
+    font-size: 9.5px;
+    color: #71717A;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  /* —— Footer —— */
+  .footer {
+    background: #4C4272;
+    color: #fff;
+    padding: 14px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer-cta {
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .footer-contact {
+    text-align: right;
+    font-size: 10px;
+    line-height: 1.55;
+    color: #E5E1F0;
+  }
+  .footer-contact strong {
+    color: #fff;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="brand">TriLumen <span>Systems</span></div>
+    <div class="tagline">Proudly Human Systems</div>
+    <h1 class="headline">Opening a Business? <em>Start Right.</em></h1>
+    <p class="intro">A website, your POS, business email, and your Google listing — set up together, correctly, before you open your doors. One fixed price, nothing to piece together yourself.</p>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <div class="section-label">Built With</div>
+      <div class="pills">
+        <span class="pill">Custom Website</span>
+        <span class="pill">Square</span>
+        <span class="pill">Clover</span>
+        <span class="pill">Toast</span>
+        <span class="pill">Google Workspace</span>
+        <span class="pill">Microsoft 365</span>
+        <span class="pill">QuickBooks Online</span>
+        <span class="pill">Google Business Profile</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Sound Familiar?</div>
+      <div class="pain-grid">
+        <div class="pain-item">No website yet, and no way for people to find you</div>
+        <div class="pain-item">Haven’t picked a POS, or can’t afford to get it wrong</div>
+        <div class="pain-item">Business email still forwarding to a personal Gmail</div>
+        <div class="pain-item">No Google Business Profile, so you’re invisible in search</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Launch Packages</div>
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-name">Essentials</div>
+          <div class="pkg-price">$2,750</div>
+          <div class="pkg-for">For a service business or office getting online and taking payments</div>
+          <ul>
+            <li>Starter website, 4–5 pages</li>
+            <li>Remote POS setup</li>
+            <li>Business email setup</li>
+            <li>Google Business Profile setup</li>
+          </ul>
+          <div class="pkg-free">First month of Site Care free</div>
+        </div>
+        <div class="pkg-card featured">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-name">Full Launch</div>
+          <div class="pkg-price">$3,950</div>
+          <div class="pkg-for">For a storefront or restaurant opening with on-site setup</div>
+          <ul>
+            <li>Business website, 6–8 pages</li>
+            <li>Full-service, on-site POS install</li>
+            <li>Business email setup</li>
+            <li>Google Business Profile setup</li>
+          </ul>
+          <div class="pkg-free">First month of Site Care free</div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-name">Retail Launch</div>
+          <div class="pkg-price">$4,750</div>
+          <div class="pkg-for">For retail selling online and in person from day one</div>
+          <ul>
+            <li>Business website + online store</li>
+            <li>Full-service, on-site POS install</li>
+            <li>Business email setup</li>
+            <li>Google Business Profile setup</li>
+          </ul>
+          <div class="pkg-free">First month of Site Care free</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">What You Actually Get</div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h4>The Domain Is Always Yours</h4>
+          <p>Registered in your name, on your own account. We manage the DNS while you’re with us; you keep the keys either way.</p>
+        </div>
+        <div class="trust-card">
+          <h4>No Assembly Required</h4>
+          <p>One fixed price covers the website, POS, email, and your Google listing together, not a checklist of separate vendors.</p>
+        </div>
+        <div class="trust-card">
+          <h4>Built to Grow With You</h4>
+          <p>Ready for dashboards, automation, or deeper systems work later? It’s the same team, not a handoff to someone new.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="note">On-site installation is available from NYC to Philadelphia. Everything can also be done fully remotely, anywhere, with remote POS setup in place of on-site installation. Already have a website, or just need POS on its own? Ask about POS setup and installation starting at $350.</p>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-cta">Let’s Figure Out What You Need</div>
+    <div class="footer-contact">
+      <strong>(570) 392-9116</strong> | hello@trilumensystems.com<br>
+      trilumensystems.com/new-business | NEPA, NYC &amp; Philadelphia — Remote Nationwide
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
