@@ -387,13 +387,17 @@ var S1 = {
     { id: 'reports_spreadsheets', label: "Reports live in spreadsheets and I want a real dashboard", scores: { dashboard: 3 } },
     { id: 'nobody_owns', label: "Nobody on the team has time to own our systems", scores: { audit: 1, retainer: 3 } },
     { id: 'too_small_it', label: "Too small for IT, but things keep breaking", scores: { audit: 1, retainer: 2 } },
+    { id: 'pos_sync', label: "Our POS doesn't talk to QuickBooks or inventory", scores: { pos_setup: 3 } },
+    { id: 'pos_down', label: "No one to call when our POS goes down", scores: { pos_care: 3 } },
     NOT_SURE
   ]
 };
 var S2 = {
   id: 's2', title: "Which of these do you use?", sub: "Pick all that apply.", type: 'multi', max: 6, scored: false, options: [
     { id: 'qbo', label: "QuickBooks Online" }, { id: 'hubspot', label: "HubSpot" }, { id: 'zapier', label: "Zapier" },
-    { id: 'make', label: "Make" }, { id: 'airtable', label: "Airtable" }, { id: 'other', label: "Other" }
+    { id: 'make', label: "Make" }, { id: 'airtable', label: "Airtable" },
+    { id: 'square', label: "Square" }, { id: 'clover', label: "Clover" }, { id: 'toast', label: "Toast" },
+    { id: 'other', label: "Other" }
   ]
 };
 var S3 = {
@@ -502,6 +506,8 @@ var REASONS = {
   's1.reports_spreadsheets': "your reports live in spreadsheets and you want a real dashboard",
   's1.nobody_owns': "nobody on the team has time to own your systems",
   's1.too_small_it': "you're too small for IT, but things keep breaking",
+  's1.pos_sync': "your POS doesn't talk to QuickBooks or your inventory",
+  's1.pos_down': "there's no one to call when your POS goes down",
   's3.one_thing': "you want one specific thing fixed or built",
   's3.few_things': "you're looking at a few things over the next several months",
   's3.on_call': "you want someone on call as things come up"
@@ -655,17 +661,23 @@ function finishQuiz() {
 }
 
 function finishSmall() {
-  var totals = { audit: 0, dashboard: 0, retainer: 0 };
+  var totals = { audit: 0, dashboard: 0, retainer: 0, pos_setup: 0, pos_care: 0 };
   (state.answers.s1 || []).forEach(function (id) { addScores(totals, scoreOf('s1', id, SMALL_FLOW)); });
   if (state.answers.s3) addScores(totals, scoreOf('s3', state.answers.s3, SMALL_FLOW));
 
-  var allUnder3 = totals.audit < 3 && totals.dashboard < 3 && totals.retainer < 3;
+  var allUnder3 = Object.keys(totals).every(function (k) { return totals[k] < 3; });
   var s1NotSure = (state.answers.s1 || []).indexOf('not_sure') !== -1;
   if (allUnder3 || s1NotSure) { state.result = { type: 'fallback_small' }; renderResult(); return; }
 
-  var retainerSignal = (state.answers.s1 || []).some(function (id) { return id === 'nobody_owns' || id === 'too_small_it'; }) || state.answers.s3 === 'on_call';
-  var lead = 'audit';
-  if (retainerSignal) lead = 'retainer';
+  var s1 = state.answers.s1 || [];
+  var retainerSignal = s1.some(function (id) { return id === 'nobody_owns' || id === 'too_small_it'; }) || state.answers.s3 === 'on_call';
+  var posCareSignal = s1.indexOf('pos_down') !== -1;
+  var posSetupSignal = s1.indexOf('pos_sync') !== -1;
+
+  var lead;
+  if (posCareSignal) lead = 'pos_care';
+  else if (posSetupSignal) lead = 'pos_setup';
+  else if (retainerSignal) lead = 'retainer';
   else lead = totals.dashboard > totals.audit ? 'dashboard' : 'audit';
 
   var tier = (state.answers.s4 === '5to10' || state.answers.s4 === '10plus') ? 'growth' : 'starter';
@@ -788,10 +800,15 @@ function renderSmallResult(r) {
   var OFFERS = {
     audit: { name: '3-Hour Automation Audit', price: '$375', desc: "One automation or workflow reviewed, a root-cause write-up, and fix recommendations you can act on yourself." },
     dashboard: { name: 'Single Dashboard Build', price: '$950', desc: "One dashboard, one data source, built in QuickBooks, HubSpot, Airtable, or similar, plus a short walkthrough." },
-    retainer: { name: r.tier === 'growth' ? 'Growth Retainer' : 'Starter Retainer', price: r.tier === 'growth' ? '$1,100/mo (10 hrs)' : '$600/mo (5 hrs)', desc: "Ongoing support for whatever you're running today, not just systems we built. Enough to keep small issues from piling up." }
+    retainer: { name: r.tier === 'growth' ? 'Growth Retainer' : 'Starter Retainer', price: r.tier === 'growth' ? '$1,100/mo (10 hrs)' : '$600/mo (5 hrs)', desc: "Ongoing support for whatever you're running today, not just systems we built. Enough to keep small issues from piling up." },
+    pos_setup: { name: 'POS Setup', price: 'From $350', desc: "Getting your POS installed and talking to QuickBooks and your inventory — remote, full-service on-site, or hardware only. We'll confirm the right scope on the call." },
+    pos_care: { name: 'POS Care', price: 'From $149/mo', desc: "Ongoing support once your POS is live — remote or priority with on-site dispatch, so you always have someone to call." }
   };
   var lead = OFFERS[r.lead];
-  var rest = ['audit', 'dashboard', 'retainer'].filter(function (k) { return k !== r.lead; });
+  var isPosLead = r.lead === 'pos_setup' || r.lead === 'pos_care';
+  var rest = isPosLead
+    ? ['pos_setup', 'pos_care'].filter(function (k) { return k !== r.lead; })
+    : ['audit', 'dashboard', 'retainer'].filter(function (k) { return k !== r.lead; });
 
   var summaryText = "Recommended: " + lead.name + " (" + lead.price + "). " + lead.desc;
 
@@ -810,7 +827,7 @@ function renderSmallResult(r) {
       becauseBlock(r.reasons) +
       actionsBlock(summaryText) +
       '<div class="customize-box"><h4>Want something different?</h4><div class="offer-toggle" id="offerToggle">' +
-        ['audit', 'dashboard', 'retainer'].map(function (k) {
+        ['audit', 'dashboard', 'retainer', 'pos_setup', 'pos_care'].map(function (k) {
           return '<button type="button" class="cz-tile' + (k === r.lead ? ' on' : '') + '" data-offer="' + k + '" style="' + (k === r.lead ? 'background:#4C4272' : '') + '">' + escapeHtml(OFFERS[k].name) + '</button>';
         }).join('') +
       '</div></div>' +
@@ -919,6 +936,7 @@ var CHIPS = [
   'Our reports and dashboards are a mess',
   'We want to use AI or Copilot',
   "Our systems don't talk to each other",
+  "We need help with our POS",
   "I'm not sure where to start"
 ];
 
