@@ -104,7 +104,7 @@ h1 { font-size: 48px; line-height: 1.12; margin-bottom: 22px; }
 
 /* Segmentation Fork */
 .fork { padding: 20px 0 60px; background: #fff; }
-.fork-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+.fork-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto; }
 .fork-card { padding: 26px 28px; border-radius: 14px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
 .fork-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,66,114,0.1); }
 .fork-card.small-biz { background: #18181B; border: 1px solid #333336; }
@@ -150,6 +150,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 @media (max-width: 860px) {
   .step-grid { grid-template-columns: 1fr; }
   .pain-grid { grid-template-columns: 1fr; }
+  .fork-grid { grid-template-columns: 1fr; }
   .periodic { grid-template-columns: repeat(3, 100px); }
   h1 { font-size: 34px; }
   .nav-links { display: none; }
@@ -224,6 +225,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 <div class="nav-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>
@@ -238,6 +240,7 @@ footer { background: #fff; padding: 44px 0; border-top: 1px solid #EDEDF2; }
 <div class="mobile-menu" id="mobileMenu">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>
@@ -347,6 +350,10 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <a href="small-business.html" class="fork-card small-biz">
 <p>Running a smaller team?</p>
 <span class="arrow">See our fixed-price small business sprint options →</span>
+</a>
+<a href="new-business.html" class="fork-card small-biz">
+<p>Opening a new business?</p>
+<span class="arrow">See our all-in-one launch packages →</span>
 </a>
 <a href="services.html" class="fork-card enterprise">
 <p>Scaling an enterprise infrastructure?</p>
@@ -482,6 +489,7 @@ document.querySelectorAll('.tile').forEach(tile => {
 <div class="footer-links">
 <a href="services.html">Services</a>
 <a href="small-business.html">Small Business</a>
+<a href="new-business.html">New Business</a>
 <a href="case-studies.html">Case Studies</a>
 <a href="team.html">Team</a>
 <a href="clarity.html">Clarity Insights</a>
