@@ -235,7 +235,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
 <a href="contact">Contact</a>
-<a href="contact" class="nav-cta">Book a Free Call</a>
+<a href="contact" class="nav-cta">Book a Call</a>
 </div>
 <button class="menu-btn" id="menuBtn" aria-label="Open menu">
 <svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -251,7 +251,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
 <a href="contact">Contact</a>
-<a href="contact" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+<a href="contact" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Call</a>
 </div>
 </nav>
 <script>
@@ -263,7 +263,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="page-header">
 <div class="wrap">
 <h1>Meet the <em>Concierge</em></h1>
-<p>Answer a few quick questions and we'll build your custom systems plan, or skip straight to asking us anything.</p>
+<p>A few questions, and we'll shape a systems plan around your business. Or simply ask us anything.</p>
 </div>
 </section>
 
@@ -875,7 +875,7 @@ function actionsBlock(summaryText) {
   var bookUrl = 'https://calendly.com/tom-trilumensystems/30min?hide_gdpr_banner=1&primary_color=4c4272&a1=' + a1;
   var mailBody = encodeURIComponent(summaryText + '\n\n—\nBuilt with the TriLumen Concierge: https://www.trilumensystems.com/concierge.html');
   return '<div class="result-actions">' +
-    '<a href="' + bookUrl + '" target="_blank" rel="noopener" class="btn-primary">Book a Free Call</a>' +
+    '<a href="' + bookUrl + '" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>' +
     '<button class="btn-outline" onclick="window.print()">Print</button>' +
     '<a href="mailto:?subject=' + encodeURIComponent('My TriLumen systems plan') + '&body=' + mailBody + '" class="btn-outline">Email Me This</a>' +
     '<button class="btn-ghost" id="askBeforeBook">Have a question first? Ask the concierge</button>' +
@@ -917,7 +917,7 @@ function renderSmallResult(r) {
           return '<button type="button" class="cz-tile' + (k === r.lead ? ' on' : '') + '" data-offer="' + k + '" style="' + (k === r.lead ? 'background:#4C4272' : '') + '">' + escapeHtml(OFFERS[k].name) + '</button>';
         }).join('') +
       '</div></div>' +
-      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The free call is where it gets confirmed.</div>' +
+      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The call is where it gets confirmed.</div>' +
       '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
     '</div>';
 
@@ -946,7 +946,7 @@ function renderLargeResult(r) {
       becauseBlock(r.reasons) +
       (r.also ? '<div class="result-also">Also consider: <strong>' + escapeHtml(TILES[r.also].name) + '</strong></div>' : '') +
       actionsBlock(summaryText) +
-      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The free call is where it gets confirmed.</div>' +
+      '<div class="result-disclaimer">This is a starting point based on a few answers, not a diagnosis. The call is where it gets confirmed.</div>' +
       '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
     '</div>';
 
@@ -969,12 +969,12 @@ function renderFallbackLarge() {
   quizArea.innerHTML =
     '<div class="simple-card">' +
       '<h3>Not sure yet: start with the assessment</h3>' +
-      '<p>Your answers point in a few directions at once, which is common, and totally fine. The best next step is a free 30-minute call, and if it makes sense, the Systems and Automation Assessment ($2,200, credited toward a project if you move forward).</p>' +
-      actionsBlock("Not sure yet: recommend starting with a free call, then the Systems and Automation Assessment.") +
+      '<p>Your answers point in a few directions at once, which is common, and totally fine. The best next step is a 30-minute call, and if it makes sense, the Systems and Automation Assessment ($2,200, credited toward a project if you move forward).</p>' +
+      actionsBlock("Not sure yet: recommend starting with a call, then the Systems and Automation Assessment.") +
       '<a href="#" class="restart-link" id="restartLink">Start over</a>' +
     '</div>';
   document.getElementById('restartLink').addEventListener('click', function (e) { e.preventDefault(); resetQuiz(); });
-  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext("Not sure yet: recommend starting with a free call, then the Systems and Automation Assessment."); });
+  document.getElementById('askBeforeBook').addEventListener('click', function () { openChatWithContext("Not sure yet: recommend starting with a call, then the Systems and Automation Assessment."); });
 }
 
 function renderFallbackSmall() {

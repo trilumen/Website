@@ -59,8 +59,17 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 
 .tools { padding: 36px 0; background: #fff; text-align: center; }
 .tools-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A1A1AA; margin-bottom: 18px; font-weight: 600; }
-.badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.badge { background: #F4F2FA; color: #4C4272; font-size: 14px; font-weight: 600; padding: 8px 18px; border-radius: 20px; border: 1px solid #E5E1F0; }
+.tool-tiles { max-width: 620px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; }
+.works-logo { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 144px; height: 62px; padding: 0 10px; background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; transition: border-color 0.15s, box-shadow 0.15s; }
+.works-logo img { display: block; flex: none; filter: grayscale(1); opacity: 0.72; transition: filter 0.2s, opacity 0.2s; }
+.works-logo .nm { font-size: 14px; font-weight: 600; color: #52525B; line-height: 1.15; white-space: nowrap; }
+.works-logo .nm small { display: block; font-size: 11px; font-weight: 500; color: #A1A1AA; }
+.works-logo:hover { border-color: #C4BEDC; box-shadow: 0 4px 12px rgba(76,66,114,0.08); }
+.works-logo:hover img { filter: none; opacity: 1; }
+.works-logo.txt .nm { transition: color 0.2s; }
+.works-logo.txt:hover .nm { color: #4C4272; }
+.works-note { text-align: center; font-size: 12px; color: #A1A1AA; max-width: 560px; margin: 16px auto 0; line-height: 1.5; }
+@media (max-width: 560px) { .works-logo { width: calc(50% - 6px); padding: 0 8px; } .works-logo .nm { font-size: 13px; } }
 
 .pain { background: #FAFAFA; padding: 60px 0; }
 .section-head { text-align: center; font-size: 30px; font-weight: 700; margin-bottom: 12px; }
@@ -211,7 +220,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
 <a href="contact">Contact</a>
-<a href="contact" class="nav-cta">Book a Free Call</a>
+<a href="contact" class="nav-cta">Book a Call</a>
 </div>
 <button class="menu-btn" id="menuBtn" aria-label="Open menu">
 <svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -227,7 +236,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
 <a href="contact">Contact</a>
-<a href="contact" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
+<a href="contact" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Call</a>
 </div>
 </nav>
 <script>
@@ -240,35 +249,36 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <div class="wrap">
 <div class="tag">Proudly Human Systems</div>
 <h1>Opening a Business? <em>Start Right.</em></h1>
-<p class="sub">A website, your POS, business email, and your Google listing — set up together, correctly, before you open your doors. One fixed price, nothing to piece together yourself.</p>
-<a href="contact" class="btn-primary">Book a Free Launch Call</a>
+<p class="sub">A website, POS, business email, and Google listing, set up together before opening day. One fixed price. Nothing to piece together.</p>
+<a href="contact" class="btn-primary">Book a Launch Call</a>
 </div>
 </section>
 
 <section class="tools">
-<p class="tools-label">What's Included Across Every Launch Package</p>
-<div class="badge-row">
-<span class="badge">Custom Website</span>
-<span class="badge">Square</span>
-<span class="badge">Clover</span>
-<span class="badge">Toast</span>
-<span class="badge">Google Workspace</span>
-<span class="badge">Microsoft 365</span>
-<span class="badge">QuickBooks Online</span>
-<span class="badge">Google Business Profile</span>
+<p class="tools-label">Included in every launch package</p>
+<div class="tool-tiles">
+<span class="works-logo txt"><span class="nm">Custom website</span></span>
+<span class="works-logo"><img src="assets/logos/square.svg" alt="Square" width="24" height="24" loading="lazy"><span class="nm">Square</span></span>
+<span class="works-logo"><img src="assets/logos/clover.svg" alt="Clover" width="106" height="26" loading="lazy"></span>
+<span class="works-logo"><img src="assets/logos/toast.svg" alt="Toast" width="100" height="25" loading="lazy"></span>
+<span class="works-logo"><img src="assets/logos/google.svg" alt="Google Workspace" width="44" height="14" loading="lazy"><span class="nm">Workspace</span></span>
+<span class="works-logo"><img src="assets/logos/microsoft365.svg" alt="Microsoft 365" width="32" height="30" loading="lazy"><span class="nm">Microsoft 365</span></span>
+<span class="works-logo"><img src="assets/logos/quickbooks.svg" alt="QuickBooks Online" width="26" height="26" loading="lazy"><span class="nm">QuickBooks</span></span>
+<span class="works-logo"><img src="assets/logos/google.svg" alt="Google Business Profile" width="44" height="14" loading="lazy"><span class="nm">Business<br>Profile</span></span>
 </div>
+<p class="works-note">Product names and logos are trademarks of their respective owners. Their use here shows the systems we work with and does not imply endorsement.</p>
 </section>
 
 <section class="pain">
 <div class="wrap">
-<h2 class="section-head">Sound Familiar?</h2>
+<h2 class="section-head">Where Most Launches Stall</h2>
 <p class="section-sub">Opening a business means a dozen different logins, vendors, and decisions, all due at once. Usually it's a handful of specific things holding up opening day.</p>
 <div class="pain-grid">
 <div class="pain-item">No website yet, and no way for people to find you</div>
 <div class="pain-item">Haven't picked a POS, or can't afford to get it wrong</div>
 <div class="pain-item">Business email still forwarding to a personal Gmail</div>
 <div class="pain-item">No Google Business Profile, so you're invisible in search and maps</div>
-<div class="pain-item">Not sure what you actually need before opening day</div>
+<div class="pain-item">Not sure what you need before opening day</div>
 <div class="pain-item">No time to vet ten different vendors for ten different things</div>
 </div>
 </div>
@@ -277,7 +287,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="packages">
 <div class="wrap">
 <h2 class="section-head">Launch Packages</h2>
-<p class="section-sub">Fixed price, fixed scope — everything bundled together because that's genuinely what opening a business needs, not a menu of parts to assemble yourself.</p>
+<p class="section-sub">Fixed price, fixed scope. Everything bundled, because opening a business calls for all of it at once.</p>
 <div class="pkg-grid">
 
 <div class="pkg-card">
@@ -331,7 +341,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 
 <section class="trust">
 <div class="wrap">
-<h2 class="section-head">What You Actually Get</h2>
+<h2 class="section-head">What You Get</h2>
 <div class="trust-grid">
 <div class="trust-item">
 <h4>The Domain Is Always Yours</h4>
@@ -384,7 +394,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="cta-band">
 <div class="wrap">
 <h2>Ready to Open?</h2>
-<a href="contact" class="btn-primary">Book a Free Launch Call</a>
+<a href="contact" class="btn-primary">Book a Launch Call</a>
 <a href="trilumen-new-business-overview.pdf" class="btn-outline">Download Your Quick-Look Sheet</a>
 </div>
 </section>
