@@ -368,8 +368,7 @@ table.data .sub { color: var(--text-mute); font-size: 11px; display: block; }
   padding: 8px 18px 16px; letter-spacing: 0.04em;
 }
 
-
-/* Embed mode: hide TriLumen wordmark + footer so host page chrome is not doubled */
+/* Embed mode: hide TriLumen wordmark + footer; unstick chrome; keep 5 KPIs on one row */
 html.embed .logo-wrap,
 body.embed .logo-wrap,
 html.embed .footer-note,
@@ -378,5 +377,39 @@ body.embed .footer-note {
 }
 html.embed .topbar,
 body.embed .topbar {
+  position: static !important;
+  top: auto !important;
   padding-right: 16px;
+  backdrop-filter: none;
+  background: #fff;
+}
+html.embed .kpi-five,
+body.embed .kpi-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 8px;
+}
+html.embed .kpi .label,
+body.embed .kpi .label {
+  font-size: 10px;
+}
+html.embed .kpi .value,
+body.embed .kpi .value {
+  font-size: 20px;
+}
+html.embed,
+body.embed {
+  overflow: hidden;
+  height: 100%;
+  background: #fff;
+}
+html.embed .app,
+body.embed .app {
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html.embed .main,
+body.embed .main {
+  overflow: hidden;
+  padding-bottom: 12px;
 }

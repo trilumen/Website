@@ -1,22 +1,50 @@
 /* TriLumen shared site nav — keep gap/font/breakpoint in one place */
 nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
-.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
-.logo { font-size: 18px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding: 16px 28px;
+  max-width: 1400px !important;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #18181B;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
 .logo-icon-img { height: 26px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 18px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
 .nav-links a:hover { color: #4C4272; }
 .nav-links a { white-space: nowrap; }
 .nav-links a.current { color: #4C4272; }
 .nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
 .nav-cta:hover { background: #3A3358; }
-.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-shrink: 0; }
 .menu-btn svg { width: 26px; height: 26px; }
 .mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
 .mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
 .mobile-menu.open { display: flex; }
 
-@media (max-width: 1200px) {
+/* Show hamburger when the wide desktop nav would collide */
+@media (max-width: 1280px) {
   .nav-links { display: none !important; }
   .menu-btn { display: block !important; }
 }
