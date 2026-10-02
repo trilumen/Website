@@ -72,6 +72,11 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .gallery-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
 .gallery-question { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #4C4272; margin-bottom: 6px; }
 .gallery-meta .company { font-size: 12px; color: #A1A1AA; margin-bottom: 6px; font-weight: 500; }
+.design-notes { max-width: 900px; margin: 28px auto 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: dn; }
+.design-notes li { counter-increment: dn; background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 12px; padding: 16px 18px; font-size: 14px; line-height: 1.5; color: #3F3F46; }
+.design-notes li::before { content: counter(dn); display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: #4C4272; color: #fff; font-size: 12px; font-weight: 700; }
+.design-notes strong { color: #18181B; }
+@media (max-width: 860px) { .design-notes { grid-template-columns: 1fr; } }
 .gallery-synth { text-align: center; font-size: 13px; color: #71717A; margin-top: 28px; }
 .gallery-thumb { display: block; width: 100%; padding: 0; border: 0; background: #F4F2FA; cursor: zoom-in; }
 .gallery-thumb img { width: 100%; height: auto; display: block; aspect-ratio: 16/10; object-fit: cover; object-position: top center; }
@@ -150,7 +155,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: #D4D4D8; }
 .browser-url { margin-left: 10px; font-size: 12px; color: #71717A; font-family: ui-monospace, monospace; }
 .browser-frame iframe { width: 100%; height: 700px; border: 0; display: block; background: #F7F8FA; }
-.iframe-interact { position: absolute; inset: 40px 0 0 0; background: rgba(255,255,255,0.02); cursor: pointer; z-index: 2; display: flex; align-items: flex-start; justify-content: center; padding-top: 18px; }
+.iframe-interact { position: absolute; inset: 40px 0 0 0; background: rgba(255,255,255,0.02); cursor: pointer; z-index: 2; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 18px; }
 .iframe-interact span { background: rgba(24,24,27,0.78); color: #fff; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px; pointer-events: none; }
 .iframe-interact.dismissed { display: none; }
 .featured-actions { margin-top: 16px; }
@@ -179,6 +184,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .process-band .section-head { color: #fff; text-align: center; font-size: 28px; margin-bottom: 28px; }
 .process-band .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .process-band .step-card { background: #232326; border-radius: 12px; padding: 22px 18px; text-align: center; }
+.process-band .band-sub { text-align: center; color: #A1A1AA; font-size: 14px; margin: -14px 0 24px; }
 .process-band .step-num { font-size: 26px; font-weight: 800; color: #A399C9; margin-bottom: 8px; }
 .process-band .step-card h4 { font-size: 15px; margin-bottom: 8px; }
 .process-band .step-card p { font-size: 13px; color: #A1A1AA; line-height: 1.5; }
@@ -242,7 +248,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="page-header">
 <div class="wrap">
 <h1>Selected <em>Work</em></h1>
-<p>Three boards, built on sample data, showing what clear looks like.</p>
+<p>Three boards showing what clear looks like.</p>
 </div>
 </section>
 
@@ -263,11 +269,16 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   <div class="iframe-interact" id="salesOpsInteract" role="button" tabindex="0" aria-label="Click to interact with demo">
     <span>Click to interact</span>
   </div>
-  <iframe src="work/demos/sales-ops/" title="Fieldstone Markets Sales Ops demo" loading="lazy" height="700"></iframe>
+  <iframe src="work/demos/sales-ops/?embed=1" title="Fieldstone Markets Sales Ops demo" loading="lazy" height="700"></iframe>
 </div>
 <div class="featured-actions">
   <a class="btn-secondary" href="work/demos/sales-ops/">Open full screen →</a>
 </div>
+<ul class="design-notes" aria-label="Why this board is built this way">
+<li><strong>The drill ends at the ticket.</strong> Nobody has to ask where a number came from.</li>
+<li><strong>Every KPI shows last year beside it.</strong> Leadership reads direction first, detail second.</li>
+<li><strong>One scoreboard, ranked.</strong> Stores and associates see where they stand without a meeting.</li>
+</ul>
 </div>
 <div class="featured-fallback">
   <img src="work/assets/sales-ops-fallback.png" alt="Fieldstone Markets Sales Ops board preview" width="1200" height="700" loading="lazy">
@@ -292,7 +303,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
     <dt>Result</dt>
     <dd>Books close in days, not a scramble.</dd>
   </dl>
-  <div class="stat">↓ 96%<span>hours re-keyed / week</span></div>
+  <div class="stat">↓ 96%<span>hours re-keyed / week · sample board</span></div>
   <span class="cta">Open interactive demo →</span>
 </a>
 
@@ -308,7 +319,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
     <dt>Result</dt>
     <dd>Repair path is visible, escalations carry $/hr context.</dd>
   </dl>
-  <div class="stat">↓ 41%<span>mean time to repair</span></div>
+  <div class="stat">↓ 41%<span>mean time to repair · sample board</span></div>
   <span class="cta">Open interactive demo →</span>
 </a>
 
@@ -319,21 +330,22 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="process-band">
 <div class="wrap">
 <h2 class="section-head">How these get built</h2>
+<p class="band-sub">Worked example: Brightwell Mercantile, Square to QuickBooks to Excel.</p>
 <div class="step-grid">
 <div class="step-card">
   <div class="step-num">1</div>
   <h4>Inputs</h4>
-  <p>POS exports, ERP tickets, shop-floor forms, spreadsheets. We map the messy sources first.</p>
+  <p>A Square sales export, the QuickBooks deposits, and the Excel master someone keeps by hand. We map all three before building anything.</p>
 </div>
 <div class="step-card">
   <div class="step-num">2</div>
   <h4>Logic</h4>
-  <p>Clean joins, job schedules, exception rules, and the KPIs leadership actually asks for.</p>
+  <p>Match each deposit to its Square batch, flag duplicate SKUs and customers, and re-run overnight. Anything that does not match becomes an exception.</p>
 </div>
 <div class="step-card">
   <div class="step-num">3</div>
   <h4>The board</h4>
-  <p>A scoreboard people can drill. Training included so it does not become another ignored tab.</p>
+  <p>One exception queue, highest severity first, beside the job log. Training is included so it does not become another ignored tab.</p>
 </div>
 </div>
 </div>
@@ -345,7 +357,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <p class="section-sub">Six boards, grouped by the question they answer. Different shapes on purpose. Click a thumb to enlarge.</p>
 <div class="gallery-grid">
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/01-which-tech-second-visit.png" data-caption="Which tech needs a second visit? · Ironvale Mechanical. Ranked technicians by first-time fix, second visits, parts misses, and travel. High-risk rows flagged in amber. All data is synthetic." aria-label="Expand: Which tech needs a second visit?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/01-which-tech-second-visit.png" data-caption="Which tech needs a second visit? · Ironvale Mechanical. Ranked technicians by first-time fix, second visits, parts misses, and travel. High-risk rows flagged in amber." aria-label="Expand: Which tech needs a second visit?">
     <img src="work/gallery/boards/01-which-tech-second-visit.png" alt="Which tech needs a second visit? · Ironvale Mechanical" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -355,7 +367,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/02-where-chairs-empty.png" data-caption="Where are chairs sitting empty? · Mosswood Dental. Chair by hour occupancy. Darker purple is fuller. Amber cells mark overbook risk. All data is synthetic." aria-label="Expand: Where are chairs sitting empty?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/02-where-chairs-empty.png" data-caption="Where are chairs sitting empty? · Mosswood Dental. Chair by hour occupancy. Darker purple is fuller. Amber cells mark overbook risk." aria-label="Expand: Where are chairs sitting empty?">
     <img src="work/gallery/boards/02-where-chairs-empty.png" alt="Where are chairs sitting empty? · Mosswood Dental" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -365,7 +377,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/03-where-pipeline-stalls.png" data-caption="Where does the pipeline stall? · Northglass Solar. Lead to install funnel with the biggest drop called out. Stall reasons ranked beside it. All data is synthetic." aria-label="Expand: Where does the pipeline stall?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/03-where-pipeline-stalls.png" data-caption="Where does the pipeline stall? · Northglass Solar. Lead to install funnel with the biggest drop called out. Stall reasons ranked beside it." aria-label="Expand: Where does the pipeline stall?">
     <img src="work/gallery/boards/03-where-pipeline-stalls.png" alt="Where does the pipeline stall? · Northglass Solar" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -375,7 +387,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/04-what-led-to-downtime.png" data-caption="What led up to the downtime? · Pinetop Fabrication. Operator form to close, with schedule flag and PO approval highlighted when money or capacity is on the line. All data is synthetic." aria-label="Expand: What led up to the downtime?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/04-what-led-to-downtime.png" data-caption="What led up to the downtime? · Pinetop Fabrication. Operator form to close, with schedule flag and PO approval highlighted when money or capacity is on the line." aria-label="Expand: What led up to the downtime?">
     <img src="work/gallery/boards/04-what-led-to-downtime.png" alt="What led up to the downtime? · Pinetop Fabrication" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -385,7 +397,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/05-are-we-ahead-of-ly.png" data-caption="Are we ahead of last year? · Copperfinch Outfitters. Six KPIs with sparklines and a daypart CY vs LY read. Conversion is the amber flag. All data is synthetic." aria-label="Expand: Are we ahead of last year?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/05-are-we-ahead-of-ly.png" data-caption="Are we ahead of last year? · Copperfinch Outfitters. Six KPIs with sparklines and a daypart CY vs LY read. Conversion is the amber flag." aria-label="Expand: Are we ahead of last year?">
     <img src="work/gallery/boards/05-are-we-ahead-of-ly.png" alt="Are we ahead of last year? · Copperfinch Outfitters" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -395,7 +407,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 <article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/06-which-deposits-unmatched.png" data-caption="Which deposits did not match? · Riverbend Mercantile. Nightly POS to books exceptions beside the job log. High-severity unmatched deposit first. All data is synthetic." aria-label="Expand: Which deposits did not match?">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/06-which-deposits-unmatched.png" data-caption="Which deposits did not match? · Riverbend Mercantile. Nightly POS to books exceptions beside the job log. High-severity unmatched deposit first." aria-label="Expand: Which deposits did not match?">
     <img src="work/gallery/boards/06-which-deposits-unmatched.png" alt="Which deposits did not match? · Riverbend Mercantile" loading="lazy" width="640" height="400">
   </button>
   <div class="gallery-meta">
@@ -405,23 +417,14 @@ document.getElementById('menuBtn').addEventListener('click', () => {
   </div>
 </article>
 </div>
-<p class="gallery-synth">All data is synthetic.</p>
-</div>
-</section>
-
-<section class="wrap">
-<div class="concierge-cta">
-<h3>Want a board like this for your data?</h3>
-<p>Tell us what is messy. We will sketch the board and the path to get there, without a slide deck marathon.</p>
-<a href="contact" class="btn-primary">Book a Free Strategy Call</a>
 </div>
 </section>
 
 
 <section class="work-cta">
 <div class="wrap">
-<h2>Ready to see this on your numbers?</h2>
-<p>Book a free strategy call. We will map where automation, BI, or sync work pays off first.</p>
+<h2>Want a board like this for your data?</h2>
+<p>Tell us what is messy. We will sketch the board and the path to get there, without a slide deck marathon.</p>
 <a href="contact" class="btn-primary">Book a Free Strategy Call</a>
 </div>
 </section>

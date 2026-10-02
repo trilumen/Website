@@ -3,11 +3,11 @@
   "use strict";
 
   const CAT_COLORS = {
-    HOME: "#5b8def",
-    OUT: "#3db8a8",
-    ELC: "#f0a14a",
-    APP: "#c084fc",
-    ESS: "#3ecf8e",
+    HOME: "#4C4272",
+    OUT: "#7C70B8",
+    ELC: "#E3A03C",
+    APP: "#A399C9",
+    ESS: "#6B7A99",
   };
 
   const state = {
@@ -686,13 +686,13 @@
               {
                 label: "CY Revenue",
                 data: rows.map((r) => r.agg.revenue),
-                backgroundColor: "rgba(61,184,168,0.75)",
+                backgroundColor: "rgba(76,66,114,0.85)",
                 borderRadius: 4,
               },
               {
                 label: "LY Revenue",
                 data: rows.map((r) => r.agg.revenueLy),
-                backgroundColor: "rgba(91,141,239,0.45)",
+                backgroundColor: "rgba(163,153,201,0.55)",
                 borderRadius: 4,
               },
             ],
@@ -736,9 +736,9 @@
           data: {
             labels: rows.map((r) => chartLabel(r, 14)),
             datasets: [
-              { label: "Walk-ins", data: rows.map((r) => r.agg.walkins), backgroundColor: "rgba(91,141,239,0.7)" },
-              { label: "Engaged", data: rows.map((r) => r.agg.engaged), backgroundColor: "rgba(61,184,168,0.7)" },
-              { label: "Sold", data: rows.map((r) => r.agg.sold), backgroundColor: "rgba(62,207,142,0.7)" },
+              { label: "Walk-ins", data: rows.map((r) => r.agg.walkins), backgroundColor: "rgba(76,66,114,0.8)" },
+              { label: "Engaged", data: rows.map((r) => r.agg.engaged), backgroundColor: "rgba(124,112,184,0.75)" },
+              { label: "Sold", data: rows.map((r) => r.agg.sold), backgroundColor: "rgba(163,153,201,0.85)" },
             ],
           },
           options: {
