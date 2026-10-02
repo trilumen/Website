@@ -367,3 +367,16 @@ table.data .sub { color: var(--text-mute); font-size: 11px; display: block; }
   text-align: center; color: var(--text-mute); font-size: 10px;
   padding: 8px 18px 16px; letter-spacing: 0.04em;
 }
+
+
+/* Embed mode: hide TriLumen wordmark + footer so host page chrome is not doubled */
+html.embed .logo-wrap,
+body.embed .logo-wrap,
+html.embed .footer-note,
+body.embed .footer-note {
+  display: none !important;
+}
+html.embed .topbar,
+body.embed .topbar {
+  padding-right: 16px;
+}

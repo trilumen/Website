@@ -83,25 +83,27 @@
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
     }[ch]));
   }
-  function associateFirstName(id) {
+  function associateFullName(id) {
     const a = state.associates.find((x) => x.id === id);
     if (!a) return id;
-    return a.firstName || (a.name ? a.name.split(/\s+/)[0] : id);
+    if (a.name) return a.name;
+    if (a.firstName && a.lastName) return `${a.firstName} ${a.lastName}`;
+    return a.firstName || id;
   }
   function assocSearchName(id) {
-    return associateFirstName(id);
+    return associateFullName(id);
   }
-  function clientRedaction() {
-    return `<span class="redact redact-client" aria-label="Protected client name"></span>`;
+  function companyLabel() {
+    return escapeHtml((state.meta && state.meta.company) || "Fieldstone Markets");
   }
   function assocLabel(id) {
-    return `<span class="associate-label"><span>${escapeHtml(associateFirstName(id))}</span><span class="redact redact-name" aria-label="Redacted last name"></span></span>`;
+    return `<span class="associate-label">${escapeHtml(associateFullName(id))}</span>`;
   }
   function rowLabel(row) {
     return row.level === "associate" ? assocLabel(row.id) : escapeHtml(row.name);
   }
   function chartLabel(row, maxLength) {
-    const text = row.level === "associate" ? `${associateFirstName(row.id)} ████` : row.name;
+    const text = row.level === "associate" ? associateFullName(row.id) : row.name;
     return text.length > maxLength ? text.slice(0, maxLength - 1) + "…" : text;
   }
   function catName(id) {
@@ -263,7 +265,7 @@
 
   function renderBreadcrumb() {
     const parts = [];
-    parts.push(`<button type="button" data-nav="company" class="${state.level === "company" ? "current" : ""}">Company</button>`);
+    parts.push(`<button type="button" data-nav="company" class="${state.level === "company" ? "current" : ""}">Fieldstone Markets</button>`);
     if (state.regionId) {
       parts.push(`<span class="sep">›</span>`);
       parts.push(`<button type="button" data-nav="region" data-id="${state.regionId}" class="${state.level === "region" ? "current" : ""}">${regionName(state.regionId)}</button>`);
@@ -388,7 +390,7 @@
     if (state.level === "associate") return assocLabel(state.associateId);
     if (state.level === "store") return storeName(state.storeId);
     if (state.level === "region") return regionName(state.regionId);
-    return clientRedaction();
+    return companyLabel();
   }
 
   function renderFunnel(a) {
@@ -578,7 +580,7 @@
               </tbody>
             </table>
           </div>
-          <p class="hint">Click a row for ticket detail. IDs are redacted. Drill scope filters this list.</p>
+          <p class="hint">Click a row for ticket detail. Ticket IDs use the TK-FS pattern. Drill scope filters this list.</p>
         </div>
       </div>`;
   }
@@ -913,7 +915,7 @@
       state.tickets = data.tickets;
       $("#boot").style.display = "none";
       $("#app").style.display = "flex";
-      $("#companyName").innerHTML = clientRedaction();
+      $("#companyName").textContent = (state.meta && state.meta.company) || "Fieldstone Markets";
       render();
     } catch (err) {
       $("#boot").innerHTML = `<div class="empty">Failed to load demo data.<br/><code>${err.message}</code></div>`;

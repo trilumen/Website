@@ -25,6 +25,7 @@
 
 <link rel="icon" type="image/png" href="trilumen-icon-32.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site-nav.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
@@ -38,7 +39,7 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
+.nav-links { display: flex; gap: 18px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
 .nav-links a { white-space: nowrap; }
 .nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
@@ -200,10 +201,30 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
 .concierge-cta.small h3 { font-size: 18px; }
 
-@media (max-width: 1150px) {
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
+
+
+.works-strip { padding: 36px 0 28px; background: #fff; }
+.works-strip .tools-label { margin-bottom: 16px; }
+.logo-strip { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
+.logo-strip a, .logo-strip span { display: inline-flex; align-items: center; height: 40px; padding: 6px 12px; background: #FAFAFA; border: 1px solid #EDEDF2; border-radius: 10px; transition: border-color 0.15s, box-shadow 0.15s; }
+.logo-strip a:hover { border-color: #C4BEDC; box-shadow: 0 4px 12px rgba(76,66,114,0.08); }
+.logo-strip img { height: 20px; width: auto; display: block; max-width: 120px; }
+.works-strip-more { text-align: center; margin-top: 14px; font-size: 14px; font-weight: 600; color: #4C4272; }
+.works-strip-more a:hover { text-decoration: underline; }
+
+.pos-embed { padding: 48px 0 64px; background: #FAFAFA; border-top: 1px solid #EDEDF2; }
+.pos-embed-inner { max-width: 960px; margin: 0 auto; }
+.pos-embed .tag { margin-bottom: 12px; }
+.pos-embed h2 { font-size: 28px; margin-bottom: 10px; text-align: center; }
+.pos-embed .pos-outcome { text-align: center; color: #52525B; font-size: 15.5px; max-width: 640px; margin: 0 auto 22px; line-height: 1.6; }
+.pos-frame { background: #fff; border: 1px solid #E5E1F0; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(76,66,114,0.08); }
+.pos-frame iframe { width: 100%; height: 620px; border: 0; display: block; background: #F7F8FA; }
+.pos-embed-actions { text-align: center; margin-top: 18px; }
+.pos-embed-actions .btn-secondary { margin: 0; }
+@media (max-width: 700px) {
+  .pos-frame iframe { height: 520px; }
 }
+
 </style>
 <script type="application/ld+json">
 {
@@ -346,46 +367,34 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 </div>
 </section>
 
-<section class="tools">
-<p class="tools-label">Business Systems</p>
-<div class="badge-row">
-<span class="badge">Microsoft 365 & Power Platform</span>
-<span class="badge">Microsoft 365 GCC</span>
-<span class="badge">Google Workspace</span>
-<span class="badge">Tableau</span>
-<span class="badge">NetSuite</span>
-<span class="badge">Odoo</span>
-<span class="badge">Acumatica</span>
-<span class="badge">Sage Intacct</span>
+<section class="works-strip" id="works-with">
+<p class="tools-label">Works with</p>
+<div class="logo-strip">
+<a href="services#works-with" title="Square"><img src="assets/logos/square.svg" alt="Square"></a>
+<a href="services#works-with" title="QuickBooks"><img src="assets/logos/quickbooks.svg" alt="QuickBooks"></a>
+<a href="services#works-with" title="HubSpot"><img src="assets/logos/hubspot.svg" alt="HubSpot"></a>
+<a href="services#works-with" title="Shopify"><img src="assets/logos/shopify.svg" alt="Shopify"></a>
+<a href="services#works-with" title="NetSuite"><img src="assets/logos/netsuite.svg" alt="NetSuite"></a>
+<a href="services#works-with" title="Power BI"><img src="assets/logos/powerbi.svg" alt="Power BI"></a>
+<a href="services#works-with" title="Tableau"><img src="assets/logos/tableau.svg" alt="Tableau"></a>
+<a href="services#works-with" title="Excel"><img src="assets/logos/excel.svg" alt="Excel"></a>
 </div>
-<p class="tools-label" style="margin-top: 22px;">Warehouse, Delivery & POS</p>
-<div class="badge-row">
-<span class="badge">Körber WMS</span>
-<span class="badge">Oracle WMS Cloud</span>
-<span class="badge">Softeon</span>
-<span class="badge">Made4Net</span>
-<span class="badge">Bringg</span>
-<span class="badge">Onfleet</span>
-<span class="badge">Routific</span>
-<span class="badge">eLogii</span>
-<span class="badge">Square</span>
-<span class="badge">Clover</span>
-<span class="badge">Toast</span>
+<p class="works-strip-more"><a href="services#works-with">See the full stack on Services →</a></p>
+</section>
+
+<section class="pos-embed" id="pos-demo">
+<div class="wrap">
+<div class="pos-embed-inner">
+<div class="tag" style="display:block;text-align:center;">Interactive demo · Au Workflow</div>
+<h2>POS and books, finally talking</h2>
+<p class="pos-outcome">Before: hours of Square → QuickBooks → Excel re-key. After: a nightly sync, a clean job log, and exceptions you can actually clear. Sample merchant: Brightwell Mercantile.</p>
+<div class="pos-frame">
+<iframe src="work/demos/pos-books-sync/?embed=1" title="Brightwell Mercantile POS · Books Sync demo" loading="lazy" height="620"></iframe>
 </div>
-<p class="tools-label" style="margin-top: 22px;">Data & BI</p>
-<div class="badge-row">
-<span class="badge">Google BigQuery</span>
-<span class="badge">Managed PostgreSQL</span>
-<span class="badge">DuckDB</span>
-<span class="badge">dbt</span>
+<div class="pos-embed-actions">
+<a class="btn-secondary" href="work/demos/pos-books-sync/">Open full demo →</a>
 </div>
-<p class="tools-label" style="margin-top: 22px;">And the Tools Small Businesses Already Run On</p>
-<div class="badge-row">
-<span class="badge">QuickBooks Online</span>
-<span class="badge">HubSpot</span>
-<span class="badge">Zapier</span>
-<span class="badge">Make.com</span>
-<span class="badge">Airtable</span>
+</div>
 </div>
 </section>
 

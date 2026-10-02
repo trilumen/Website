@@ -32,14 +32,14 @@
   };
 
   /**
-   * Synthetic tickets — plant / company anonymized.
+   * Synthetic tickets — Alder Ridge Precision plant.
    * Flow: operator mobile form → parallel Teams alert + machine-down flag + inventory
    * → pick ticket (stock) or draft PO; under $1500 auto-approve, over escalate with $/hr.
    */
   const TICKETS = [
     {
       id: "DT-2841",
-      machine: "CNC-██-07",
+      machine: "CNC-AR-07",
       machineLabel: "CNC cell · Bay 3",
       issue: "Spindle over-temp · E-stop",
       photo: true,
@@ -47,9 +47,9 @@
       opened: "Oct 2 · 9:14 AM ET",
       downtimeHr: 420,
       partCost: 2840,
-      part: "Spindle bearing kit · SK-████",
-      vendor: "Vendor ███",
-      operator: "Op. ████",
+      part: "Spindle bearing kit · SK-ARP-2201",
+      vendor: "Vendor Northfield Supply",
+      operator: "Op. Jordan Hale",
       line: "Line A",
       note: "Operator submitted mobile form with photo. Inventory short; draft PO over auto-approve threshold — escalated with downtime $/hr.",
       timeline: [
@@ -63,7 +63,7 @@
     },
     {
       id: "DT-2839",
-      machine: "PMP-██-12",
+      machine: "PMP-AR-12",
       machineLabel: "Hydraulic press · Bay 1",
       issue: "Seal leak · hydraulic pressure drop",
       photo: true,
@@ -71,9 +71,9 @@
       opened: "Oct 2 · 7:42 AM ET",
       downtimeHr: 310,
       partCost: 186,
-      part: "O-ring / seal kit · SK-████",
+      part: "O-ring / seal kit · SK-ARP-1188",
       vendor: "Stock · crib B",
-      operator: "Op. ████",
+      operator: "Op. Casey Quinn",
       line: "Line C",
       note: "Part on hand. Auto pick ticket issued to crib B; tech notified in Teams.",
       timeline: [
@@ -81,13 +81,13 @@
         { title: "Teams alert", time: "Oct 2 · 7:42 AM", note: "Maint. + Line C leads", state: "done" },
         { title: "Schedule flagged", time: "Oct 2 · 7:43 AM", note: "Machine DOWN · press bay 1", state: "done" },
         { title: "Inventory check", time: "Oct 2 · 7:43 AM", note: "Seal kit · qty 4 on hand", state: "done" },
-        { title: "Pick ticket", time: "Oct 2 · 7:44 AM", note: "PICK-████ · crib B · auto (under $1,500)", state: "done" },
+        { title: "Pick ticket", time: "Oct 2 · 7:44 AM", note: "PICK-ARP-8841 · crib B · auto (under $1,500)", state: "done" },
         { title: "Closed", time: "—", note: "Awaiting tech complete", state: "pending" },
       ],
     },
     {
       id: "DT-2837",
-      machine: "CNV-██-03",
+      machine: "CNV-AR-03",
       machineLabel: "Conveyor · Pack-out",
       issue: "Drive belt slip · intermittent jam",
       photo: false,
@@ -95,9 +95,9 @@
       opened: "Oct 1 · 4:05 PM ET",
       downtimeHr: 185,
       partCost: 94,
-      part: "Drive belt · SK-████",
+      part: "Drive belt · SK-ARP-3340",
       vendor: "Stock · crib A",
-      operator: "Op. ████",
+      operator: "Op. Riley Voss",
       line: "Pack",
       note: "Pick completed yesterday; tech on floor replacing belt. MTTR clock running.",
       timeline: [
@@ -105,14 +105,14 @@
         { title: "Teams alert", time: "Oct 1 · 4:05 PM", note: "Pack leads + maint.", state: "done" },
         { title: "Schedule flagged", time: "Oct 1 · 4:06 PM", note: "Conveyor DOWN · pack-out slowed", state: "done" },
         { title: "Inventory check", time: "Oct 1 · 4:06 PM", note: "Belt · qty 6 on hand", state: "done" },
-        { title: "Pick ticket", time: "Oct 1 · 4:07 PM", note: "PICK-████ · crib A · auto", state: "done" },
+        { title: "Pick ticket", time: "Oct 1 · 4:07 PM", note: "PICK-ARP-7720 · crib A · auto", state: "done" },
         { title: "In repair", time: "Oct 2 · 8:10 AM", note: "Tech assigned · belt swap in progress", state: "done" },
         { title: "Closed", time: "—", note: "Pending QA restart", state: "pending" },
       ],
     },
     {
       id: "DT-2834",
-      machine: "LAT-██-02",
+      machine: "LAT-AR-02",
       machineLabel: "Lathe · Tooling cell",
       issue: "Servo encoder fault",
       photo: true,
@@ -120,9 +120,9 @@
       opened: "Oct 1 · 11:22 AM ET",
       downtimeHr: 520,
       partCost: 4125,
-      part: "Servo encoder · OEM ███",
+      part: "Servo encoder · OEM Halcyon Motion",
       vendor: "OEM distributor",
-      operator: "Op. ████",
+      operator: "Op. Avery Calder",
       line: "Line B",
       note: "High-cost OEM part. Escalated for PO approval; downtime $/hr shown next to part cost.",
       timeline: [
@@ -136,7 +136,7 @@
     },
     {
       id: "DT-2831",
-      machine: "WLD-██-05",
+      machine: "WLD-AR-05",
       machineLabel: "Welder · Frame cell",
       issue: "Coolant pump failure",
       photo: true,
@@ -146,7 +146,7 @@
       partCost: null,
       part: "— inventory running —",
       vendor: "—",
-      operator: "Op. ████",
+      operator: "Op. Morgan Wren",
       line: "Frame",
       note: "Just submitted. Parallel path: Teams alerted, schedule flagged, inventory check in flight.",
       timeline: [
@@ -160,7 +160,7 @@
     },
     {
       id: "DT-2828",
-      machine: "RBT-██-01",
+      machine: "RBT-AR-01",
       machineLabel: "Robot · Palletize",
       issue: "Gripper pneumatic leak",
       photo: false,
@@ -168,9 +168,9 @@
       opened: "Sep 30 · 2:18 PM ET",
       downtimeHr: 390,
       partCost: 1680,
-      part: "Pneumatic gripper rebuild · SK-████",
-      vendor: "Vendor ███",
-      operator: "Op. ████",
+      part: "Pneumatic gripper rebuild · SK-ARP-4412",
+      vendor: "Vendor Crestline Parts",
+      operator: "Op. Drew Pendleton",
       line: "Ship",
       note: "Just over threshold. Approval queue shows part cost vs ongoing downtime $/hr.",
       timeline: [
@@ -184,7 +184,7 @@
     },
     {
       id: "DT-2822",
-      machine: "MIL-██-09",
+      machine: "MIL-AR-09",
       machineLabel: "Mill · Fixture bay",
       issue: "Tool changer jam",
       photo: true,
@@ -193,9 +193,9 @@
       closed: "Sep 29 · 11:40 AM ET",
       downtimeHr: 210,
       partCost: 42,
-      part: "ATC finger · SK-████",
+      part: "ATC finger · SK-ARP-5099",
       vendor: "Stock · crib A",
-      operator: "Op. ████",
+      operator: "Op. Sam Ellison",
       line: "Line A",
       mttrHours: 2.8,
       note: "Full loop closed. Pick ticket auto; MTTR feed updated on dashboard.",
@@ -204,13 +204,13 @@
         { title: "Teams alert", time: "Sep 29 · 8:50 AM", note: "Maint. channel", state: "done" },
         { title: "Schedule flagged", time: "Sep 29 · 8:51 AM", note: "Mill DOWN · fixture bay", state: "done" },
         { title: "Inventory check", time: "Sep 29 · 8:51 AM", note: "ATC finger · qty 11", state: "done" },
-        { title: "Pick ticket", time: "Sep 29 · 8:52 AM", note: "PICK-████ · crib A · auto", state: "done" },
+        { title: "Pick ticket", time: "Sep 29 · 8:52 AM", note: "PICK-ARP-6615 · crib A · auto", state: "done" },
         { title: "Closed", time: "Sep 29 · 11:40 AM", note: "MTTR 2.8h · ticket closed", state: "done" },
       ],
     },
     {
       id: "DT-2819",
-      machine: "DRY-██-04",
+      machine: "DRY-AR-04",
       machineLabel: "Dryer · Finish",
       issue: "Heater element open circuit",
       photo: true,
@@ -219,9 +219,9 @@
       closed: "Sep 28 · 6:20 PM ET",
       downtimeHr: 240,
       partCost: 890,
-      part: "Heater element · SK-████",
+      part: "Heater element · SK-ARP-6621",
       vendor: "Stock · crib C",
-      operator: "Op. ████",
+      operator: "Op. Jamie Briar",
       line: "Finish",
       mttrHours: 5.2,
       note: "Auto-approved under $1,500. Closed same shift; contributes to MTTR trend.",
@@ -230,7 +230,7 @@
         { title: "Teams alert", time: "Sep 28 · 1:05 PM", note: "Finish + maint.", state: "done" },
         { title: "Schedule flagged", time: "Sep 28 · 1:06 PM", note: "Dryer DOWN", state: "done" },
         { title: "Inventory check", time: "Sep 28 · 1:07 PM", note: "Element · qty 2", state: "done" },
-        { title: "Pick ticket", time: "Sep 28 · 1:08 PM", note: "PICK-████ · crib C · auto", state: "done" },
+        { title: "Pick ticket", time: "Sep 28 · 1:08 PM", note: "PICK-ARP-5502 · crib C · auto", state: "done" },
         { title: "Closed", time: "Sep 28 · 6:20 PM", note: "MTTR 5.2h · ticket closed", state: "done" },
       ],
     },
@@ -323,7 +323,7 @@
             .join("")}
         </tbody>
       </table>
-      <p class="hint">Sample data — plant name and machine IDs partially redacted. Flowchart lives in the case study story, not on this board.</p>`;
+      <p class="hint">Sample data — Alder Ridge Precision. All data is synthetic. Flowchart lives in the case study story, not on this board.</p>`;
 
     el.ticketTable.querySelectorAll("tr.clickable").forEach((tr) => {
       tr.addEventListener("click", () => openTicket(tr.dataset.id));

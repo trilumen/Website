@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 36" role="img" aria-label="Microsoft 365">
+  <rect x="2" y="6" width="11" height="11" fill="#18181B"/>
+  <rect x="15" y="6" width="11" height="11" fill="#3F3F46"/>
+  <rect x="2" y="19" width="11" height="11" fill="#3F3F46"/>
+  <rect x="15" y="19" width="11" height="11" fill="#18181B"/>
+  <text x="34" y="24" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#18181B">Microsoft 365</text>
+</svg>

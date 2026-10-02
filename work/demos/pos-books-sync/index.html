@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="assets/trilumen-icon-64.png" />
-  <title>████ | POS · Books sync | TriLumen Systems</title>
+  <title>Brightwell Mercantile | POS · Books sync | TriLumen Systems</title>
   <meta name="description" content="Interactive Before/After demo: Square POS, QuickBooks Online, and Excel — manual re-key vs TriLumen nightly sync. Sample data only." />
   <link rel="stylesheet" href="css/dashboard.css" />
   <script src="assets/vendor/chart.umd.min.js" defer></script>
@@ -15,7 +15,7 @@
     <header class="topbar">
       <div class="brand-block">
         <div class="brand-kicker">POS · Books sync</div>
-        <div class="brand-title"><span class="redact redact-client" aria-label="Protected merchant name"></span></div>
+        <div class="brand-title">Brightwell Mercantile</div>
         <div class="brand-sub" id="modeSubtitle">Manual export &amp; re-key · tools not speaking · As of Oct 1, 2026</div>
       </div>
 
@@ -49,7 +49,7 @@
     </main>
 
     <footer class="footer-note">
-      TriLumen Systems interactive demo · Synthetic <span class="redact redact-footer" aria-label="Protected merchant data"></span> data · Not a live client environment
+      TriLumen Systems interactive demo · All data is synthetic. · Not a live client environment
     </footer>
   </div>
 
@@ -57,5 +57,14 @@
   <aside id="drawer" class="drawer" aria-label="Row detail">
     <div id="drawerBody"></div>
   </aside>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.get("embed") === "1") {
+    document.documentElement.classList.add("embed");
+    document.body.classList.add("embed");
+  }
+})();
+</script>
 </body>
 </html>

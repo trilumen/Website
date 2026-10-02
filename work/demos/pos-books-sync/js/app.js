@@ -31,7 +31,7 @@
         title: "Unmatched deposit",
         fields: [
           ["Exception", "EX-1042"],
-          ["Square payout", "po_████████ · $1,284.60"],
+          ["Square payout", "po_BW88214 · $1,284.60"],
           ["Expected QBO", "Deposit · Sep 30"],
           ["Found in QBO", "— none —"],
           ["Excel row", "Deposits!B184 (stale)"],
@@ -44,14 +44,14 @@
       id: "EX-1041",
       time: "Sep 30 · 9:18 PM ET",
       source: "Excel master",
-      issue: "SKU SK-████ listed twice (retail + wholesale)",
+      issue: "SKU SK-BW-4412 listed twice (retail + wholesale)",
       severity: "warn",
       severityLabel: "Duplicate",
       detail: {
         title: "Duplicate SKU / customer",
         fields: [
           ["Exception", "EX-1041"],
-          ["SKU", "SK-████ · Ceramic pour-over"],
+          ["SKU", "SK-BW-4412 · Ceramic pour-over"],
           ["Square catalog", "1 active item"],
           ["Excel rows", "Items!A92 and Items!A217"],
           ["QBO product", "2 Product/Service records"],
@@ -71,8 +71,8 @@
         title: "Sales receipt mismatch",
         fields: [
           ["Exception", "EX-1039"],
-          ["Square batch", "batch_████ · $3,902.15"],
-          ["QBO receipt", "SR-████ · $3,872.15"],
+          ["Square batch", "batch_BW9104 · $3,902.15"],
+          ["QBO receipt", "SR-BW-3310 · $3,872.15"],
           ["Delta", "−$30.00 (missing tip line)"],
           ["Entered by", "AP clerk · 6:02 PM"],
           ["Excel P&L", "Still shows $3,902.15"],
@@ -84,14 +84,14 @@
       id: "EX-1037",
       time: "Sep 29 · 8:40 PM ET",
       source: "CSV drop",
-      issue: "Customer ████████ appears under two emails",
+      issue: "Customer Mira Langford appears under two emails",
       severity: "warn",
       severityLabel: "Duplicate",
       detail: {
         title: "Duplicate customer",
         fields: [
           ["Exception", "EX-1037"],
-          ["Square buyer", "████████ · loyalty"],
+          ["Square buyer", "Mira Langford · loyalty"],
           ["QBO customer", "Two Customer records"],
           ["Emails", "a@… / a+pos@…"],
           ["Open invoices", "1 orphaned"],
@@ -111,7 +111,7 @@
         title: "Inventory variance",
         fields: [
           ["Exception", "EX-1035"],
-          ["Item", "SK-████ · Candle set"],
+          ["Item", "SK-BW-5520 · Candle set"],
           ["Square on hand", "61"],
           ["Excel on hand", "75"],
           ["QBO qty", "Not updated since Sep 22"],
@@ -158,7 +158,7 @@
           ["QBO bank deposits", "3 linked"],
           ["Unmatched", "0"],
           ["Tolerance", "±$0.01"],
-          ["Audit ref", "AUD-████-2202"],
+          ["Audit ref", "AUD-BW-2202"],
         ],
         note: "Each Square payout was matched to the corresponding QBO deposit by amount + settlement date. Fees landed on the clearing account with a full audit trail.",
       },
@@ -174,7 +174,7 @@
         title: "Excel workbook refresh",
         fields: [
           ["Job", "JOB-2203"],
-          ["Workbook", "Ops_Daily_████.xlsx"],
+          ["Workbook", "Ops_Daily_BW.xlsx"],
           ["Tabs", "Sales · Deposits · Inventory · Exceptions"],
           ["Rows written", "1,204"],
           ["Prior snapshot", "Retained (versioned)"],
@@ -198,7 +198,7 @@
           ["Auto-merged", "0 (policy: review)"],
           ["Queued for review", "2 SKUs · 1 customer"],
           ["QBO impact", "No destructive writes"],
-          ["Audit ref", "AUD-████-2204"],
+          ["Audit ref", "AUD-BW-2204"],
         ],
         note: "Fuzzy match on name + barcode flagged clusters. TriLumen stages merges for human approval instead of silently collapsing records.",
       },
@@ -299,7 +299,7 @@
             ).join("")}
           </tbody>
         </table>
-        <p class="hint">Click a row for exception detail. Sample data — merchant name redacted.</p>`;
+        <p class="hint">Click a row for exception detail. Sample data — Brightwell Mercantile. All data is synthetic.</p>`;
     } else {
       el.boardBody.innerHTML = `
         <div class="source-chips" aria-label="Sync pipeline">
@@ -330,7 +330,7 @@
             ).join("")}
           </tbody>
         </table>
-        <p class="hint">Click a row for sync detail. Sample data — merchant name redacted.</p>`;
+        <p class="hint">Click a row for sync detail. Sample data — Brightwell Mercantile. All data is synthetic.</p>`;
     }
 
     el.boardBody.querySelectorAll("tr.clickable").forEach((tr) => {

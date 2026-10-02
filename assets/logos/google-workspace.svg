@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 36" role="img" aria-label="Google Workspace">
+  <circle cx="18" cy="18" r="12" fill="none" stroke="#18181B" stroke-width="3"/>
+  <path d="M18 6 v12 h10" stroke="#18181B" stroke-width="3" fill="none"/>
+  <text x="36" y="24" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#18181B">Google Workspace</text>
+</svg>
