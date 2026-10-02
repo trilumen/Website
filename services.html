@@ -25,6 +25,7 @@
 <meta name="twitter:card" content="summary">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site-nav.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
@@ -37,7 +38,7 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
+.nav-links { display: flex; gap: 18px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
 .nav-links a { white-space: nowrap; }
 .nav-links a.current { color: #4C4272; }
@@ -148,10 +149,19 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
 .concierge-cta.small h3 { font-size: 18px; }
 
-@media (max-width: 1150px) {
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
-}
+
+
+.works-with { padding: 70px 0; background: #fff; border-top: 1px solid #F0F0F3; }
+.works-with-head { text-align: center; margin-bottom: 36px; }
+.works-with-head h2 { font-size: 28px; margin-bottom: 10px; }
+.works-with-head p { font-size: 15px; color: #52525B; max-width: 560px; margin: 0 auto; line-height: 1.6; }
+.works-group { margin-bottom: 28px; }
+.works-group-label { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: #A1A1AA; font-weight: 600; margin-bottom: 14px; text-align: center; }
+.works-logo-grid { display: flex; flex-wrap: wrap; gap: 12px 18px; justify-content: center; align-items: center; }
+.works-logo { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 8px 14px; background: #FAFAFA; border: 1px solid #EDEDF2; border-radius: 10px; }
+.works-logo img { height: 22px; width: auto; display: block; max-width: 140px; }
+.works-logo-pill { display: inline-flex; align-items: center; height: 44px; padding: 8px 16px; background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 10px; font-size: 13px; font-weight: 600; color: #4C4272; }
+
 </style>
 <script type="application/ld+json">
 {
@@ -218,6 +228,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="small-business">Small Business</a>
 <a href="new-business">New Business</a>
 <a href="case-studies">Case Studies</a>
+<a href="work">Work</a>
 <a href="team">Team</a>
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
@@ -233,6 +244,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="small-business">Small Business</a>
 <a href="new-business">New Business</a>
 <a href="case-studies">Case Studies</a>
+<a href="work">Work</a>
 <a href="team">Team</a>
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
@@ -394,6 +406,73 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 </div>
 </section>
 
+
+<section class="works-with" id="works-with">
+<div class="wrap">
+<div class="works-with-head">
+<h2>Works with</h2>
+<p>We meet you in the stack you already run, then connect, clean, and surface the numbers so the board is usable.</p>
+</div>
+
+<div class="works-group">
+<p class="works-group-label">Business Systems</p>
+<div class="works-logo-grid">
+<span class="works-logo"><img src="assets/logos/microsoft365.svg" alt="Microsoft 365"></span>
+<span class="works-logo"><img src="assets/logos/google-workspace.svg" alt="Google Workspace"></span>
+<span class="works-logo"><img src="assets/logos/tableau.svg" alt="Tableau"></span>
+<span class="works-logo"><img src="assets/logos/netsuite.svg" alt="NetSuite"></span>
+<span class="works-logo"><img src="assets/logos/odoo.svg" alt="Odoo"></span>
+<span class="works-logo"><img src="assets/logos/acumatica.svg" alt="Acumatica"></span>
+<span class="works-logo"><img src="assets/logos/sage.svg" alt="Sage Intacct"></span>
+<span class="works-logo-pill">Microsoft 365 GCC</span>
+</div>
+</div>
+
+<div class="works-group">
+<p class="works-group-label">Warehouse, Delivery &amp; POS</p>
+<div class="works-logo-grid">
+<span class="works-logo"><img src="assets/logos/square.svg" alt="Square"></span>
+<span class="works-logo"><img src="assets/logos/clover.svg" alt="Clover"></span>
+<span class="works-logo"><img src="assets/logos/toast.svg" alt="Toast"></span>
+<span class="works-logo-pill">Körber WMS</span>
+<span class="works-logo-pill">Oracle WMS Cloud</span>
+<span class="works-logo-pill">Softeon</span>
+<span class="works-logo-pill">Made4Net</span>
+<span class="works-logo-pill">Bringg</span>
+<span class="works-logo-pill">Onfleet</span>
+<span class="works-logo-pill">Routific</span>
+<span class="works-logo-pill">eLogii</span>
+</div>
+</div>
+
+<div class="works-group">
+<p class="works-group-label">Data &amp; BI</p>
+<div class="works-logo-grid">
+<span class="works-logo"><img src="assets/logos/powerbi.svg" alt="Power BI"></span>
+<span class="works-logo"><img src="assets/logos/tableau.svg" alt="Tableau"></span>
+<span class="works-logo"><img src="assets/logos/excel.svg" alt="Excel"></span>
+<span class="works-logo"><img src="assets/logos/bigquery.svg" alt="BigQuery"></span>
+<span class="works-logo"><img src="assets/logos/postgres.svg" alt="PostgreSQL"></span>
+<span class="works-logo"><img src="assets/logos/duckdb.svg" alt="DuckDB"></span>
+<span class="works-logo"><img src="assets/logos/dbt.svg" alt="dbt"></span>
+</div>
+</div>
+
+<div class="works-group">
+<p class="works-group-label">Tools small businesses already run on</p>
+<div class="works-logo-grid">
+<span class="works-logo"><img src="assets/logos/quickbooks.svg" alt="QuickBooks"></span>
+<span class="works-logo"><img src="assets/logos/hubspot.svg" alt="HubSpot"></span>
+<span class="works-logo"><img src="assets/logos/shopify.svg" alt="Shopify"></span>
+<span class="works-logo"><img src="assets/logos/zapier.svg" alt="Zapier"></span>
+<span class="works-logo"><img src="assets/logos/make.svg" alt="Make"></span>
+<span class="works-logo"><img src="assets/logos/airtable.svg" alt="Airtable"></span>
+</div>
+</div>
+
+</div>
+</section>
+
 <section class="coverage">
 <div class="wrap">
 <div class="coverage-inner">
@@ -450,6 +529,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <li><a href="small-business">Small Business</a></li>
 <li><a href="new-business">New Business</a></li>
 <li><a href="case-studies">Case Studies</a></li>
+<li><a href="work">Work</a></li>
 </ul>
 </div>
 <div class="footer-col">

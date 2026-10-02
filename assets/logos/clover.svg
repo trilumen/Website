@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 36" role="img" aria-label="Clover">
+  <circle cx="10" cy="14" r="6" fill="#18181B"/><circle cx="20" cy="14" r="6" fill="#18181B"/>
+  <circle cx="10" cy="24" r="6" fill="#18181B"/><circle cx="20" cy="24" r="6" fill="#18181B"/>
+  <text x="34" y="24" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#18181B">Clover</text>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 36" role="img" aria-label="Make">
+  <circle cx="10" cy="18" r="6" fill="#18181B"/><circle cx="24" cy="18" r="6" fill="#3F3F46"/><circle cx="38" cy="18" r="6" fill="#71717A"/>
+  <text x="50" y="24" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#18181B">Make</text>
+</svg>

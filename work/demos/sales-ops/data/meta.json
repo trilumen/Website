@@ -1,0 +1,81 @@
+{
+  "company": "Fieldstone Markets",
+  "asOf": "2026-10-02",
+  "asOfLabel": "Oct 2, 2026",
+  "ptd": {
+    "start": "2026-10-01",
+    "end": "2026-10-02",
+    "label": "PTD (Oct 1\u20132)"
+  },
+  "ytd": {
+    "start": "2026-01-01",
+    "end": "2026-10-02",
+    "label": "YTD (Jan 1 \u2013 Oct 2)"
+  },
+  "lyPtd": {
+    "start": "2025-10-01",
+    "end": "2025-10-02"
+  },
+  "lyYtd": {
+    "start": "2025-01-01",
+    "end": "2025-10-02"
+  },
+  "categories": [
+    {
+      "id": "HOME",
+      "name": "Home"
+    },
+    {
+      "id": "OUT",
+      "name": "Outdoor"
+    },
+    {
+      "id": "ELC",
+      "name": "Electronics"
+    },
+    {
+      "id": "APP",
+      "name": "Apparel"
+    },
+    {
+      "id": "ESS",
+      "name": "Essentials"
+    }
+  ],
+  "regions": [
+    {
+      "id": "NE",
+      "name": "Northeast"
+    },
+    {
+      "id": "MA",
+      "name": "Mid-Atlantic"
+    },
+    {
+      "id": "SE",
+      "name": "Southeast"
+    },
+    {
+      "id": "MW",
+      "name": "Midwest"
+    },
+    {
+      "id": "MT",
+      "name": "Mountain West"
+    },
+    {
+      "id": "PC",
+      "name": "Pacific"
+    }
+  ],
+  "ticketCount": 47433,
+  "storeCount": 23,
+  "associateCount": 239,
+  "sampleBadge": "Sample data",
+  "generatedAt": "2026-10-02T11:37:14.530176",
+  "explorerTicketCount": 9000,
+  "aggregateKeys": {
+    "ptd": 269,
+    "ytd": 269
+  }
+}

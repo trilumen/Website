@@ -1,0 +1,11 @@
+{
+  "demo": "repair-ops",
+  "title": "Maintenance · Repair ops",
+  "asOf": "2026-10-02",
+  "timezone": "America/New_York",
+  "autoApproveThresholdUsd": 1500,
+  "synthetic": true,
+  "plantRedacted": true,
+  "beforeAfterToggle": false,
+  "flowchartOnBoard": false
+}

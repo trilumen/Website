@@ -1,0 +1,9 @@
+{
+  "demo": "pos-books-sync",
+  "title": "POS · Books Sync Before/After",
+  "asOf": "2026-10-01",
+  "timezone": "America/New_York",
+  "tools": ["Square POS", "QuickBooks Online", "Excel"],
+  "synthetic": true,
+  "merchantRedacted": true
+}
