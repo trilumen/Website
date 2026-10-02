@@ -401,5 +401,58 @@
     if (e.key === "Escape") closeDrawer();
   });
 
-  setMode("before");
+  function isEmbed() {
+    try {
+      return new URLSearchParams(location.search).get("embed") === "1"
+        || document.documentElement.classList.contains("embed")
+        || document.body.classList.contains("embed");
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function embedAutoFlip() {
+    if (!isEmbed()) {
+      setMode("before");
+      return;
+    }
+    setMode("before");
+    let flipped = false;
+    const flip = () => {
+      if (flipped) return;
+      flipped = true;
+      setMode("after");
+    };
+    const root = document.getElementById("app") || document.body;
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some((e) => e.isIntersecting && e.intersectionRatio >= 0.35)) {
+          window.setTimeout(flip, 2800);
+          io.disconnect();
+        }
+      }, { threshold: [0.35, 0.5] });
+      io.observe(root);
+      // Fallback if already visible (some iframe cases)
+      window.setTimeout(() => {
+        const rect = root.getBoundingClientRect();
+        const vh = window.innerHeight || 600;
+        if (rect.top < vh * 0.85 && rect.bottom > vh * 0.15) {
+          window.setTimeout(flip, 2800);
+          io.disconnect();
+        }
+      }, 400);
+    } else {
+      window.setTimeout(flip, 3200);
+    }
+    window.addEventListener("message", (ev) => {
+      if (!ev || !ev.data) return;
+      if (ev.data === "trilumen:pos-flip-after" || ev.data.type === "trilumen:pos-flip-after") flip();
+      if (ev.data === "trilumen:pos-show-before" || ev.data.type === "trilumen:pos-show-before") {
+        flipped = false;
+        setMode("before");
+      }
+    });
+  }
+
+  embedAutoFlip();
 })();

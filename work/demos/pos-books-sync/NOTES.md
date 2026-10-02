@@ -35,3 +35,10 @@ Add `?embed=1` to hide the TriLumen wordmark and footer (keeps KPIs and Before/A
 ## Sample language
 
 Footer and hints say **All data is synthetic.** Invented SKUs use `SK-BW-####`, audit refs `AUD-BW-####`, payouts `po_BW#####`.
+
+## Embed behavior (`?embed=1`)
+
+- Hides TriLumen wordmark and footer
+- Unsticks the top bar (avoids fighting host sticky nav)
+- Keeps five KPIs on one row
+- Starts on **Before**, then auto-flips to **After** ~2.8s after the board is in view (toggle still works)

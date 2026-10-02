@@ -35,7 +35,7 @@ em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 50
 
 /* Nav */
 nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
-.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1400px; margin: 0 auto; }
 .logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
 .logo-icon-img { height: 30px; width: auto; display: block; }
 .logo span { color: #4C4272; }
@@ -213,17 +213,20 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 .works-strip-more a:hover { text-decoration: underline; }
 
 .pos-embed { padding: 48px 0 64px; background: #FAFAFA; border-top: 1px solid #EDEDF2; }
-.pos-embed-inner { max-width: 960px; margin: 0 auto; }
+.pos-embed-inner { max-width: 1080px; margin: 0 auto; }
 .pos-embed .tag { margin-bottom: 12px; }
 .pos-embed h2 { font-size: 28px; margin-bottom: 10px; text-align: center; }
 .pos-embed .pos-outcome { text-align: center; color: #52525B; font-size: 15.5px; max-width: 640px; margin: 0 auto 22px; line-height: 1.6; }
 .pos-frame { background: #fff; border: 1px solid #E5E1F0; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(76,66,114,0.08); }
-.pos-frame iframe { width: 100%; height: 620px; border: 0; display: block; background: #F7F8FA; }
+.pos-frame iframe { width: 100%; height: 780px; border: 0; display: block; background: #F7F8FA; }
 .pos-embed-actions { text-align: center; margin-top: 18px; }
 .pos-embed-actions .btn-secondary { margin: 0; }
 @media (max-width: 700px) {
-  .pos-frame iframe { height: 520px; }
+  .pos-frame iframe { height: 640px; }
 }
+.pos-work-link { display: block; margin-top: 12px; font-size: 14px; font-weight: 500; color: #71717A; }
+.pos-work-link a { color: #4C4272; font-weight: 600; }
+.pos-work-link a:hover { text-decoration: underline; }
 
 </style>
 <script type="application/ld+json">
@@ -360,7 +363,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <div class="wrap">
 <div class="hero-content">
 <div class="tag">Proudly Human Systems</div>
-<h1>Systems that drive <em>real clarity</em></h1>
+<h1>Systems that drive <em>real&nbsp;clarity</em></h1>
 <p class="sub">TriLumen Systems is a proudly human systems and AI consulting company that builds what works and trains the people who run it.</p>
 <a href="contact" class="btn-primary">Book a Free Strategy Call</a>
 </div>
@@ -385,14 +388,15 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="pos-embed" id="pos-demo">
 <div class="wrap">
 <div class="pos-embed-inner">
-<div class="tag" style="display:block;text-align:center;">Interactive demo · Au Workflow</div>
+<div class="tag" style="display:block;text-align:center;">Interactive demo · Workflow automation</div>
 <h2>POS and books, finally talking</h2>
 <p class="pos-outcome">Before: hours of Square → QuickBooks → Excel re-key. After: a nightly sync, a clean job log, and exceptions you can actually clear. Sample merchant: Brightwell Mercantile.</p>
 <div class="pos-frame">
-<iframe src="work/demos/pos-books-sync/?embed=1" title="Brightwell Mercantile POS · Books Sync demo" loading="lazy" height="620"></iframe>
+<iframe id="posEmbedFrame" src="work/demos/pos-books-sync/?embed=1" title="Brightwell Mercantile POS · Books Sync demo" loading="lazy" height="780"></iframe>
 </div>
 <div class="pos-embed-actions">
 <a class="btn-secondary" href="work/demos/pos-books-sync/">Open full demo →</a>
+<p class="pos-work-link">More sample boards on <a href="work">Work</a></p>
 </div>
 </div>
 </div>
@@ -412,10 +416,6 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <a href="services" class="fork-card enterprise">
 <p>Scaling an enterprise infrastructure?</p>
 <span class="arrow">Explore our full lifecycle consulting capabilities →</span>
-</a>
-<a href="work" class="fork-card enterprise">
-<p>Want to see sample boards &amp; interactive demos?</p>
-<span class="arrow">Browse TriLumen Work →</span>
 </a>
 </div>
 </div>
