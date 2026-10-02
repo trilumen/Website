@@ -205,10 +205,14 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 
 .works-strip { padding: 36px 0 28px; background: #fff; }
 .works-strip .tools-label { margin-bottom: 16px; }
-.logo-strip { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
-.logo-strip a, .logo-strip span { display: inline-flex; align-items: center; height: 40px; padding: 6px 12px; background: #FAFAFA; border: 1px solid #EDEDF2; border-radius: 10px; transition: border-color 0.15s, box-shadow 0.15s; }
-.logo-strip a:hover { border-color: #C4BEDC; box-shadow: 0 4px 12px rgba(76,66,114,0.08); }
-.logo-strip img { height: 20px; width: auto; display: block; max-width: 120px; }
+.logo-strip { max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; }
+.works-logo { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 144px; height: 62px; padding: 0 10px; background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; transition: border-color 0.15s, box-shadow 0.15s; }
+.works-logo img { display: block; flex: none; filter: grayscale(1); opacity: 0.72; transition: filter 0.2s, opacity 0.2s; }
+.works-logo .nm { font-size: 14px; font-weight: 600; color: #52525B; line-height: 1.15; white-space: nowrap; }
+.works-logo .nm small { display: block; font-size: 11px; font-weight: 500; color: #A1A1AA; }
+.works-logo:hover { border-color: #C4BEDC; box-shadow: 0 4px 12px rgba(76,66,114,0.08); }
+.works-logo:hover img { filter: none; opacity: 1; }
+.works-note { text-align: center; font-size: 12px; color: #A1A1AA; max-width: 560px; margin: 8px auto 0; line-height: 1.5; }
 .works-strip-more { text-align: center; margin-top: 14px; font-size: 14px; font-weight: 600; color: #4C4272; }
 .works-strip-more a:hover { text-decoration: underline; }
 
@@ -373,14 +377,14 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="works-strip" id="works-with">
 <p class="tools-label">Works with</p>
 <div class="logo-strip">
-<a href="services#works-with" title="Square"><img src="assets/logos/square.svg" alt="Square"></a>
-<a href="services#works-with" title="QuickBooks"><img src="assets/logos/quickbooks.svg" alt="QuickBooks"></a>
-<a href="services#works-with" title="HubSpot"><img src="assets/logos/hubspot.svg" alt="HubSpot"></a>
-<a href="services#works-with" title="Shopify"><img src="assets/logos/shopify.svg" alt="Shopify"></a>
-<a href="services#works-with" title="NetSuite"><img src="assets/logos/netsuite.svg" alt="NetSuite"></a>
-<a href="services#works-with" title="Power BI"><img src="assets/logos/powerbi.svg" alt="Power BI"></a>
-<a href="services#works-with" title="Tableau"><img src="assets/logos/tableau.svg" alt="Tableau"></a>
-<a href="services#works-with" title="Excel"><img src="assets/logos/excel.svg" alt="Excel"></a>
+<a class="works-logo" href="services#works-with" title="Square"><img src="assets/logos/square.svg" alt="Square" width="24" height="24" loading="lazy"><span class="nm">Square</span></a>
+<a class="works-logo" href="services#works-with" title="QuickBooks"><img src="assets/logos/quickbooks.svg" alt="QuickBooks" width="26" height="26" loading="lazy"><span class="nm">QuickBooks</span></a>
+<a class="works-logo" href="services#works-with" title="HubSpot"><img src="assets/logos/hubspot.svg" alt="HubSpot" width="25" height="26" loading="lazy"><span class="nm">HubSpot</span></a>
+<a class="works-logo" href="services#works-with" title="Shopify"><img src="assets/logos/shopify.svg" alt="Shopify" width="23" height="26" loading="lazy"><span class="nm">Shopify</span></a>
+<a class="works-logo" href="services#works-with" title="NetSuite"><img src="assets/logos/netsuite.svg" alt="NetSuite" width="132" height="9" loading="lazy"></a>
+<a class="works-logo" href="services#works-with" title="Power BI"><img src="assets/logos/powerbi.svg" alt="Power BI" width="21" height="28" loading="lazy"><span class="nm">Power BI</span></a>
+<a class="works-logo" href="services#works-with" title="Tableau"><img src="assets/logos/tableau.svg" alt="Tableau" width="124" height="26" loading="lazy"></a>
+<a class="works-logo" href="services#works-with" title="Excel"><img src="assets/logos/excel.svg" alt="Excel" width="27" height="28" loading="lazy"><span class="nm">Excel</span></a>
 </div>
 <p class="works-strip-more"><a href="services#works-with">See the full stack on Services →</a></p>
 </section>
