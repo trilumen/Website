@@ -63,5 +63,23 @@
   <aside id="drawer" class="drawer" aria-label="Ticket detail">
     <div id="drawerBody"></div>
   </aside>
+  <script>
+  /* Embed mode: tell the host page how tall the board is so the frame fits it (no inner scrollbar). */
+  (function () {
+    if (!document.documentElement.classList.contains("embed") || window.parent === window) return;
+    var last = 0;
+    function send() {
+      var app = document.getElementById("app");
+      if (!app || app.offsetHeight === 0) return;
+      var h = Math.ceil(app.getBoundingClientRect().height);
+      if (h && h !== last) { last = h; window.parent.postMessage({ type: "trilumen:resize", height: h }, location.origin); }
+    }
+    window.addEventListener("load", function () {
+      send();
+      if ("ResizeObserver" in window) new ResizeObserver(send).observe(document.getElementById("app"));
+      setInterval(send, 500);
+    });
+  })();
+  </script>
 </body>
 </html>
