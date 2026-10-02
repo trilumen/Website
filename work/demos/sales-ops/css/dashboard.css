@@ -451,3 +451,5 @@ table.data .sub { color: var(--text-mute); font-size: 11px; display: block; }
 html.embed .logo-wrap,
 html.embed .footer-note { display: none !important; }
 html.embed .topbar { position: static !important; top: auto !important; backdrop-filter: none; background: #fff; }
+html.embed .app { min-height: 0; }
+html.embed body { overflow: hidden; }
