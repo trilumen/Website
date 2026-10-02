@@ -68,12 +68,11 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .demo-body p { font-size: 14px; color: #52525B; line-height: 1.55; flex: 1; }
 .demo-cta { font-size: 14px; font-weight: 600; color: #4C4272; margin-top: 4px; }
 
-.gallery-filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; }
-.gallery-filters a { font-size: 13px; font-weight: 600; color: #52525B; background: #fff; border: 1px solid #E5E1F0; padding: 8px 12px; border-radius: 999px; }
-.gallery-filters a:hover { color: #4C4272; border-color: #C4BEDC; }
-.gallery-group { margin-bottom: 40px; }
-.gallery-group-title { font-size: 18px; margin-bottom: 16px; color: #18181B; }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.gallery-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.gallery-question { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #4C4272; margin-bottom: 6px; }
+.gallery-meta .company { font-size: 12px; color: #A1A1AA; margin-bottom: 6px; font-weight: 500; }
+.gallery-synth { text-align: center; font-size: 13px; color: #71717A; margin-top: 28px; }
 .gallery-card { background: #fff; border: 1px solid #EDEDF2; border-radius: 12px; overflow: hidden; }
 .gallery-thumb { display: block; width: 100%; padding: 0; border: 0; background: #F4F2FA; cursor: zoom-in; }
 .gallery-thumb img { width: 100%; height: auto; display: block; aspect-ratio: 16/10; object-fit: cover; object-position: top center; }
@@ -344,392 +343,70 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <section class="section alt" id="gallery">
 <div class="wrap">
 <h2 class="section-head">Dashboard Gallery</h2>
-<p class="section-sub">Sample boards across industries, from shop-floor ops to enterprise roll-ups. Click a thumb to enlarge. All data is synthetic.</p>
-<div class="gallery-filters">
-<a href="#gallery-powerbi">Dense Ops Boards</a><a href="#gallery-tableau">Vertical Ops Boards</a><a href="#gallery-enterprise">Enterprise</a><a href="#gallery-erp">ERP</a><a href="#gallery-wms">WMS & Last Mile</a><a href="#gallery-pos">POS</a><a href="#gallery-power-platform">Power Platform / M365</a><a href="#gallery-smb-glue">SMB Systems Glue</a>
+<p class="section-sub">Six boards, grouped by the question they answer. Different shapes on purpose. Click a thumb to enlarge.</p>
+<div class="gallery-grid">
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/01-which-tech-second-visit.png" data-caption="Which tech needs a second visit? · Ironvale Mechanical. Ranked technicians by first-time fix, second visits, parts misses, and travel. High-risk rows flagged in amber. All data is synthetic." aria-label="Expand: Which tech needs a second visit?">
+    <img src="work/gallery/boards/01-which-tech-second-visit.png" alt="Which tech needs a second visit? · Ironvale Mechanical" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">Which tech needs a second visit?</p>
+    <p class="company">Ironvale Mechanical · Table</p>
+    <p>Ranked technicians by first-time fix, second visits, parts misses, and travel. High-risk rows flagged in amber.</p>
+  </div>
+</article>
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/02-where-chairs-empty.png" data-caption="Where are chairs sitting empty? · Mosswood Dental. Chair by hour occupancy. Darker purple is fuller. Amber cells mark overbook risk. All data is synthetic." aria-label="Expand: Where are chairs sitting empty?">
+    <img src="work/gallery/boards/02-where-chairs-empty.png" alt="Where are chairs sitting empty? · Mosswood Dental" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">Where are chairs sitting empty?</p>
+    <p class="company">Mosswood Dental · Heatmap</p>
+    <p>Chair by hour occupancy. Darker purple is fuller. Amber cells mark overbook risk.</p>
+  </div>
+</article>
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/03-where-pipeline-stalls.png" data-caption="Where does the pipeline stall? · Northglass Solar. Lead to install funnel with the biggest drop called out. Stall reasons ranked beside it. All data is synthetic." aria-label="Expand: Where does the pipeline stall?">
+    <img src="work/gallery/boards/03-where-pipeline-stalls.png" alt="Where does the pipeline stall? · Northglass Solar" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">Where does the pipeline stall?</p>
+    <p class="company">Northglass Solar · Funnel</p>
+    <p>Lead to install funnel with the biggest drop called out. Stall reasons ranked beside it.</p>
+  </div>
+</article>
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/04-what-led-to-downtime.png" data-caption="What led up to the downtime? · Pinetop Fabrication. Operator form to close, with schedule flag and PO approval highlighted when money or capacity is on the line. All data is synthetic." aria-label="Expand: What led up to the downtime?">
+    <img src="work/gallery/boards/04-what-led-to-downtime.png" alt="What led up to the downtime? · Pinetop Fabrication" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">What led up to the downtime?</p>
+    <p class="company">Pinetop Fabrication · Timeline</p>
+    <p>Operator form to close, with schedule flag and PO approval highlighted when money or capacity is on the line.</p>
+  </div>
+</article>
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/05-are-we-ahead-of-ly.png" data-caption="Are we ahead of last year? · Copperfinch Outfitters. Six KPIs with sparklines and a daypart CY vs LY read. Conversion is the amber flag. All data is synthetic." aria-label="Expand: Are we ahead of last year?">
+    <img src="work/gallery/boards/05-are-we-ahead-of-ly.png" alt="Are we ahead of last year? · Copperfinch Outfitters" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">Are we ahead of last year?</p>
+    <p class="company">Copperfinch Outfitters · KPI + sparklines</p>
+    <p>Six KPIs with sparklines and a daypart CY vs LY read. Conversion is the amber flag.</p>
+  </div>
+</article>
+<article class="gallery-card">
+  <button type="button" class="gallery-thumb" data-full="work/gallery/boards/06-which-deposits-unmatched.png" data-caption="Which deposits did not match? · Riverbend Mercantile. Nightly POS to books exceptions beside the job log. High-severity unmatched deposit first. All data is synthetic." aria-label="Expand: Which deposits did not match?">
+    <img src="work/gallery/boards/06-which-deposits-unmatched.png" alt="Which deposits did not match? · Riverbend Mercantile" loading="lazy" width="640" height="400">
+  </button>
+  <div class="gallery-meta">
+    <p class="gallery-question">Which deposits did not match?</p>
+    <p class="company">Riverbend Mercantile · Exception queue</p>
+    <p>Nightly POS to books exceptions beside the job log. High-severity unmatched deposit first.</p>
+  </div>
+</article>
 </div>
-
-<div class="gallery-group" id="gallery-powerbi">
-  <h3 class="gallery-group-title">Dense Ops Boards</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/01-brewery-taproom-pos.png" data-caption="Craft brewery taproom  -  Taproom POS tickets, tank utilization, and style-mix GM for a craft brewery." aria-label="Expand Craft brewery taproom">
-    <img src="work/gallery/powerbi/01-brewery-taproom-pos.png" alt="Craft brewery taproom" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Craft brewery taproom</h3>
-    <p>Taproom POS tickets, tank utilization, and style-mix GM for a craft brewery.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/02-vet-clinic-ops.png" data-caption="Veterinary clinic  -  Appointment throughput, room occupancy heatmap, and controlled Rx inventory for a vet clinic." aria-label="Expand Veterinary clinic">
-    <img src="work/gallery/powerbi/02-vet-clinic-ops.png" alt="Veterinary clinic" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Veterinary clinic</h3>
-    <p>Appointment throughput, room occupancy heatmap, and controlled Rx inventory for a vet clinic.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/03-auto-repair-bays.png" data-caption="Auto repair shop  -  Bay utilization, RO aging, and tech efficiency for an independent auto repair shop." aria-label="Expand Auto repair shop">
-    <img src="work/gallery/powerbi/03-auto-repair-bays.png" alt="Auto repair shop" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Auto repair shop</h3>
-    <p>Bay utilization, RO aging, and tech efficiency for an independent auto repair shop.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/04-dental-chair-ops.png" data-caption="Dental office  -  Chair utilization, case acceptance funnel, and unscheduled treatment pipeline for a dental practice." aria-label="Expand Dental office">
-    <img src="work/gallery/powerbi/04-dental-chair-ops.png" alt="Dental office" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Dental office</h3>
-    <p>Chair utilization, case acceptance funnel, and unscheduled treatment pipeline for a dental practice.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/05-bowling-alley-ops.png" data-caption="Bowling alley  -  Lane occupancy heatmap, league fill, and F&B attach rate for a bowling center." aria-label="Expand Bowling alley">
-    <img src="work/gallery/powerbi/05-bowling-alley-ops.png" alt="Bowling alley" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Bowling alley</h3>
-    <p>Lane occupancy heatmap, league fill, and F&B attach rate for a bowling center.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/06-landscaping-routes.png" data-caption="Landscaping company  -  Crew utilization, job-cost vs bid, and route-density clusters for a landscaping firm." aria-label="Expand Landscaping company">
-    <img src="work/gallery/powerbi/06-landscaping-routes.png" alt="Landscaping company" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Landscaping company</h3>
-    <p>Crew utilization, job-cost vs bid, and route-density clusters for a landscaping firm.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/07-coffee-wholesale.png" data-caption="Specialty coffee wholesale  -  Roast capacity, origin mix, and lot-level green-to-roast traceability for a specialty coffee wholesaler." aria-label="Expand Specialty coffee wholesale">
-    <img src="work/gallery/powerbi/07-coffee-wholesale.png" alt="Specialty coffee wholesale" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Specialty coffee wholesale</h3>
-    <p>Roast capacity, origin mix, and lot-level green-to-roast traceability for a specialty coffee wholesaler.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/08-hvac-service-dispatch.png" data-caption="HVAC service  -  Dispatch load, first-time fix by tech, and membership renewals vs churn for an HVAC contractor." aria-label="Expand HVAC service">
-    <img src="work/gallery/powerbi/08-hvac-service-dispatch.png" alt="HVAC service" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>HVAC service</h3>
-    <p>Dispatch load, first-time fix by tech, and membership renewals vs churn for an HVAC contractor.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/09-climbing-gym-membership.png" data-caption="Climbing gym  -  Peak occupancy by zone, membership mix, and class waitlists for a climbing gym." aria-label="Expand Climbing gym">
-    <img src="work/gallery/powerbi/09-climbing-gym-membership.png" alt="Climbing gym" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Climbing gym</h3>
-    <p>Peak occupancy by zone, membership mix, and class waitlists for a climbing gym.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/powerbi/10-pest-control-routes.png" data-caption="Pest control routes  -  Route stop density, recurring retention, and chemical cost per stop for a pest control operator." aria-label="Expand Pest control routes">
-    <img src="work/gallery/powerbi/10-pest-control-routes.png" alt="Pest control routes" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Pest control routes</h3>
-    <p>Route stop density, recurring retention, and chemical cost per stop for a pest control operator.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-tableau">
-  <h3 class="gallery-group-title">Vertical Ops Boards</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/01-funeral-home-ops.png" data-caption="Funeral home ops  -  Arrangement pipeline, service-type mix, and preneed conversion for a funeral home." aria-label="Expand Funeral home ops">
-    <img src="work/gallery/tableau/01-funeral-home-ops.png" alt="Funeral home ops" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Funeral home ops</h3>
-    <p>Arrangement pipeline, service-type mix, and preneed conversion for a funeral home.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/02-marina-slip-occupancy.png" data-caption="Marina / boat slip  -  Slip occupancy heatmap, fuel-dock sales, and waitlist transfers for a marina." aria-label="Expand Marina / boat slip">
-    <img src="work/gallery/tableau/02-marina-slip-occupancy.png" alt="Marina / boat slip" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Marina / boat slip</h3>
-    <p>Slip occupancy heatmap, fuel-dock sales, and waitlist transfers for a marina.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/03-bakery-production.png" data-caption="Bakery production  -  Bake-vs-demand dual axis, waste by SKU family, and batch exceptions for a production bakery." aria-label="Expand Bakery production">
-    <img src="work/gallery/tableau/03-bakery-production.png" alt="Bakery production" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Bakery production</h3>
-    <p>Bake-vs-demand dual axis, waste by SKU family, and batch exceptions for a production bakery.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/04-self-storage-occupancy.png" data-caption="Self-storage  -  Economic occupancy by unit size, delinquency watchlist, and move-in/out balance for self-storage." aria-label="Expand Self-storage">
-    <img src="work/gallery/tableau/04-self-storage-occupancy.png" alt="Self-storage" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Self-storage</h3>
-    <p>Economic occupancy by unit size, delinquency watchlist, and move-in/out balance for self-storage.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/05-plumbing-dispatch.png" data-caption="Plumbing dispatch  -  Emergency overlay on hourly jobs, GP% by type, and live dispatch board for a plumbing shop." aria-label="Expand Plumbing dispatch">
-    <img src="work/gallery/tableau/05-plumbing-dispatch.png" alt="Plumbing dispatch" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Plumbing dispatch</h3>
-    <p>Emergency overlay on hourly jobs, GP% by type, and live dispatch board for a plumbing shop.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/06-farm-csa-ops.png" data-caption="Farm CSA  -  Share fulfillment, crop yield vs plan, and pickup exceptions for a CSA farm." aria-label="Expand Farm CSA">
-    <img src="work/gallery/tableau/06-farm-csa-ops.png" alt="Farm CSA" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Farm CSA</h3>
-    <p>Share fulfillment, crop yield vs plan, and pickup exceptions for a CSA farm.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/07-music-venue-ops.png" data-caption="Music venue  -  Ticket sell-through, day-of sales pace, and concessions per head for a music venue." aria-label="Expand Music venue">
-    <img src="work/gallery/tableau/07-music-venue-ops.png" alt="Music venue" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Music venue</h3>
-    <p>Ticket sell-through, day-of sales pace, and concessions per head for a music venue.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/08-daycare-capacity.png" data-caption="Daycare capacity  -  Classroom occupancy vs license, staff:child ratios, and waitlist by age band for a daycare." aria-label="Expand Daycare capacity">
-    <img src="work/gallery/tableau/08-daycare-capacity.png" alt="Daycare capacity" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Daycare capacity</h3>
-    <p>Classroom occupancy vs license, staff:child ratios, and waitlist by age band for a daycare.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/09-equipment-rental.png" data-caption="Equipment rental  -  Fleet utilization by category, idle-asset queue, and damage claims for an equipment rental yard." aria-label="Expand Equipment rental">
-    <img src="work/gallery/tableau/09-equipment-rental.png" alt="Equipment rental" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Equipment rental</h3>
-    <p>Fleet utilization by category, idle-asset queue, and damage claims for an equipment rental yard.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/tableau/10-car-wash-membership.png" data-caption="Car wash membership  -  Tunnel throughput by hour, membership plan mix, and equipment downtime for a car wash." aria-label="Expand Car wash membership">
-    <img src="work/gallery/tableau/10-car-wash-membership.png" alt="Car wash membership" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Car wash membership</h3>
-    <p>Tunnel throughput by hour, membership plan mix, and equipment downtime for a car wash.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-enterprise">
-  <h3 class="gallery-group-title">Enterprise</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/01-multi-region-pnl.png" data-caption="Enterprise multi-region P&L  -  Consolidated multi-region P&L flash with entity roll-up, eliminations, and FX bridge for a $1B+ group." aria-label="Expand Enterprise multi-region P&L">
-    <img src="work/gallery/enterprise/01-multi-region-pnl.png" alt="Enterprise multi-region P&L" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise multi-region P&L</h3>
-    <p>Consolidated multi-region P&L flash with entity roll-up, eliminations, and FX bridge for a $1B+ group.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/02-shared-services-cost.png" data-caption="Enterprise shared services  -  GBS cost allocation by tower, BU chargeback vs consumption, and cost-per-ticket trend." aria-label="Expand Enterprise shared services">
-    <img src="work/gallery/enterprise/02-shared-services-cost.png" alt="Enterprise shared services" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise shared services</h3>
-    <p>GBS cost allocation by tower, BU chargeback vs consumption, and cost-per-ticket trend.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/03-risk-compliance-heatmap.png" data-caption="Enterprise risk & compliance  -  GRC control heatmap, domain findings, and overdue remediation queue for a large enterprise." aria-label="Expand Enterprise risk & compliance">
-    <img src="work/gallery/enterprise/03-risk-compliance-heatmap.png" alt="Enterprise risk & compliance" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise risk & compliance</h3>
-    <p>GRC control heatmap, domain findings, and overdue remediation queue for a large enterprise.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/04-supply-network.png" data-caption="Enterprise supply network  -  Multi-echelon OTIF, inventory days by node, and at-risk supplier watchlist." aria-label="Expand Enterprise supply network">
-    <img src="work/gallery/enterprise/04-supply-network.png" alt="Enterprise supply network" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise supply network</h3>
-    <p>Multi-echelon OTIF, inventory days by node, and at-risk supplier watchlist.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/05-working-capital.png" data-caption="Enterprise working capital  -  Cash vs forecast, AR aging, and CCC component trends for enterprise treasury." aria-label="Expand Enterprise working capital">
-    <img src="work/gallery/enterprise/05-working-capital.png" alt="Enterprise working capital" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise working capital</h3>
-    <p>Cash vs forecast, AR aging, and CCC component trends for enterprise treasury.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/enterprise/06-global-workforce.png" data-caption="Enterprise global workforce  -  Global headcount by region, labor cost vs HC, and attrition heatmap for a large enterprise." aria-label="Expand Enterprise global workforce">
-    <img src="work/gallery/enterprise/06-global-workforce.png" alt="Enterprise global workforce" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Enterprise global workforce</h3>
-    <p>Global headcount by region, labor cost vs HC, and attrition heatmap for a large enterprise.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-erp">
-  <h3 class="gallery-group-title">ERP</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/erp/01-erp-financial-close.png" data-caption="ERP financial close  -  Period-close console with journal queue, task progress, and AP/AR aging  -  ERP chrome without vendor marks." aria-label="Expand ERP financial close">
-    <img src="work/gallery/erp/01-erp-financial-close.png" alt="ERP financial close" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>ERP financial close</h3>
-    <p>Period-close console with journal queue, task progress, and AP/AR aging  -  ERP chrome without vendor marks.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/erp/02-erp-inventory-cogs.png" data-caption="ERP inventory & COGS  -  Inventory valuation by class, COGS vs shipments, and negative-OH exceptions  -  ERP feel, no vendor marks." aria-label="Expand ERP inventory & COGS">
-    <img src="work/gallery/erp/02-erp-inventory-cogs.png" alt="ERP inventory & COGS" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>ERP inventory & COGS</h3>
-    <p>Inventory valuation by class, COGS vs shipments, and negative-OH exceptions  -  ERP feel, no vendor marks.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-wms">
-  <h3 class="gallery-group-title">WMS & Last Mile</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/wms/01-wms-pick-pack.png" data-caption="WMS pick-pack  -  Wave pick lines vs plan, zone completion, and pack UPH for a warehouse pick-pack floor." aria-label="Expand WMS pick-pack">
-    <img src="work/gallery/wms/01-wms-pick-pack.png" alt="WMS pick-pack" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>WMS pick-pack</h3>
-    <p>Wave pick lines vs plan, zone completion, and pack UPH for a warehouse pick-pack floor.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/wms/02-last-mile-routes.png" data-caption="Last-mile delivery  -  Route on-time heatmap, failed-delivery reasons, and cost-per-stop for last-mile fleet ops." aria-label="Expand Last-mile delivery">
-    <img src="work/gallery/wms/02-last-mile-routes.png" alt="Last-mile delivery" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Last-mile delivery</h3>
-    <p>Route on-time heatmap, failed-delivery reasons, and cost-per-stop for last-mile fleet ops.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-pos">
-  <h3 class="gallery-group-title">POS</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/pos/01-pos-restaurant-shift.png" data-caption="Restaurant POS  -  Shift sales-by-hour, category mix, voids/comps, and labor vs sales  -  POS chrome without vendor logos." aria-label="Expand Restaurant POS">
-    <img src="work/gallery/pos/01-pos-restaurant-shift.png" alt="Restaurant POS" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Restaurant POS</h3>
-    <p>Shift sales-by-hour, category mix, voids/comps, and labor vs sales  -  POS chrome without vendor logos.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/pos/02-pos-retail-tickets.png" data-caption="Retail POS  -  Ticket-size histogram, tender mix, and returns vs tickets for specialty retail POS." aria-label="Expand Retail POS">
-    <img src="work/gallery/pos/02-pos-retail-tickets.png" alt="Retail POS" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Retail POS</h3>
-    <p>Ticket-size histogram, tender mix, and returns vs tickets for specialty retail POS.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-power-platform">
-  <h3 class="gallery-group-title">Power Platform / M365</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/power-platform/01-m365-adoption-ops.png" data-caption="Power Platform / M365 ops  -  M365 adoption by workload, collaboration heatmap, and risky sharing queue  -  no Microsoft logos." aria-label="Expand Power Platform / M365 ops">
-    <img src="work/gallery/power-platform/01-m365-adoption-ops.png" alt="Power Platform / M365 ops" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Power Platform / M365 ops</h3>
-    <p>M365 adoption by workload, collaboration heatmap, and risky sharing queue  -  no Microsoft logos.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/power-platform/02-power-automate-ops.png" data-caption="Power Automate / apps ops  -  Flow success vs fail, connector failure ranking, and maker activity  -  Power Platform ops without vendor marks." aria-label="Expand Power Automate / apps ops">
-    <img src="work/gallery/power-platform/02-power-automate-ops.png" alt="Power Automate / apps ops" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>Power Automate / apps ops</h3>
-    <p>Flow success vs fail, connector failure ranking, and maker activity  -  Power Platform ops without vendor marks.</p>
-  </div>
-</article>
-  </div>
-</div>
-<div class="gallery-group" id="gallery-smb-glue">
-  <h3 class="gallery-group-title">SMB Systems Glue</h3>
-  <div class="gallery-grid">
-
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/smb-glue/01-qbo-hubspot-pipeline.png" data-caption="QuickBooks + HubSpot SMB  -  Pipeline funnel tied to cash collected and sync-exception queue for QB↔CRM glue  -  no vendor logos." aria-label="Expand QuickBooks + HubSpot SMB">
-    <img src="work/gallery/smb-glue/01-qbo-hubspot-pipeline.png" alt="QuickBooks + HubSpot SMB" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>QuickBooks + HubSpot SMB</h3>
-    <p>Pipeline funnel tied to cash collected and sync-exception queue for QB↔CRM glue  -  no vendor logos.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/smb-glue/02-dbt-kpi-trust.png" data-caption="BigQuery/dbt KPI trust  -  Model freshness, test failures, and KPI drift alerts for a warehouse/dbt trust layer  -  no vendor marks." aria-label="Expand BigQuery/dbt KPI trust">
-    <img src="work/gallery/smb-glue/02-dbt-kpi-trust.png" alt="BigQuery/dbt KPI trust" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>BigQuery/dbt KPI trust</h3>
-    <p>Model freshness, test failures, and KPI drift alerts for a warehouse/dbt trust layer  -  no vendor marks.</p>
-  </div>
-</article>
-<article class="gallery-card">
-  <button type="button" class="gallery-thumb" data-full="work/gallery/smb-glue/03-ai-exception-queue.png" data-caption="AI exception review  -  Human-in-the-loop AI exception queue with auto vs human volume, confidence distribution, and review SLA." aria-label="Expand AI exception review">
-    <img src="work/gallery/smb-glue/03-ai-exception-queue.png" alt="AI exception review" loading="lazy" width="640" height="400">
-  </button>
-  <div class="gallery-meta">
-    <h3>AI exception review</h3>
-    <p>Human-in-the-loop AI exception queue with auto vs human volume, confidence distribution, and review SLA.</p>
-  </div>
-</article>
-  </div>
-</div>
+<p class="gallery-synth">All data is synthetic.</p>
 </div>
 </section>
 

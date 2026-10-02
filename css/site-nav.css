@@ -1,8 +1,8 @@
 /* TriLumen shared site nav — keep gap/font/breakpoint in one place */
 nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
 .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
-.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
-.logo-icon-img { height: 30px; width: auto; display: block; }
+.logo { font-size: 18px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
+.logo-icon-img { height: 26px; width: auto; display: block; }
 .logo span { color: #4C4272; }
 .nav-links { display: flex; gap: 18px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
 .nav-links a:hover { color: #4C4272; }
@@ -16,7 +16,7 @@ nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDED
 .mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
 .mobile-menu.open { display: flex; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .nav-links { display: none !important; }
   .menu-btn { display: block !important; }
 }
