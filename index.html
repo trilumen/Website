@@ -106,7 +106,7 @@ h1 { font-size: 48px; line-height: 1.12; margin-bottom: 22px; }
 
 /* Segmentation Fork */
 .fork { padding: 20px 0 60px; background: #fff; }
-.fork-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto; }
+.fork-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1080px; margin: 0 auto; }
 .fork-card { padding: 26px 28px; border-radius: 14px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
 .fork-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,66,114,0.1); }
 .fork-card.small-biz { background: #18181B; border: 1px solid #333336; }
@@ -270,6 +270,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="small-business">Small Business</a>
 <a href="new-business">New Business</a>
 <a href="case-studies">Case Studies</a>
+<a href="work">Work</a>
 <a href="team">Team</a>
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
@@ -285,6 +286,7 @@ footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
 <a href="small-business">Small Business</a>
 <a href="new-business">New Business</a>
 <a href="case-studies">Case Studies</a>
+<a href="work">Work</a>
 <a href="team">Team</a>
 <a href="clarity">Clarity Insights</a>
 <a href="faq">FAQ</a>
@@ -401,6 +403,10 @@ document.getElementById('menuBtn').addEventListener('click', () => {
 <a href="services" class="fork-card enterprise">
 <p>Scaling an enterprise infrastructure?</p>
 <span class="arrow">Explore our full lifecycle consulting capabilities →</span>
+</a>
+<a href="work" class="fork-card enterprise">
+<p>Want to see sample boards &amp; interactive demos?</p>
+<span class="arrow">Browse TriLumen Work →</span>
 </a>
 </div>
 </div>
@@ -538,6 +544,7 @@ document.querySelectorAll('.tile').forEach(tile => {
 <li><a href="small-business">Small Business</a></li>
 <li><a href="new-business">New Business</a></li>
 <li><a href="case-studies">Case Studies</a></li>
+<li><a href="work">Work</a></li>
 </ul>
 </div>
 <div class="footer-col">

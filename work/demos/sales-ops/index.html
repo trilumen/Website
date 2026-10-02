@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/trilumen-icon-64.png" />
+  <title>████ | Sales operations | TriLumen Systems</title>
+  <meta name="description" content="Interactive multi-store retail sales operations dashboard demo. Sample data only. Built for TriLumen Systems." />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="assets/vendor/chart.umd.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="boot" class="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <div>Loading <span class="redact redact-loading" aria-label="Protected client data"></span> sales operations…</div>
+  </div>
+
+  <div id="app" class="app" style="display:none">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-kicker">Sales operations</div>
+        <div class="brand-title" id="companyName"><span class="redact redact-client" aria-label="Protected client name"></span></div>
+        <div class="brand-sub"><span id="asOfLabel">As of Oct 2, 2026</span> · Multi-store scoreboard</div>
+      </div>
+
+      <div class="topbar-center">
+        <nav class="breadcrumb" id="breadcrumb" aria-label="Drill path"></nav>
+        <div class="controls-row">
+          <div class="seg seg-period" role="group" aria-label="Period">
+            <button type="button" data-period="ptd" class="active">PTD</button>
+            <button type="button" data-period="ytd">YTD</button>
+          </div>
+          <span class="badge-sample">Sample data</span>
+        </div>
+      </div>
+
+      <div class="logo-wrap" title="TriLumen Systems">
+        <img src="assets/trilumen-wordmark.png" alt="TriLumen Systems" width="180" height="34" />
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" data-tab="scoreboard" class="active">Scoreboard</button>
+      <button type="button" data-tab="funnel">Traffic funnel</button>
+      <button type="button" data-tab="category">Category mix</button>
+      <button type="button" data-tab="tickets">Ticket explorer</button>
+    </nav>
+
+    <main class="main">
+      <section class="kpi-grid" id="kpiGrid" aria-label="KPI strip"></section>
+      <section id="tabContent"></section>
+    </main>
+
+    <footer class="footer-note">
+      TriLumen Systems interactive demo · Synthetic <span class="redact redact-footer" aria-label="Protected client data"></span> data · Not a live client environment
+    </footer>
+  </div>
+
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="drawer" class="drawer" aria-label="Ticket detail">
+    <div id="drawerBody"></div>
+  </aside>
+</body>
+</html>

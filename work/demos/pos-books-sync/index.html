@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/trilumen-icon-64.png" />
+  <title>████ | POS · Books sync | TriLumen Systems</title>
+  <meta name="description" content="Interactive Before/After demo: Square POS, QuickBooks Online, and Excel — manual re-key vs TriLumen nightly sync. Sample data only." />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="assets/vendor/chart.umd.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app" data-mode="before">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-kicker">POS · Books sync</div>
+        <div class="brand-title"><span class="redact redact-client" aria-label="Protected merchant name"></span></div>
+        <div class="brand-sub" id="modeSubtitle">Manual export &amp; re-key · tools not speaking · As of Oct 1, 2026</div>
+      </div>
+
+      <div class="topbar-center">
+        <div class="controls-row">
+          <div class="seg seg-mode" role="group" aria-label="Before or After">
+            <button type="button" data-mode="before" class="active" id="btnBefore">Before</button>
+            <button type="button" data-mode="after" id="btnAfter">After</button>
+          </div>
+          <span class="badge-sample">Sample data</span>
+        </div>
+      </div>
+
+      <div class="logo-wrap" title="TriLumen Systems">
+        <img src="assets/trilumen-wordmark.png" alt="TriLumen Systems" width="180" height="34" />
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="kpi-grid kpi-five" id="kpiGrid" aria-label="KPI strip"></section>
+
+      <section class="panel board-panel" aria-label="Detail board">
+        <div class="panel-hd">
+          <h2 id="boardTitle">Last night’s mess</h2>
+          <span class="meta" id="boardMeta">CSV drop · paste into QBO · Excel as source of truth</span>
+        </div>
+        <div class="panel-bd" id="boardBody">
+          <!-- filled by JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      TriLumen Systems interactive demo · Synthetic <span class="redact redact-footer" aria-label="Protected merchant data"></span> data · Not a live client environment
+    </footer>
+  </div>
+
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="drawer" class="drawer" aria-label="Row detail">
+    <div id="drawerBody"></div>
+  </aside>
+</body>
+</html>

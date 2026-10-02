@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/trilumen-icon-64.png" />
+  <title>████ | Maintenance · Repair ops | TriLumen Systems</title>
+  <meta name="description" content="Interactive maintenance / repair ops board: operator mobile form → Teams alert, schedule flag, inventory, pick ticket or draft PO. Sample data only." />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="assets/vendor/chart.umd.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-kicker">Maintenance · Repair ops</div>
+        <div class="brand-title"><span class="redact redact-client" aria-label="Protected plant name"></span></div>
+        <div class="brand-sub">Equipment downtime board · As of Oct 2, 2026</div>
+      </div>
+
+      <div class="topbar-center">
+        <div class="controls-row">
+          <span class="badge-live">Live ops</span>
+          <span class="badge-sample">Sample data</span>
+        </div>
+      </div>
+
+      <div class="logo-wrap" title="TriLumen Systems">
+        <img src="assets/trilumen-wordmark.png" alt="TriLumen Systems" width="180" height="34" />
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="kpi-grid kpi-five" id="kpiGrid" aria-label="KPI strip"></section>
+
+      <div class="panel-row two">
+        <section class="panel tickets-panel" aria-label="Open downtime tickets">
+          <div class="panel-hd">
+            <h2>Open downtime tickets</h2>
+            <span class="meta" id="ticketMeta">Click a row for timeline</span>
+          </div>
+          <div class="panel-bd scroll-table" id="ticketTable">
+            <!-- filled by JS -->
+          </div>
+        </section>
+
+        <div class="side-stack">
+          <section class="panel approval-panel" aria-label="PO approval queue">
+            <div class="panel-hd">
+              <h2>Approval queue</h2>
+              <span class="meta">Over $1,500 · with downtime $/hr</span>
+            </div>
+            <div class="panel-bd" id="approvalQueue">
+              <!-- filled by JS -->
+            </div>
+          </section>
+
+          <section class="panel chart-panel" aria-label="MTTR trend">
+            <div class="panel-hd">
+              <h2>MTTR trend</h2>
+              <span class="meta">Hours · last 8 weeks</span>
+            </div>
+            <div class="panel-bd">
+              <div class="mttr-chart" id="mttrChart" role="img" aria-label="Mean time to repair trend chart"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-note">
+      TriLumen Systems interactive demo · Synthetic <span class="redact redact-footer" aria-label="Protected plant data"></span> data · Not a live client environment
+    </footer>
+  </div>
+
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="drawer" class="drawer" aria-label="Ticket detail">
+    <div id="drawerBody"></div>
+  </aside>
+</body>
+</html>

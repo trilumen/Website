@@ -1,0 +1,1675 @@
+[
+  {
+    "id": "AS-0001",
+    "firstName": "Taylor",
+    "storeId": "ST-NE-001",
+    "role": "Senior Associate",
+    "tenureMonths": 71
+  },
+  {
+    "id": "AS-0002",
+    "firstName": "Skyler",
+    "storeId": "ST-NE-001",
+    "role": "Sales Associate",
+    "tenureMonths": 29
+  },
+  {
+    "id": "AS-0003",
+    "firstName": "Rowan",
+    "storeId": "ST-NE-001",
+    "role": "Sales Associate",
+    "tenureMonths": 71
+  },
+  {
+    "id": "AS-0004",
+    "firstName": "Jamie",
+    "storeId": "ST-NE-001",
+    "role": "Sales Associate",
+    "tenureMonths": 2
+  },
+  {
+    "id": "AS-0005",
+    "firstName": "Morgan",
+    "storeId": "ST-NE-001",
+    "role": "Sales Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0006",
+    "firstName": "Mia",
+    "storeId": "ST-NE-001",
+    "role": "Sales Associate",
+    "tenureMonths": 50
+  },
+  {
+    "id": "AS-0007",
+    "firstName": "Ethan",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 39
+  },
+  {
+    "id": "AS-0008",
+    "firstName": "Rowan",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 10
+  },
+  {
+    "id": "AS-0009",
+    "firstName": "Avery",
+    "storeId": "ST-NE-002",
+    "role": "Lead",
+    "tenureMonths": 31
+  },
+  {
+    "id": "AS-0010",
+    "firstName": "Parker",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 48
+  },
+  {
+    "id": "AS-0011",
+    "firstName": "Drew",
+    "storeId": "ST-NE-002",
+    "role": "Senior Associate",
+    "tenureMonths": 84
+  },
+  {
+    "id": "AS-0012",
+    "firstName": "Elliot",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 33
+  },
+  {
+    "id": "AS-0013",
+    "firstName": "Parker",
+    "storeId": "ST-NE-002",
+    "role": "Lead",
+    "tenureMonths": 83
+  },
+  {
+    "id": "AS-0014",
+    "firstName": "Avery",
+    "storeId": "ST-NE-002",
+    "role": "Senior Associate",
+    "tenureMonths": 9
+  },
+  {
+    "id": "AS-0015",
+    "firstName": "Jordan",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 10
+  },
+  {
+    "id": "AS-0016",
+    "firstName": "Harper",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 65
+  },
+  {
+    "id": "AS-0017",
+    "firstName": "Ethan",
+    "storeId": "ST-NE-002",
+    "role": "Sales Associate",
+    "tenureMonths": 19
+  },
+  {
+    "id": "AS-0018",
+    "firstName": "Drew",
+    "storeId": "ST-NE-003",
+    "role": "Lead",
+    "tenureMonths": 19
+  },
+  {
+    "id": "AS-0019",
+    "firstName": "Sam",
+    "storeId": "ST-NE-003",
+    "role": "Senior Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0020",
+    "firstName": "Olivia",
+    "storeId": "ST-NE-003",
+    "role": "Sales Associate",
+    "tenureMonths": 51
+  },
+  {
+    "id": "AS-0021",
+    "firstName": "Jamie",
+    "storeId": "ST-NE-003",
+    "role": "Sales Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0022",
+    "firstName": "Alex",
+    "storeId": "ST-NE-003",
+    "role": "Senior Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0023",
+    "firstName": "Mia",
+    "storeId": "ST-NE-003",
+    "role": "Sales Associate",
+    "tenureMonths": 57
+  },
+  {
+    "id": "AS-0024",
+    "firstName": "Alex",
+    "storeId": "ST-NE-003",
+    "role": "Lead",
+    "tenureMonths": 24
+  },
+  {
+    "id": "AS-0025",
+    "firstName": "Casey",
+    "storeId": "ST-NE-003",
+    "role": "Senior Associate",
+    "tenureMonths": 66
+  },
+  {
+    "id": "AS-0026",
+    "firstName": "Rowan",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 16
+  },
+  {
+    "id": "AS-0027",
+    "firstName": "Sofia",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 32
+  },
+  {
+    "id": "AS-0028",
+    "firstName": "Sam",
+    "storeId": "ST-NE-004",
+    "role": "Senior Associate",
+    "tenureMonths": 10
+  },
+  {
+    "id": "AS-0029",
+    "firstName": "Logan",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0030",
+    "firstName": "Morgan",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 79
+  },
+  {
+    "id": "AS-0031",
+    "firstName": "Riley",
+    "storeId": "ST-NE-004",
+    "role": "Senior Associate",
+    "tenureMonths": 27
+  },
+  {
+    "id": "AS-0032",
+    "firstName": "Parker",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 68
+  },
+  {
+    "id": "AS-0033",
+    "firstName": "Avery",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 4
+  },
+  {
+    "id": "AS-0034",
+    "firstName": "Avery",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 11
+  },
+  {
+    "id": "AS-0035",
+    "firstName": "Jordan",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 6
+  },
+  {
+    "id": "AS-0036",
+    "firstName": "Sam",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0037",
+    "firstName": "Taylor",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 33
+  },
+  {
+    "id": "AS-0038",
+    "firstName": "Olivia",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 14
+  },
+  {
+    "id": "AS-0039",
+    "firstName": "Drew",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 8
+  },
+  {
+    "id": "AS-0040",
+    "firstName": "Elliot",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 45
+  },
+  {
+    "id": "AS-0041",
+    "firstName": "Casey",
+    "storeId": "ST-NE-004",
+    "role": "Sales Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0042",
+    "firstName": "Jamie",
+    "storeId": "ST-MA-005",
+    "role": "Sales Associate",
+    "tenureMonths": 71
+  },
+  {
+    "id": "AS-0043",
+    "firstName": "Sam",
+    "storeId": "ST-MA-005",
+    "role": "Sales Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0044",
+    "firstName": "Emma",
+    "storeId": "ST-MA-005",
+    "role": "Lead",
+    "tenureMonths": 23
+  },
+  {
+    "id": "AS-0045",
+    "firstName": "Parker",
+    "storeId": "ST-MA-005",
+    "role": "Lead",
+    "tenureMonths": 60
+  },
+  {
+    "id": "AS-0046",
+    "firstName": "Kai",
+    "storeId": "ST-MA-005",
+    "role": "Senior Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0047",
+    "firstName": "Reese",
+    "storeId": "ST-MA-005",
+    "role": "Lead",
+    "tenureMonths": 76
+  },
+  {
+    "id": "AS-0048",
+    "firstName": "Jordan",
+    "storeId": "ST-MA-005",
+    "role": "Sales Associate",
+    "tenureMonths": 76
+  },
+  {
+    "id": "AS-0049",
+    "firstName": "Ethan",
+    "storeId": "ST-MA-005",
+    "role": "Sales Associate",
+    "tenureMonths": 67
+  },
+  {
+    "id": "AS-0050",
+    "firstName": "Morgan",
+    "storeId": "ST-MA-005",
+    "role": "Sales Associate",
+    "tenureMonths": 32
+  },
+  {
+    "id": "AS-0051",
+    "firstName": "Skyler",
+    "storeId": "ST-MA-006",
+    "role": "Sales Associate",
+    "tenureMonths": 42
+  },
+  {
+    "id": "AS-0052",
+    "firstName": "Riley",
+    "storeId": "ST-MA-006",
+    "role": "Sales Associate",
+    "tenureMonths": 52
+  },
+  {
+    "id": "AS-0053",
+    "firstName": "Elliot",
+    "storeId": "ST-MA-006",
+    "role": "Sales Associate",
+    "tenureMonths": 11
+  },
+  {
+    "id": "AS-0054",
+    "firstName": "Rowan",
+    "storeId": "ST-MA-006",
+    "role": "Lead",
+    "tenureMonths": 11
+  },
+  {
+    "id": "AS-0055",
+    "firstName": "Hayden",
+    "storeId": "ST-MA-006",
+    "role": "Sales Associate",
+    "tenureMonths": 46
+  },
+  {
+    "id": "AS-0056",
+    "firstName": "Rowan",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0057",
+    "firstName": "Finley",
+    "storeId": "ST-MA-007",
+    "role": "Lead",
+    "tenureMonths": 19
+  },
+  {
+    "id": "AS-0058",
+    "firstName": "Sofia",
+    "storeId": "ST-MA-007",
+    "role": "Senior Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0059",
+    "firstName": "Rowan",
+    "storeId": "ST-MA-007",
+    "role": "Senior Associate",
+    "tenureMonths": 28
+  },
+  {
+    "id": "AS-0060",
+    "firstName": "Emma",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 34
+  },
+  {
+    "id": "AS-0061",
+    "firstName": "Emma",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 56
+  },
+  {
+    "id": "AS-0062",
+    "firstName": "Jordan",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 18
+  },
+  {
+    "id": "AS-0063",
+    "firstName": "Quinn",
+    "storeId": "ST-MA-007",
+    "role": "Senior Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0064",
+    "firstName": "Logan",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0065",
+    "firstName": "Liam",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 20
+  },
+  {
+    "id": "AS-0066",
+    "firstName": "Jordan",
+    "storeId": "ST-MA-007",
+    "role": "Sales Associate",
+    "tenureMonths": 7
+  },
+  {
+    "id": "AS-0067",
+    "firstName": "Riley",
+    "storeId": "ST-MA-007",
+    "role": "Senior Associate",
+    "tenureMonths": 47
+  },
+  {
+    "id": "AS-0068",
+    "firstName": "Sofia",
+    "storeId": "ST-MA-007",
+    "role": "Lead",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0069",
+    "firstName": "Noah",
+    "storeId": "ST-MA-008",
+    "role": "Senior Associate",
+    "tenureMonths": 54
+  },
+  {
+    "id": "AS-0070",
+    "firstName": "Emma",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 15
+  },
+  {
+    "id": "AS-0071",
+    "firstName": "Jordan",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 60
+  },
+  {
+    "id": "AS-0072",
+    "firstName": "Liam",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 26
+  },
+  {
+    "id": "AS-0073",
+    "firstName": "Quinn",
+    "storeId": "ST-MA-008",
+    "role": "Lead",
+    "tenureMonths": 37
+  },
+  {
+    "id": "AS-0074",
+    "firstName": "Hayden",
+    "storeId": "ST-MA-008",
+    "role": "Senior Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0075",
+    "firstName": "Alex",
+    "storeId": "ST-MA-008",
+    "role": "Senior Associate",
+    "tenureMonths": 35
+  },
+  {
+    "id": "AS-0076",
+    "firstName": "Quinn",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 57
+  },
+  {
+    "id": "AS-0077",
+    "firstName": "Olivia",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 67
+  },
+  {
+    "id": "AS-0078",
+    "firstName": "Sofia",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 7
+  },
+  {
+    "id": "AS-0079",
+    "firstName": "Alex",
+    "storeId": "ST-MA-008",
+    "role": "Lead",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0080",
+    "firstName": "Noah",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 10
+  },
+  {
+    "id": "AS-0081",
+    "firstName": "Ethan",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 17
+  },
+  {
+    "id": "AS-0082",
+    "firstName": "Reese",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 54
+  },
+  {
+    "id": "AS-0083",
+    "firstName": "Kai",
+    "storeId": "ST-MA-008",
+    "role": "Sales Associate",
+    "tenureMonths": 26
+  },
+  {
+    "id": "AS-0084",
+    "firstName": "Parker",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 40
+  },
+  {
+    "id": "AS-0085",
+    "firstName": "Skyler",
+    "storeId": "ST-SE-009",
+    "role": "Sales Associate",
+    "tenureMonths": 43
+  },
+  {
+    "id": "AS-0086",
+    "firstName": "Jamie",
+    "storeId": "ST-SE-009",
+    "role": "Sales Associate",
+    "tenureMonths": 23
+  },
+  {
+    "id": "AS-0087",
+    "firstName": "Reese",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 81
+  },
+  {
+    "id": "AS-0088",
+    "firstName": "Liam",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 30
+  },
+  {
+    "id": "AS-0089",
+    "firstName": "Taylor",
+    "storeId": "ST-SE-009",
+    "role": "Sales Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0090",
+    "firstName": "Mia",
+    "storeId": "ST-SE-009",
+    "role": "Sales Associate",
+    "tenureMonths": 82
+  },
+  {
+    "id": "AS-0091",
+    "firstName": "Kai",
+    "storeId": "ST-SE-009",
+    "role": "Sales Associate",
+    "tenureMonths": 33
+  },
+  {
+    "id": "AS-0092",
+    "firstName": "Kai",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 15
+  },
+  {
+    "id": "AS-0093",
+    "firstName": "Avery",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 68
+  },
+  {
+    "id": "AS-0094",
+    "firstName": "Logan",
+    "storeId": "ST-SE-009",
+    "role": "Lead",
+    "tenureMonths": 17
+  },
+  {
+    "id": "AS-0095",
+    "firstName": "Olivia",
+    "storeId": "ST-SE-009",
+    "role": "Senior Associate",
+    "tenureMonths": 73
+  },
+  {
+    "id": "AS-0096",
+    "firstName": "Sofia",
+    "storeId": "ST-SE-010",
+    "role": "Senior Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0097",
+    "firstName": "Mia",
+    "storeId": "ST-SE-010",
+    "role": "Senior Associate",
+    "tenureMonths": 37
+  },
+  {
+    "id": "AS-0098",
+    "firstName": "Hayden",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 37
+  },
+  {
+    "id": "AS-0099",
+    "firstName": "Kai",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 44
+  },
+  {
+    "id": "AS-0100",
+    "firstName": "Logan",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 31
+  },
+  {
+    "id": "AS-0101",
+    "firstName": "Taylor",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 54
+  },
+  {
+    "id": "AS-0102",
+    "firstName": "Jamie",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 55
+  },
+  {
+    "id": "AS-0103",
+    "firstName": "Mia",
+    "storeId": "ST-SE-010",
+    "role": "Lead",
+    "tenureMonths": 4
+  },
+  {
+    "id": "AS-0104",
+    "firstName": "Mia",
+    "storeId": "ST-SE-010",
+    "role": "Sales Associate",
+    "tenureMonths": 2
+  },
+  {
+    "id": "AS-0105",
+    "firstName": "Reese",
+    "storeId": "ST-SE-010",
+    "role": "Senior Associate",
+    "tenureMonths": 55
+  },
+  {
+    "id": "AS-0106",
+    "firstName": "Noah",
+    "storeId": "ST-SE-010",
+    "role": "Senior Associate",
+    "tenureMonths": 30
+  },
+  {
+    "id": "AS-0107",
+    "firstName": "Finley",
+    "storeId": "ST-SE-011",
+    "role": "Senior Associate",
+    "tenureMonths": 61
+  },
+  {
+    "id": "AS-0108",
+    "firstName": "Rowan",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 52
+  },
+  {
+    "id": "AS-0109",
+    "firstName": "Finley",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 56
+  },
+  {
+    "id": "AS-0110",
+    "firstName": "Jamie",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 50
+  },
+  {
+    "id": "AS-0111",
+    "firstName": "Jamie",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 50
+  },
+  {
+    "id": "AS-0112",
+    "firstName": "Liam",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 12
+  },
+  {
+    "id": "AS-0113",
+    "firstName": "Noah",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 46
+  },
+  {
+    "id": "AS-0114",
+    "firstName": "Sam",
+    "storeId": "ST-SE-011",
+    "role": "Senior Associate",
+    "tenureMonths": 33
+  },
+  {
+    "id": "AS-0115",
+    "firstName": "Alex",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 18
+  },
+  {
+    "id": "AS-0116",
+    "firstName": "Casey",
+    "storeId": "ST-SE-011",
+    "role": "Lead",
+    "tenureMonths": 61
+  },
+  {
+    "id": "AS-0117",
+    "firstName": "Mia",
+    "storeId": "ST-SE-011",
+    "role": "Sales Associate",
+    "tenureMonths": 79
+  },
+  {
+    "id": "AS-0118",
+    "firstName": "Ethan",
+    "storeId": "ST-SE-012",
+    "role": "Sales Associate",
+    "tenureMonths": 50
+  },
+  {
+    "id": "AS-0119",
+    "firstName": "Kai",
+    "storeId": "ST-SE-012",
+    "role": "Sales Associate",
+    "tenureMonths": 82
+  },
+  {
+    "id": "AS-0120",
+    "firstName": "Kai",
+    "storeId": "ST-SE-012",
+    "role": "Senior Associate",
+    "tenureMonths": 78
+  },
+  {
+    "id": "AS-0121",
+    "firstName": "Olivia",
+    "storeId": "ST-SE-012",
+    "role": "Senior Associate",
+    "tenureMonths": 46
+  },
+  {
+    "id": "AS-0122",
+    "firstName": "Finley",
+    "storeId": "ST-SE-012",
+    "role": "Sales Associate",
+    "tenureMonths": 84
+  },
+  {
+    "id": "AS-0123",
+    "firstName": "Kai",
+    "storeId": "ST-MW-013",
+    "role": "Sales Associate",
+    "tenureMonths": 68
+  },
+  {
+    "id": "AS-0124",
+    "firstName": "Quinn",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0125",
+    "firstName": "Jamie",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 77
+  },
+  {
+    "id": "AS-0126",
+    "firstName": "Emma",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 13
+  },
+  {
+    "id": "AS-0127",
+    "firstName": "Jamie",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 74
+  },
+  {
+    "id": "AS-0128",
+    "firstName": "Parker",
+    "storeId": "ST-MW-013",
+    "role": "Sales Associate",
+    "tenureMonths": 43
+  },
+  {
+    "id": "AS-0129",
+    "firstName": "Riley",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 45
+  },
+  {
+    "id": "AS-0130",
+    "firstName": "Rowan",
+    "storeId": "ST-MW-013",
+    "role": "Sales Associate",
+    "tenureMonths": 68
+  },
+  {
+    "id": "AS-0131",
+    "firstName": "Sam",
+    "storeId": "ST-MW-013",
+    "role": "Senior Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0132",
+    "firstName": "Avery",
+    "storeId": "ST-MW-013",
+    "role": "Sales Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0133",
+    "firstName": "Reese",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0134",
+    "firstName": "Skyler",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 60
+  },
+  {
+    "id": "AS-0135",
+    "firstName": "Quinn",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 26
+  },
+  {
+    "id": "AS-0136",
+    "firstName": "Noah",
+    "storeId": "ST-MW-014",
+    "role": "Lead",
+    "tenureMonths": 25
+  },
+  {
+    "id": "AS-0137",
+    "firstName": "Noah",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 77
+  },
+  {
+    "id": "AS-0138",
+    "firstName": "Hayden",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 14
+  },
+  {
+    "id": "AS-0139",
+    "firstName": "Reese",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 40
+  },
+  {
+    "id": "AS-0140",
+    "firstName": "Logan",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 8
+  },
+  {
+    "id": "AS-0141",
+    "firstName": "Kai",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 64
+  },
+  {
+    "id": "AS-0142",
+    "firstName": "Alex",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 63
+  },
+  {
+    "id": "AS-0143",
+    "firstName": "Morgan",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 63
+  },
+  {
+    "id": "AS-0144",
+    "firstName": "Sam",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 75
+  },
+  {
+    "id": "AS-0145",
+    "firstName": "Jordan",
+    "storeId": "ST-MW-014",
+    "role": "Sales Associate",
+    "tenureMonths": 74
+  },
+  {
+    "id": "AS-0146",
+    "firstName": "Mia",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 58
+  },
+  {
+    "id": "AS-0147",
+    "firstName": "Harper",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 81
+  },
+  {
+    "id": "AS-0148",
+    "firstName": "Noah",
+    "storeId": "ST-MW-015",
+    "role": "Lead",
+    "tenureMonths": 28
+  },
+  {
+    "id": "AS-0149",
+    "firstName": "Quinn",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 24
+  },
+  {
+    "id": "AS-0150",
+    "firstName": "Morgan",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 78
+  },
+  {
+    "id": "AS-0151",
+    "firstName": "Jordan",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 38
+  },
+  {
+    "id": "AS-0152",
+    "firstName": "Jamie",
+    "storeId": "ST-MW-015",
+    "role": "Senior Associate",
+    "tenureMonths": 35
+  },
+  {
+    "id": "AS-0153",
+    "firstName": "Elliot",
+    "storeId": "ST-MW-015",
+    "role": "Senior Associate",
+    "tenureMonths": 27
+  },
+  {
+    "id": "AS-0154",
+    "firstName": "Logan",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 36
+  },
+  {
+    "id": "AS-0155",
+    "firstName": "Sam",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 41
+  },
+  {
+    "id": "AS-0156",
+    "firstName": "Liam",
+    "storeId": "ST-MW-015",
+    "role": "Lead",
+    "tenureMonths": 58
+  },
+  {
+    "id": "AS-0157",
+    "firstName": "Kai",
+    "storeId": "ST-MW-015",
+    "role": "Senior Associate",
+    "tenureMonths": 36
+  },
+  {
+    "id": "AS-0158",
+    "firstName": "Blake",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 7
+  },
+  {
+    "id": "AS-0159",
+    "firstName": "Noah",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 5
+  },
+  {
+    "id": "AS-0160",
+    "firstName": "Finley",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 4
+  },
+  {
+    "id": "AS-0161",
+    "firstName": "Finley",
+    "storeId": "ST-MW-015",
+    "role": "Sales Associate",
+    "tenureMonths": 24
+  },
+  {
+    "id": "AS-0162",
+    "firstName": "Elliot",
+    "storeId": "ST-MW-016",
+    "role": "Lead",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0163",
+    "firstName": "Cameron",
+    "storeId": "ST-MW-016",
+    "role": "Senior Associate",
+    "tenureMonths": 22
+  },
+  {
+    "id": "AS-0164",
+    "firstName": "Kai",
+    "storeId": "ST-MW-016",
+    "role": "Sales Associate",
+    "tenureMonths": 53
+  },
+  {
+    "id": "AS-0165",
+    "firstName": "Logan",
+    "storeId": "ST-MW-016",
+    "role": "Sales Associate",
+    "tenureMonths": 42
+  },
+  {
+    "id": "AS-0166",
+    "firstName": "Casey",
+    "storeId": "ST-MW-016",
+    "role": "Senior Associate",
+    "tenureMonths": 2
+  },
+  {
+    "id": "AS-0167",
+    "firstName": "Logan",
+    "storeId": "ST-MW-016",
+    "role": "Sales Associate",
+    "tenureMonths": 26
+  },
+  {
+    "id": "AS-0168",
+    "firstName": "Rowan",
+    "storeId": "ST-MW-016",
+    "role": "Sales Associate",
+    "tenureMonths": 8
+  },
+  {
+    "id": "AS-0169",
+    "firstName": "Logan",
+    "storeId": "ST-MW-016",
+    "role": "Lead",
+    "tenureMonths": 58
+  },
+  {
+    "id": "AS-0170",
+    "firstName": "Reese",
+    "storeId": "ST-MT-017",
+    "role": "Sales Associate",
+    "tenureMonths": 54
+  },
+  {
+    "id": "AS-0171",
+    "firstName": "Liam",
+    "storeId": "ST-MT-017",
+    "role": "Sales Associate",
+    "tenureMonths": 17
+  },
+  {
+    "id": "AS-0172",
+    "firstName": "Taylor",
+    "storeId": "ST-MT-017",
+    "role": "Lead",
+    "tenureMonths": 39
+  },
+  {
+    "id": "AS-0173",
+    "firstName": "Quinn",
+    "storeId": "ST-MT-017",
+    "role": "Senior Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0174",
+    "firstName": "Logan",
+    "storeId": "ST-MT-017",
+    "role": "Sales Associate",
+    "tenureMonths": 78
+  },
+  {
+    "id": "AS-0175",
+    "firstName": "Sofia",
+    "storeId": "ST-MT-017",
+    "role": "Senior Associate",
+    "tenureMonths": 37
+  },
+  {
+    "id": "AS-0176",
+    "firstName": "Emma",
+    "storeId": "ST-MT-017",
+    "role": "Sales Associate",
+    "tenureMonths": 66
+  },
+  {
+    "id": "AS-0177",
+    "firstName": "Alex",
+    "storeId": "ST-MT-017",
+    "role": "Senior Associate",
+    "tenureMonths": 77
+  },
+  {
+    "id": "AS-0178",
+    "firstName": "Finley",
+    "storeId": "ST-MT-017",
+    "role": "Senior Associate",
+    "tenureMonths": 59
+  },
+  {
+    "id": "AS-0179",
+    "firstName": "Ethan",
+    "storeId": "ST-MT-018",
+    "role": "Senior Associate",
+    "tenureMonths": 32
+  },
+  {
+    "id": "AS-0180",
+    "firstName": "Avery",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0181",
+    "firstName": "Olivia",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0182",
+    "firstName": "Jordan",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 77
+  },
+  {
+    "id": "AS-0183",
+    "firstName": "Casey",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 60
+  },
+  {
+    "id": "AS-0184",
+    "firstName": "Taylor",
+    "storeId": "ST-MT-018",
+    "role": "Senior Associate",
+    "tenureMonths": 21
+  },
+  {
+    "id": "AS-0185",
+    "firstName": "Olivia",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 52
+  },
+  {
+    "id": "AS-0186",
+    "firstName": "Emma",
+    "storeId": "ST-MT-018",
+    "role": "Senior Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0187",
+    "firstName": "Cameron",
+    "storeId": "ST-MT-018",
+    "role": "Senior Associate",
+    "tenureMonths": 6
+  },
+  {
+    "id": "AS-0188",
+    "firstName": "Avery",
+    "storeId": "ST-MT-018",
+    "role": "Lead",
+    "tenureMonths": 13
+  },
+  {
+    "id": "AS-0189",
+    "firstName": "Casey",
+    "storeId": "ST-MT-018",
+    "role": "Sales Associate",
+    "tenureMonths": 40
+  },
+  {
+    "id": "AS-0190",
+    "firstName": "Skyler",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 54
+  },
+  {
+    "id": "AS-0191",
+    "firstName": "Olivia",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 12
+  },
+  {
+    "id": "AS-0192",
+    "firstName": "Parker",
+    "storeId": "ST-MT-019",
+    "role": "Senior Associate",
+    "tenureMonths": 65
+  },
+  {
+    "id": "AS-0193",
+    "firstName": "Taylor",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 34
+  },
+  {
+    "id": "AS-0194",
+    "firstName": "Finley",
+    "storeId": "ST-MT-019",
+    "role": "Senior Associate",
+    "tenureMonths": 61
+  },
+  {
+    "id": "AS-0195",
+    "firstName": "Finley",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 58
+  },
+  {
+    "id": "AS-0196",
+    "firstName": "Harper",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 56
+  },
+  {
+    "id": "AS-0197",
+    "firstName": "Jamie",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 51
+  },
+  {
+    "id": "AS-0198",
+    "firstName": "Casey",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 47
+  },
+  {
+    "id": "AS-0199",
+    "firstName": "Kai",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 52
+  },
+  {
+    "id": "AS-0200",
+    "firstName": "Harper",
+    "storeId": "ST-MT-019",
+    "role": "Lead",
+    "tenureMonths": 65
+  },
+  {
+    "id": "AS-0201",
+    "firstName": "Sofia",
+    "storeId": "ST-MT-019",
+    "role": "Senior Associate",
+    "tenureMonths": 31
+  },
+  {
+    "id": "AS-0202",
+    "firstName": "Drew",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 81
+  },
+  {
+    "id": "AS-0203",
+    "firstName": "Mia",
+    "storeId": "ST-MT-019",
+    "role": "Sales Associate",
+    "tenureMonths": 82
+  },
+  {
+    "id": "AS-0204",
+    "firstName": "Sam",
+    "storeId": "ST-PC-020",
+    "role": "Sales Associate",
+    "tenureMonths": 55
+  },
+  {
+    "id": "AS-0205",
+    "firstName": "Taylor",
+    "storeId": "ST-PC-020",
+    "role": "Senior Associate",
+    "tenureMonths": 48
+  },
+  {
+    "id": "AS-0206",
+    "firstName": "Ethan",
+    "storeId": "ST-PC-020",
+    "role": "Senior Associate",
+    "tenureMonths": 34
+  },
+  {
+    "id": "AS-0207",
+    "firstName": "Blake",
+    "storeId": "ST-PC-020",
+    "role": "Senior Associate",
+    "tenureMonths": 45
+  },
+  {
+    "id": "AS-0208",
+    "firstName": "Jamie",
+    "storeId": "ST-PC-020",
+    "role": "Sales Associate",
+    "tenureMonths": 30
+  },
+  {
+    "id": "AS-0209",
+    "firstName": "Noah",
+    "storeId": "ST-PC-020",
+    "role": "Lead",
+    "tenureMonths": 73
+  },
+  {
+    "id": "AS-0210",
+    "firstName": "Olivia",
+    "storeId": "ST-PC-020",
+    "role": "Sales Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0211",
+    "firstName": "Drew",
+    "storeId": "ST-PC-020",
+    "role": "Sales Associate",
+    "tenureMonths": 83
+  },
+  {
+    "id": "AS-0212",
+    "firstName": "Casey",
+    "storeId": "ST-PC-020",
+    "role": "Sales Associate",
+    "tenureMonths": 81
+  },
+  {
+    "id": "AS-0213",
+    "firstName": "Logan",
+    "storeId": "ST-PC-020",
+    "role": "Lead",
+    "tenureMonths": 30
+  },
+  {
+    "id": "AS-0214",
+    "firstName": "Taylor",
+    "storeId": "ST-PC-021",
+    "role": "Lead",
+    "tenureMonths": 40
+  },
+  {
+    "id": "AS-0215",
+    "firstName": "Casey",
+    "storeId": "ST-PC-021",
+    "role": "Sales Associate",
+    "tenureMonths": 70
+  },
+  {
+    "id": "AS-0216",
+    "firstName": "Jamie",
+    "storeId": "ST-PC-021",
+    "role": "Senior Associate",
+    "tenureMonths": 71
+  },
+  {
+    "id": "AS-0217",
+    "firstName": "Noah",
+    "storeId": "ST-PC-021",
+    "role": "Senior Associate",
+    "tenureMonths": 14
+  },
+  {
+    "id": "AS-0218",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-021",
+    "role": "Lead",
+    "tenureMonths": 37
+  },
+  {
+    "id": "AS-0219",
+    "firstName": "Casey",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 84
+  },
+  {
+    "id": "AS-0220",
+    "firstName": "Parker",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 17
+  },
+  {
+    "id": "AS-0221",
+    "firstName": "Liam",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 29
+  },
+  {
+    "id": "AS-0222",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 44
+  },
+  {
+    "id": "AS-0223",
+    "firstName": "Taylor",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0224",
+    "firstName": "Riley",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 20
+  },
+  {
+    "id": "AS-0225",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 20
+  },
+  {
+    "id": "AS-0226",
+    "firstName": "Logan",
+    "storeId": "ST-PC-022",
+    "role": "Senior Associate",
+    "tenureMonths": 16
+  },
+  {
+    "id": "AS-0227",
+    "firstName": "Alex",
+    "storeId": "ST-PC-022",
+    "role": "Sales Associate",
+    "tenureMonths": 32
+  },
+  {
+    "id": "AS-0228",
+    "firstName": "Hayden",
+    "storeId": "ST-PC-023",
+    "role": "Senior Associate",
+    "tenureMonths": 62
+  },
+  {
+    "id": "AS-0229",
+    "firstName": "Drew",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 59
+  },
+  {
+    "id": "AS-0230",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-023",
+    "role": "Senior Associate",
+    "tenureMonths": 68
+  },
+  {
+    "id": "AS-0231",
+    "firstName": "Elliot",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 63
+  },
+  {
+    "id": "AS-0232",
+    "firstName": "Skyler",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 58
+  },
+  {
+    "id": "AS-0233",
+    "firstName": "Sam",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 10
+  },
+  {
+    "id": "AS-0234",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 43
+  },
+  {
+    "id": "AS-0235",
+    "firstName": "Rowan",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 66
+  },
+  {
+    "id": "AS-0236",
+    "firstName": "Casey",
+    "storeId": "ST-PC-023",
+    "role": "Senior Associate",
+    "tenureMonths": 72
+  },
+  {
+    "id": "AS-0237",
+    "firstName": "Riley",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 31
+  },
+  {
+    "id": "AS-0238",
+    "firstName": "Liam",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 14
+  },
+  {
+    "id": "AS-0239",
+    "firstName": "Cameron",
+    "storeId": "ST-PC-023",
+    "role": "Sales Associate",
+    "tenureMonths": 21
+  }
+]
