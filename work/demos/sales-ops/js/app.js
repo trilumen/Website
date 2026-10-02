@@ -90,6 +90,9 @@
     if (a.firstName && a.lastName) return `${a.firstName} ${a.lastName}`;
     return a.firstName || id;
   }
+  function associateFirstName(id) {
+    return associateFullName(id);
+  }
   function assocSearchName(id) {
     return associateFullName(id);
   }
@@ -839,6 +842,7 @@
         if (el.dataset.ticket) return;
         const level = el.dataset.drill;
         const id = el.dataset.id;
+        if (level === "associate" && state.level === "associate" && state.associateId === id) { setTab("tickets"); return; }
         if (level && id) drillTo(level, id);
       });
     });
