@@ -1,611 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP88CN9BNQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BP88CN9BNQ');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TriLumen Systems | Systems, BI & AI Automation Consulting in NEPA</title>
-<meta name="description" content="TriLumen Systems is a proudly human systems and AI consulting company that builds what works and trains the people who run it.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TriLumen Systems | Systems, BI & AI Automation Consulting in NEPA">
-<meta property="og:description" content="TriLumen Systems is a proudly human systems and AI consulting company that builds what works and trains the people who run it.">
-<meta property="og:url" content="https://www.trilumensystems.com/">
-<link rel="canonical" href="https://www.trilumensystems.com/">
-<meta property="og:image" content="https://www.trilumensystems.com/trilumen-og.png">
-<meta property="og:site_name" content="TriLumen Systems">
-<meta name="twitter:card" content="summary">
-
-<link rel="icon" type="image/png" href="trilumen-icon-32.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site-nav.css">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: #18181B; background: #ffffff; }
-a { text-decoration: none; color: inherit; }
-.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-em { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; color: #4C4272; }
-
-/* Nav */
-nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #EDEDF2; z-index: 50; }
-.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1400px; margin: 0 auto; }
-.logo { font-size: 20px; font-weight: 700; color: #18181B; display: flex; align-items: center; gap: 8px; }
-.logo-icon-img { height: 30px; width: auto; display: block; }
-.logo span { color: #4C4272; }
-.nav-links { display: flex; gap: 18px; align-items: center; font-size: 14px; font-weight: 500; flex-wrap: nowrap; }
-.nav-links a:hover { color: #4C4272; }
-.nav-links a { white-space: nowrap; }
-.nav-cta { background: #4C4272; color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
-.nav-cta:hover { background: #3A3358; }
-.menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
-.menu-btn svg { width: 26px; height: 26px; }
-.mobile-menu { display: none; flex-direction: column; padding: 8px 24px 16px; background: #fff; border-bottom: 1px solid #EDEDF2; }
-.mobile-menu a { padding: 10px 0; font-weight: 500; font-size: 15px; border-bottom: 1px solid #F4F2FA; }
-.mobile-menu.open { display: flex; }
-
-/* Hero */
-.hero { position: relative; background: #F4F2FA; overflow: hidden; padding: 80px 0 60px; }
-.hero-beams { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.hero-content { position: relative; z-index: 3; max-width: 640px; }
-.tag { display: inline-block; font-size: 13px; color: #4C4272; letter-spacing: 1px; margin-bottom: 18px; text-transform: uppercase; font-weight: 600; }
-h1 { font-size: 48px; line-height: 1.12; margin-bottom: 22px; }
-.sub { font-size: 17px; color: #52525B; max-width: 560px; margin-bottom: 30px; line-height: 1.6; }
-.btn-primary { display: inline-block; background: #4C4272; color: #fff; padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(76,66,114,0.22); }
-.btn-primary:hover { background: #3A3358; }
-.hero-note { font-size: 14px; color: #71717A; margin-top: 14px; }
-
-/* Tool badges */
-.tools { padding: 40px 0; background: #fff; }
-.tools-label { text-align: center; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A1A1AA; margin-bottom: 20px; font-weight: 600; }
-.badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.badge { background: #F4F2FA; color: #4C4272; font-size: 14px; font-weight: 600; padding: 8px 18px; border-radius: 20px; border: 1px solid #E5E1F0; }
-
-/* Pain points */
-.pain { background: #FAFAFA; padding: 70px 0; }
-.section-head { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 44px; }
-.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
-.pain-item { background: #fff; border-left: 3px solid #4C4272; padding: 16px 20px; font-weight: 600; font-size: 15px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-
-/* Periodic table services */
-.services { padding: 80px 0; background: #fff; text-align: center; }
-.periodic { display: grid; grid-template-columns: repeat(3, 130px); gap: 10px; justify-content: center; margin-bottom: 24px; }
-.tile { aspect-ratio: 1; border-radius: 10px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; color: #fff; position: relative; padding: 10px; display: flex; flex-direction: column; }
-.tile:hover, .tile:focus { transform: scale(1.06); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-.tile.active { outline: 3px solid #18181B; outline-offset: 2px; }
-.tile .num { font-size: 11px; opacity: 0.7; font-weight: 500; text-align: left; }
-.tile .symbol { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 700; }
-.tile .short { font-size: 10px; text-align: center; opacity: 0.85; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
-.p1 { background: #4C4272; } .p2 { background: #5B5088; } .p3 { background: #6B5FA0; }
-.p4 { background: #7C70B8; } .p5 { background: #5D5296; } .p6 { background: #3E3760; }
-.detail { min-height: 90px; max-width: 560px; margin: 0 auto 40px; background: #F4F2FA; border-radius: 10px; padding: 22px 26px; display: flex; flex-direction: column; justify-content: center; text-align: left; }
-.detail .name { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #18181B; }
-.detail .desc { font-size: 14px; color: #52525B; }
-.detail.empty .name { color: #A1A1AA; font-weight: 500; }
-.btn-secondary { display: inline-block; border: 2px solid #4C4272; color: #4C4272; padding: 12px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; }
-.btn-secondary:hover { background: #F4F2FA; }
-
-/* How it works */
-.process { background: #18181B; color: #fff; padding: 80px 0; }
-.process .section-head { color: #fff; }
-.step-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-.step-card { background: #232326; border-radius: 12px; padding: 22px 18px; text-align: center; }
-.step-num { font-size: 26px; font-weight: 800; color: #A399C9; margin-bottom: 8px; }
-.step-card h4 { font-size: 15px; margin-bottom: 8px; }
-.step-card p { font-size: 13px; color: #A1A1AA; line-height: 1.5; }
-
-/* Numbers need people */
-.about { padding: 90px 0; text-align: center; }
-.about h2 { font-size: 34px; margin-bottom: 16px; }
-.about p { font-size: 18px; color: #52525B; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-
-/* Segmentation Fork */
-.fork { padding: 20px 0 60px; background: #fff; }
-.fork-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1080px; margin: 0 auto; }
-.fork-card { padding: 26px 28px; border-radius: 14px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.fork-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,66,114,0.1); }
-.fork-card.small-biz { background: #18181B; border: 1px solid #333336; }
-.fork-card.enterprise { background: #18181B; }
-.fork-card p { font-size: 16px; font-weight: 600; line-height: 1.5; margin-bottom: 4px; }
-.fork-card.small-biz p { color: #fff; }
-.fork-card.enterprise p { color: #fff; }
-.fork-card .arrow { font-size: 14px; font-weight: 600; }
-.fork-card.small-biz .arrow { color: #A399C9; }
-.fork-card.enterprise .arrow { color: #A399C9; }
-
-/* Credibility */
-.credibility { background: #F4F2FA; padding: 50px 0; text-align: center; }
-.credibility p { font-size: 19px; font-weight: 600; max-width: 700px; margin: 0 auto; line-height: 1.5; }
-
-/* Clarity preview */
-.clarity-preview { padding: 80px 0; background: #fff; }
-.clarity-preview-head { text-align: center; margin-bottom: 44px; }
-.clarity-preview-head h2 { font-size: 32px; margin-bottom: 10px; }
-.clarity-preview-head p { font-size: 15.5px; color: #71717A; }
-.clarity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto 34px; }
-.clarity-card { border: 1px solid #EDEDF2; border-radius: 14px; padding: 28px 26px; transition: box-shadow 0.15s ease, transform 0.15s ease; }
-.clarity-card:hover { box-shadow: 0 8px 24px rgba(76,66,114,0.1); transform: translateY(-2px); }
-.clarity-card-date { font-size: 12px; color: #A1A1AA; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-.clarity-card h3 { font-size: 19px; margin-bottom: 10px; line-height: 1.3; }
-.clarity-card p { font-size: 14.5px; color: #52525B; line-height: 1.6; }
-.clarity-view-all { text-align: center; }
-
-/* Closing CTA band */
-.cta-band { background: #4C4272; color: #fff; padding: 60px 0; text-align: center; }
-.cta-band h2 { font-size: 32px; margin-bottom: 24px; font-weight: 700; }
-.cta-band .btn-primary { background: #fff; color: #4C4272; box-shadow: none; }
-.cta-band .btn-primary:hover { background: #F4F2FA; }
-.cta-band .btn-outline { display: inline-block; border: 2px solid #fff; color: #fff; padding: 13px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; margin-left: 14px; }
-.cta-band .btn-outline:hover { background: rgba(255,255,255,0.1); }
-
-/* Footer */
-footer { background: #fff; padding: 0; border-top: 1px solid #EDEDF2; }
-.footer-shell { max-width: 1140px; margin: 0 auto; padding: 48px 24px 0; }
-.footer-columns { display: grid; grid-template-columns: 1.15fr 1fr 1fr 1.35fr; gap: 40px 28px; align-items: start; }
-.footer-col-title { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4C4272; margin: 0 0 14px; }
-.footer-col-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.footer-col-links a { color: #52525B; font-size: 14px; }
-.footer-col-links a:hover { color: #4C4272; }
-.footer-brand { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.footer-brand .logo { font-size: 18px; }
-.footer-tagline { font-size: 13px; color: #A1A1AA; margin: 0; }
-.footer-service-area { font-size: 13px; color: #71717A; margin: 8px 0 0; line-height: 1.4; }
-.footer-newsletter label { display: block; font-size: 14px; color: #3F3F46; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
-.embeddable-buttondown-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; margin-bottom: 18px; }
-.embeddable-buttondown-form input[type="email"] { flex: 1 1 160px; min-width: 0; padding: 11px 14px; border: 1px solid #E5E1F0; border-radius: 8px; font-family: Inter, sans-serif; font-size: 14px; color: #18181B; background: #fff; }
-.embeddable-buttondown-form input[type="email"]:focus { outline: none; border-color: #4C4272; box-shadow: 0 0 0 3px rgba(76,66,114,0.12); }
-.embeddable-buttondown-form input[type="submit"] { background: #4C4272; color: #fff; border: none; border-radius: 8px; padding: 11px 18px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-.embeddable-buttondown-form input[type="submit"]:hover { background: #3d365c; }
-.footer-social { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
-.footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: #F4F2FA; border: 1px solid #E5E1F0; color: #4C4272; transition: background 0.15s, color 0.15s; }
-.footer-social a:hover { background: #4C4272; color: #fff; border-color: #4C4272; }
-.footer-social svg { width: 18px; height: 18px; display: block; fill: currentColor; }
-.footer-recognized { margin: 0; }
-.footer-recognized-label { font-size: 12px; color: #A1A1AA; margin: 0 0 8px; font-weight: 500; }
-.footer-badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.footer-badges a { display: inline-flex; align-items: center; }
-.footer-badges img { height: 48px; width: auto; display: block; }
-.footer-bottom { margin-top: 40px; border-top: 1px solid #EDEDF2; padding: 16px 0 20px; }
-.footer-bottom-inner { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: space-between; font-size: 13px; color: #A1A1AA; }
-.footer-bottom-links { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
-.footer-bottom-links a { color: #71717A; }
-.footer-bottom-links a:hover { color: #4C4272; }
-.footer-bottom-sep { color: #D4D4D8; }
-@media (max-width: 1000px) {
-  .footer-columns { grid-template-columns: 1fr 1fr 1fr; }
-  .footer-col-newsletter { grid-column: 1 / -1; }
-}
-@media (max-width: 560px) {
-  .footer-shell { padding: 36px 20px 0; }
-  .footer-columns { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
-}
-@media (max-width: 860px) {
-  .step-grid { grid-template-columns: 1fr; }
-  .pain-grid { grid-template-columns: 1fr; }
-  .fork-grid { grid-template-columns: 1fr; }
-  .periodic { grid-template-columns: repeat(3, 100px); }
-  h1 { font-size: 34px; }
-}
-
-.concierge-cta { background: #F4F2FA; border: 1px solid #E5E1F0; border-radius: 14px; padding: 32px; margin: 40px auto; max-width: 900px; text-align: center; }
-.concierge-cta h3 { font-size: 22px; margin-bottom: 8px; }
-.concierge-cta p { color: #52525B; font-size: 15px; margin-bottom: 18px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; }
-.concierge-cta .btn-primary { display: inline-block; }
-.concierge-cta.small { padding: 22px 28px; margin: 28px auto; }
-.concierge-cta.small h3 { font-size: 18px; }
-
-
-
-.works-strip { padding: 36px 0 28px; background: #fff; }
-.works-strip .tools-label { margin-bottom: 16px; }
-.logo-strip { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
-.logo-strip a, .logo-strip span { display: inline-flex; align-items: center; height: 40px; padding: 6px 12px; background: #FAFAFA; border: 1px solid #EDEDF2; border-radius: 10px; transition: border-color 0.15s, box-shadow 0.15s; }
-.logo-strip a:hover { border-color: #C4BEDC; box-shadow: 0 4px 12px rgba(76,66,114,0.08); }
-.logo-strip img { height: 20px; width: auto; display: block; max-width: 120px; }
-.works-strip-more { text-align: center; margin-top: 14px; font-size: 14px; font-weight: 600; color: #4C4272; }
-.works-strip-more a:hover { text-decoration: underline; }
-
-.pos-embed { padding: 48px 0 64px; background: #FAFAFA; border-top: 1px solid #EDEDF2; }
-.pos-embed-inner { max-width: 1080px; margin: 0 auto; }
-.pos-embed .tag { margin-bottom: 12px; }
-.pos-embed h2 { font-size: 28px; margin-bottom: 10px; text-align: center; }
-.pos-embed .pos-outcome { text-align: center; color: #52525B; font-size: 15.5px; max-width: 640px; margin: 0 auto 22px; line-height: 1.6; }
-.pos-frame { background: #fff; border: 1px solid #E5E1F0; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(76,66,114,0.08); }
-.pos-frame iframe { width: 100%; height: 780px; border: 0; display: block; background: #F7F8FA; }
-.pos-embed-actions { text-align: center; margin-top: 18px; }
-.pos-embed-actions .btn-secondary { margin: 0; }
-@media (max-width: 700px) {
-  .pos-frame iframe { height: 640px; }
-}
-.pos-work-link { display: block; margin-top: 12px; font-size: 14px; font-weight: 500; color: #71717A; }
-.pos-work-link a { color: #4C4272; font-weight: 600; }
-.pos-work-link a:hover { text-decoration: underline; }
-
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "TriLumen Systems",
-  "alternateName": "TriLumen",
-  "description": "TriLumen Systems is a proudly human systems and AI consulting company helping small and mid-size businesses with BI reporting, AI automation, cloud migrations, ERP/WMS support, workflow automation, and change management.",
-  "url": "https://www.trilumensystems.com/",
-  "logo": "https://www.trilumensystems.com/trilumen-icon-512.png",
-  "image": "https://www.trilumensystems.com/trilumen-og.png",
-  "telephone": "+1-570-392-9116",
-  "email": "hello@trilumensystems.com",
-  "priceRange": "$$",
-  "areaServed": [
-    { "@type": "City", "name": "Wilkes-Barre, PA" },
-    { "@type": "City", "name": "Scranton, PA" },
-    { "@type": "City", "name": "New York, NY" },
-    { "@type": "City", "name": "Philadelphia, PA" },
-    { "@type": "AdministrativeArea", "name": "Northeastern Pennsylvania" },
-    { "@type": "Country", "name": "United States" }
-  ],
-  "knowsAbout": [
-    "Business Intelligence",
-    "BI Reporting and Dashboards",
-    "AI Automation",
-    "Microsoft Copilot Deployment",
-    "ERP Integration",
-    "ERP Migration",
-    "Warehouse Management Systems",
-    "Data Warehousing",
-    "Cloud Migration",
-    "SharePoint Intranet Development",
-    "Workflow Automation",
-    "Change Management",
-    "Systems Integration",
-    "NetSuite",
-    "QuickBooks Integration",
-    "HubSpot Integration",
-    "POS Installation",
-    "POS Support",
-    "Retail Systems Integration",
-    "Square",
-    "Clover",
-    "Toast POS"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/company/trilumen-systems/",
-    "https://www.facebook.com/trilumensystemspa/",
-    "https://www.instagram.com/trilumensystems/",
-    "https://share.google/hdX5ZFP5B2RnKa2Sh",
-    "https://nextdoor.com/page/trilumen-systems"
-  ]
-}
-</script>
+<script>(function(){try{if(new URLSearchParams(location.search).get("embed")==="1"){document.documentElement.classList.add("embed");}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/trilumen-icon-64.png" />
+  <title>Fieldstone Markets | Sales operations | TriLumen Systems</title>
+  <meta name="description" content="Interactive multi-store retail sales operations dashboard demo. Sample data only. Built for TriLumen Systems." />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="assets/vendor/chart.umd.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
+  <div id="boot" class="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <div>Loading Fieldstone Markets sales operations…</div>
+  </div>
 
-<nav>
-<div class="nav-inner">
-<a href="/" class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></a>
-<div class="nav-links">
-<a href="services">Services</a>
-<a href="small-business">Small Business</a>
-<a href="new-business">New Business</a>
-<a href="case-studies">Case Studies</a>
-<a href="work">Work</a>
-<a href="team">Team</a>
-<a href="clarity">Clarity Insights</a>
-<a href="faq">FAQ</a>
-<a href="contact">Contact</a>
-<a href="contact" class="nav-cta">Book a Free Call</a>
-</div>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu">
-<svg viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
-</button>
-</div>
-<div class="mobile-menu" id="mobileMenu">
-<a href="services">Services</a>
-<a href="small-business">Small Business</a>
-<a href="new-business">New Business</a>
-<a href="case-studies">Case Studies</a>
-<a href="work">Work</a>
-<a href="team">Team</a>
-<a href="clarity">Clarity Insights</a>
-<a href="faq">FAQ</a>
-<a href="contact">Contact</a>
-<a href="contact" class="nav-cta" style="text-align:center; margin-top:10px;">Book a Free Call</a>
-</div>
-</nav>
-<script>
-document.getElementById('menuBtn').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.toggle('open');
-});
-</script>
+  <div id="app" class="app" style="display:none">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-kicker">Sales operations</div>
+        <div class="brand-title" id="companyName">Fieldstone Markets</div>
+        <div class="brand-sub"><span id="asOfLabel">As of Oct 2, 2026</span> · Multi-store scoreboard</div>
+      </div>
 
-<section class="hero">
-<svg class="hero-beams" viewBox="0 0 1140 500" preserveAspectRatio="xMidYMid slice">
-<defs>
-<filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-<feGaussianBlur stdDeviation="4" result="blur"/>
-<feMerge>
-<feMergeNode in="blur"/>
-<feMergeNode in="SourceGraphic"/>
-</feMerge>
-</filter>
-<radialGradient id="dotGrad">
-<stop offset="0%" stop-color="#8B5CF6" stop-opacity="1"/>
-<stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="dotGradFinal">
-<stop offset="0%" stop-color="#4C4272" stop-opacity="1"/>
-<stop offset="100%" stop-color="#4C4272" stop-opacity="0"/>
-</radialGradient>
-</defs>
-<path d="M -50 60 C 250 60, 400 260, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
-<path d="M -50 260 C 250 260, 400 260, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
-<path d="M -50 440 C 250 440, 400 290, 620 268" fill="none" stroke="#E5E1F0" stroke-width="3"/>
-<path d="M 620 268 C 800 268, 1000 262, 1190 258" fill="none" stroke="#E5E1F0" stroke-width="5"/>
-<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
-<animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 60 C 250 60, 400 260, 620 268"/>
-</circle>
-<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
-<animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 260 C 250 260, 400 260, 620 268"/>
-</circle>
-<circle r="10" fill="url(#dotGrad)" filter="url(#glow)">
-<animateMotion dur="3.6s" repeatCount="indefinite" path="M -50 440 C 250 440, 400 290, 620 268"/>
-</circle>
-<circle r="12" fill="url(#dotGradFinal)" filter="url(#glow)">
-<animateMotion dur="1.8s" begin="3.6s;7.2s;10.8s;14.4s;18s;21.6s;25.2s;28.8s;32.4s;36s;39.6s;43.2s;46.8s;50.4s;54s;57.6s;61.2s;64.8s;68.4s;72s" path="M 620 268 C 800 268, 1000 262, 1190 258"/>
-</circle>
-</svg>
-<div class="wrap">
-<div class="hero-content">
-<div class="tag">Proudly Human Systems</div>
-<h1>Systems that drive <em>real&nbsp;clarity</em></h1>
-<p class="sub">TriLumen Systems is a proudly human systems and AI consulting company that builds what works and trains the people who run it.</p>
-<a href="contact" class="btn-primary">Book a Free Strategy Call</a>
-</div>
-</div>
-</section>
+      <div class="topbar-center">
+        <nav class="breadcrumb" id="breadcrumb" aria-label="Drill path"></nav>
+        <div class="controls-row">
+          <div class="seg seg-period" role="group" aria-label="Period">
+            <button type="button" data-period="ptd" class="active">PTD</button>
+            <button type="button" data-period="ytd">YTD</button>
+          </div>
+          <span class="badge-sample">Sample data</span>
+        </div>
+      </div>
 
-<section class="works-strip" id="works-with">
-<p class="tools-label">Works with</p>
-<div class="logo-strip">
-<a href="services#works-with" title="Square"><img src="assets/logos/square.svg" alt="Square"></a>
-<a href="services#works-with" title="QuickBooks"><img src="assets/logos/quickbooks.svg" alt="QuickBooks"></a>
-<a href="services#works-with" title="HubSpot"><img src="assets/logos/hubspot.svg" alt="HubSpot"></a>
-<a href="services#works-with" title="Shopify"><img src="assets/logos/shopify.svg" alt="Shopify"></a>
-<a href="services#works-with" title="NetSuite"><img src="assets/logos/netsuite.svg" alt="NetSuite"></a>
-<a href="services#works-with" title="Power BI"><img src="assets/logos/powerbi.svg" alt="Power BI"></a>
-<a href="services#works-with" title="Tableau"><img src="assets/logos/tableau.svg" alt="Tableau"></a>
-<a href="services#works-with" title="Excel"><img src="assets/logos/excel.svg" alt="Excel"></a>
-</div>
-<p class="works-strip-more"><a href="services#works-with">See the full stack on Services →</a></p>
-</section>
+      <div class="logo-wrap" title="TriLumen Systems">
+        <img src="assets/trilumen-wordmark.png" alt="TriLumen Systems" width="180" height="34" />
+      </div>
+    </header>
 
-<section class="pos-embed" id="pos-demo">
-<div class="wrap">
-<div class="pos-embed-inner">
-<div class="tag" style="display:block;text-align:center;">Interactive demo · Workflow automation</div>
-<h2>POS and books, finally talking</h2>
-<p class="pos-outcome">Before: hours of Square → QuickBooks → Excel re-key. After: a nightly sync, a clean job log, and exceptions you can actually clear. Sample merchant: Brightwell Mercantile.</p>
-<div class="pos-frame">
-<iframe id="posEmbedFrame" src="work/demos/pos-books-sync/?embed=1" title="Brightwell Mercantile POS · Books Sync demo" loading="lazy" height="780"></iframe>
-</div>
-<div class="pos-embed-actions">
-<a class="btn-secondary" href="work/demos/pos-books-sync/">Open full demo →</a>
-<p class="pos-work-link">More sample boards on <a href="work">Work</a></p>
-</div>
-</div>
-</div>
-</section>
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" data-tab="scoreboard" class="active">Scoreboard</button>
+      <button type="button" data-tab="funnel">Traffic funnel</button>
+      <button type="button" data-tab="category">Category mix</button>
+      <button type="button" data-tab="tickets">Ticket explorer</button>
+    </nav>
 
-<section class="fork">
-<div class="wrap">
-<div class="fork-grid">
-<a href="small-business" class="fork-card small-biz">
-<p>Running a smaller team?</p>
-<span class="arrow">See our fixed-price small business sprint options →</span>
-</a>
-<a href="new-business" class="fork-card small-biz">
-<p>Opening a new business?</p>
-<span class="arrow">See our all-in-one launch packages →</span>
-</a>
-<a href="services" class="fork-card enterprise">
-<p>Scaling an enterprise infrastructure?</p>
-<span class="arrow">Explore our full lifecycle consulting capabilities →</span>
-</a>
-</div>
-</div>
-</section>
+    <main class="main">
+      <section class="kpi-grid" id="kpiGrid" aria-label="KPI strip"></section>
+      <section id="tabContent"></section>
+    </main>
 
-<section class="pain">
-<div class="wrap">
-<h2 class="section-head">Common Starting Points</h2>
-<div class="pain-grid">
-<div class="pain-item">Manual reporting that eats a full week each month</div>
-<div class="pain-item">Disconnected systems that don't share data</div>
-<div class="pain-item">A migration that's been stalled for months</div>
-<div class="pain-item">AI initiatives with no clear owner</div>
-<div class="pain-item">Software that's rolled out, but never adopted</div>
-<div class="pain-item">KPIs that are tracked, but not trusted</div>
-</div>
-</div>
-</section>
+    <footer class="footer-note">
+      TriLumen Systems interactive demo · All data is synthetic. · Not a live client environment
+    </footer>
+  </div>
 
-<section class="services">
-<div class="wrap">
-<h2 class="section-head">What We Do</h2>
-<div class="periodic" id="grid">
-<div class="tile p1" tabindex="0" data-name="BI Reporting" data-desc="Power BI & Tableau dashboards leadership trusts to run the business."><span class="num">01</span><span class="symbol">BI</span><span class="short">Reporting</span></div>
-<div class="tile p2" tabindex="0" data-name="AI Automation" data-desc="Microsoft Copilot & workflow automation that removes manual work."><span class="num">02</span><span class="symbol">AI</span><span class="short">Automation</span></div>
-<div class="tile p3" tabindex="0" data-name="Cloud Migrations" data-desc="SharePoint & cloud environments, migrated and built for adoption."><span class="num">03</span><span class="symbol">Cl</span><span class="short">Cloud</span></div>
-<div class="tile p4" tabindex="0" data-name="Change Management" data-desc="Training & rollout plans that make new systems actually stick."><span class="num">04</span><span class="symbol">Ch</span><span class="short">Change</span></div>
-<div class="tile p5" tabindex="0" data-name="ERP & WMS Support" data-desc="NetSuite, Körber, delivery platforms, and POS deployment, migrated and supported."><span class="num">05</span><span class="symbol">Er</span><span class="short">ERP</span></div>
-<div class="tile p6" tabindex="0" data-name="Workflow Automation" data-desc="Power Automate-driven elimination of repetitive manual tasks."><span class="num">06</span><span class="symbol">Au</span><span class="short">Workflow</span></div>
-</div>
-<div class="detail empty" id="detail">
-<div class="name">Hover or tap a tile to see what it covers</div>
-</div>
-<a href="services" class="btn-secondary">See All Services →</a>
-</div>
-</section>
-<script>
-const detail = document.getElementById('detail');
-document.querySelectorAll('.tile').forEach(tile => {
-  const show = () => {
-    document.querySelectorAll('.tile').forEach(t => t.classList.remove('active'));
-    tile.classList.add('active');
-    detail.classList.remove('empty');
-    detail.innerHTML = '<div class="name">' + tile.dataset.name + '</div><div class="desc">' + tile.dataset.desc + '</div>';
-  };
-  tile.addEventListener('mouseenter', show);
-  tile.addEventListener('focus', show);
-  tile.addEventListener('click', show);
-});
-</script>
-
-<section class="concierge-cta-wrap wrap">
-<div class="concierge-cta">
-<h3>Not sure where to start?</h3>
-<p>Answer a few quick questions and our free concierge will build your custom plan for you, no guessing which pieces you need.</p>
-<a href="concierge" class="btn-primary">Build My Plan</a>
-</div>
-</section>
-
-<section class="process">
-<div class="wrap">
-<h2 class="section-head">How It Works</h2>
-<div class="step-grid">
-<div class="step-card"><div class="step-num">1</div><h4>Free Strategy Call</h4><p>A quick, no-commitment conversation about what's slowing your team down.</p></div>
-<div class="step-card"><div class="step-num">2</div><h4>Systems Assessment</h4><p>A flat-fee review of your systems — credited toward your project.</p></div>
-<div class="step-card"><div class="step-num">3</div><h4>Scoped Proposal</h4><p>A clear plan, timeline, and price — no surprise costs.</p></div>
-<div class="step-card"><div class="step-num">4</div><h4>Build & Migrate</h4><p>We build, automate, or migrate — tested before going live.</p></div>
-<div class="step-card"><div class="step-num">5</div><h4>Adopt & Support</h4><p>Training and change management so your team actually uses it.</p></div>
-</div>
-</div>
-</section>
-
-<section class="about">
-<div class="wrap">
-<h2>Numbers Need People.</h2>
-<p>Dashboards, automation, and AI can tell you what happened. It still takes people to know what to do about it.</p>
-</div>
-</section>
-
-<section class="credibility">
-<div class="wrap">
-<p>Our systems experience spans national retailers, manufacturers, and government contractors — the same expertise, whether your team has 10 people or 10,000.</p>
-</div>
-</section>
-
-<section class="clarity-preview">
-<div class="wrap">
-<div class="clarity-preview-head">
-<h2>Latest from <em>Clarity</em></h2>
-<p>Real answers on systems, AI, and the problems that come with them.</p>
-</div>
-<div class="clarity-grid">
-
-<!-- Most recent post -->
-<a href="clarity/launching-pos-and-online-store" class="clarity-card">
-<div class="clarity-card-date"><!-- EDIT DATE HERE --> October 1, 2026</div>
-<h3>Launching a POS and Online Store Together: What to Get Right First</h3>
-<p>Opening with both a register and a web store? Here's how to avoid double inventory and opening-day surprises.</p>
-</a>
-
-<!-- Second most recent post -->
-<a href="clarity/fractional-vs-full-project" class="clarity-card">
-<div class="clarity-card-date"><!-- EDIT DATE HERE --> September 22, 2026</div>
-<h3>Fractional vs. Full Project: How to Know Which One Your Business Actually Needs</h3>
-<p>Not every systems problem needs a full project. Here's how to tell which kind of help actually fits.</p>
-</a>
-
-</div>
-<div class="clarity-view-all">
-<a href="clarity" class="btn-secondary">View All Clarity Insights →</a>
-</div>
-</div>
-</section>
-
-<section class="cta-band">
-<div class="wrap">
-<h2>Ready to Start?</h2>
-<a href="contact" class="btn-primary">Book Your Free Strategy Call</a>
-<a href="trilumen-overview.pdf" class="btn-outline">Download Your Quick-Look Sheet</a>
-</div>
-</section>
-
-<footer>
-<div class="footer-shell">
-<div class="footer-columns">
-<div class="footer-col footer-col-brand">
-<div class="footer-brand"><div class="logo"><img src="trilumen-icon-64.png" alt="" class="logo-icon-img">TriLumen <span>Systems</span></div></div>
-<p class="footer-tagline">Proudly Human Systems</p>
-<p class="footer-service-area">Scranton / Wilkes-Barre<br>Philadelphia · NYC</p>
-</div>
-<div class="footer-col">
-<p class="footer-col-title">Explore</p>
-<ul class="footer-col-links">
-<li><a href="services">Services</a></li>
-<li><a href="small-business">Small Business</a></li>
-<li><a href="new-business">New Business</a></li>
-<li><a href="case-studies">Case Studies</a></li>
-<li><a href="work">Work</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<p class="footer-col-title">Company</p>
-<ul class="footer-col-links">
-<li><a href="team">Team</a></li>
-<li><a href="clarity">Clarity Insights</a></li>
-<li><a href="faq">FAQ</a></li>
-<li><a href="contact">Contact</a></li>
-<li><a href="concierge">Concierge</a></li>
-</ul>
-</div>
-<div class="footer-col footer-col-newsletter">
-<p class="footer-col-title">Newsletter</p>
-<form action="https://buttondown.com/api/emails/embed-subscribe/trilumensystems" method="post" class="embeddable-buttondown-form">
-<label for="bd-email">Get systems &amp; AI clarity in your inbox</label>
-<input type="email" name="email" id="bd-email" placeholder="Your email" required />
-<input type="submit" value="Subscribe" />
-</form>
-<div class="footer-social" aria-label="Social links">
-<a href="https://www.linkedin.com/company/trilumen-systems" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg></a>
-<a href="https://www.facebook.com/trilumensystemspa" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.68 0H1.32A1.32 1.32 0 0 0 0 1.32v21.36A1.32 1.32 0 0 0 1.32 24h11.5v-9.29H9.69v-3.62h3.13V8.41c0-3.1 1.89-4.79 4.66-4.79 1.33 0 2.47.1 2.8.14v3.24h-1.92c-1.5 0-1.8.72-1.8 1.76v2.31h3.6l-.47 3.62h-3.13V24h6.12A1.32 1.32 0 0 0 24 22.68V1.32A1.32 1.32 0 0 0 22.68 0z"/></svg></a>
-<a href="https://www.instagram.com/trilumensystems" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.12.14 4.51 1.6 4.65 4.65.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.14 3.04-1.52 4.51-4.65 4.65-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.14-.14-4.51-1.62-4.65-4.65-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.64 3.84 4.02 2.37 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
-<a href="https://nextdoor.com/page/trilumen-systems" target="_blank" rel="noopener" aria-label="Nextdoor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2.5 8.5V21h6.2v-6.4c0-1.9 1.5-3.4 3.3-3.4s3.3 1.5 3.3 3.4V21h6.2V8.5L12 2zm0 2.4l7.3 5V19h-2.6v-4.4c0-2.9-2.3-5.2-5.1-5.2-2.7 0-4.9 2.2-5.1 4.9V19H4.7V9.4L12 4.4z"/></svg></a>
-</div>
-<div class="footer-recognized">
-<p class="footer-recognized-label">Recognized on</p>
-<div class="footer-badges">
-<a href="https://clutch.co/profile/trilumen-systems" target="_blank" rel="noopener" title="Clutch"><img src="assets/badges/clutch.png" alt="Clutch" height="48"></a>
-<a href="https://www.goodfirms.co/company/trilumen-systems" target="_blank" rel="noopener" title="GoodFirms"><img src="assets/badges/goodfirms.png" alt="GoodFirms" height="48"></a>
-<a href="https://www.alignable.com/kingston-pa/trilumen-systems" target="_blank" rel="noopener" title="Alignable"><img src="assets/badges/alignable.png" alt="Alignable" height="48"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-bottom-inner">
-<span>© 2026 TriLumen Systems</span>
-<div class="footer-bottom-links">
-<a href="tel:+15703929116">(570) 392-9116</a>
-<span class="footer-bottom-sep">|</span>
-<a href="mailto:hello@trilumensystems.com">hello@trilumensystems.com</a>
-<span class="footer-bottom-sep">|</span>
-<a href="privacy-policy">Privacy</a>
-<span class="footer-bottom-sep">|</span>
-<a href="terms-of-use">Terms</a>
-<span class="footer-bottom-sep">|</span>
-<a href="trilumen-overview.pdf">Overview PDF</a>
-</div>
-</div>
-</div>
-</div>
-</footer>
+  <div id="drawerBackdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="drawer" class="drawer" aria-label="Ticket detail">
+    <div id="drawerBody"></div>
+  </aside>
+  <script>
+  /* Embed mode: tell the host page how tall the board is so the frame fits it (no inner scrollbar). */
+  (function () {
+    if (!document.documentElement.classList.contains("embed") || window.parent === window) return;
+    var last = 0;
+    function send() {
+      var app = document.getElementById("app");
+      if (!app || app.offsetHeight === 0) return;
+      var h = Math.ceil(app.getBoundingClientRect().height);
+      if (h && h !== last) { last = h; window.parent.postMessage({ type: "trilumen:resize", height: h }, location.origin); }
+    }
+    window.addEventListener("load", function () {
+      send();
+      if ("ResizeObserver" in window) new ResizeObserver(send).observe(document.getElementById("app"));
+      setInterval(send, 500);
+    });
+  })();
+  </script>
 </body>
 </html>
